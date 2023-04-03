@@ -1,3 +1,10 @@
+.contenedorBoton{
+    background: #052D51;  
+    text-align: center;
+    border: none;
+    position: relative;
+}
+
 /*--------- boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP{
     width: 50px;

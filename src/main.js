@@ -5,10 +5,10 @@ import data from './data/harrypotter/data.js';
 console.log(example, data);
 
 document.getElementById("Boton de inicio").addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-      //"instant"
-    });
-  });  
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+    //"instant"
+  });
+});  
 
