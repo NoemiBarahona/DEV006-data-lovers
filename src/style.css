@@ -1,3 +1,4 @@
+/*--------- contenedor del boton  ---------*/
 .contenedorBoton{
     background: #052D51;  
     text-align: center;
@@ -26,7 +27,7 @@
 /*--------- Imagen del boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP img{
     width: 100%;
-    max-width: 30px;
+    max-width: 1500px;
     margin-bottom: 20px;
     position: relative;
     top: 10px;
