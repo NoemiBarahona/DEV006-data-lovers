@@ -1,0 +1,26 @@
+/*--------- boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: #052D51;
+    position: relative;
+    border-radius: 100%;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/*--------- Color del sensor del boton  ---------*/
+.contenedorBoton .botonInicioHP:hover {
+    background: rgb(255, 255, 255);
+}
+/*--------- Imagen del boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP img{
+    width: 100%;
+    max-width: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+}
