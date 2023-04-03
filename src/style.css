@@ -1,3 +1,11 @@
+/*--------- color del fondo  ---------*/
+body{
+    background: #052D51;  
+    background-image: url("img/Fondo/Fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton{
     background: #052D51;  
@@ -30,5 +38,5 @@
     max-width: 1500px;
     margin-bottom: 20px;
     position: relative;
-    top: 10px;
+    top: 4px;
 }
