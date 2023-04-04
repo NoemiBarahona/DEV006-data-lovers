@@ -88,8 +88,14 @@ body{
    display: flex;
 }
 
+/*h1{
+    color: white;
+}*/
 .bienvenida{
+    color: white;
     width: 50%;
+    text-shadow: white;
+    
 }
 
 .fondoInicial img{
