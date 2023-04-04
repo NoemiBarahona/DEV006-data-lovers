@@ -32,11 +32,53 @@ body{
 .contenedorBoton .botonInicioHP:hover {
     background: rgb(255, 255, 255);
 }
+
 /*--------- Imagen del boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP img{
     width: 100%;
-    max-width: 1500px;
+    max-width: 100px;
     margin-bottom: 20px;
     position: relative;
     top: 4px;
+}
+
+/*--------- Botones de cabecera  ---------*/
+.contenedorBoton .botonInicioLibros,
+.contenedorBoton .botonInicioCasas,
+.contenedorBoton .botonInicioPersonajes,
+.contenedorBoton .botonInicioHechizos,
+.contenedorBoton .botonInicioPociones{
+    font-family: 'Harry Potter', sans-serif;
+    border: none;
+    font-size: 20px;
+    height: 50px;
+    width: 50%;
+    padding: 5px;
+    line-height: 10px;
+    color: rgb(175, 167, 88);
+    background-color: #052D51;
+    border-radius: 15px;
+    position: relative;
+    top: -30px; 
+    cursor: pointer; 
+    margin-left: 40px; 
+}
+
+
+/*--------- fondo de los botones  ---------*/
+.contenedorBoton .botonInicioLibros:hover,
+.contenedorBoton .botonInicioCasas:hover,
+.contenedorBoton .botonInicioPersonajes:hover,
+.contenedorBoton .botonInicioHechizos:hover,
+.contenedorBoton .botonInicioPociones:hover{
+    background: rgb(255, 255, 255);
+}
+
+
+
+/*--------- flexbox del cotenedor de los botones  ---------*/
+.contenedorBoton .flexbox{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20px;
 }
