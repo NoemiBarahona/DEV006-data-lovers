@@ -1,17 +1,27 @@
 /*--------- color del fondo  ---------*/
 body{
     background: #052D51;  
-
 }
 
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton{
-    background: #052D51;  
+    background: #052D51; 
+    height: 120px;
     text-align: center;
     border: none;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    /* z-index: 9999;  */
 }
-
+/* .contenedorBoton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Añade un margen de 20 píxeles para separar el contenido del borde de la ventana 
+  } 
+*/
 /*--------- boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP{
     width: 50px;
@@ -57,9 +67,9 @@ body{
     background-color: #052D51;
     border-radius: 15px;
     position: relative;
-    top: -30px; 
+    top: -20px; 
     cursor: pointer; 
-    margin-left: 40px; 
+    margin: 15px; 
 }
 
 
@@ -77,27 +87,42 @@ body{
 /*--------- flexbox del cotenedor de los botones  ---------*/
 .contenedorBoton .flexbox{
     display: flex;
-    justify-content:space-between;
-    margin-top: 20px;
+    justify-content:center;
+    /* margin-top: 20px; */
 }
 
+/*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial{
+    /* margin: 105px; */
     background-image: url('img/Fondo/FondoPantallaInicio.png');
     background-repeat: no-repeat;
-   background-size: cover;
-   display: flex;
+    background-size: cover;
+    display: flex;
 }
 
-/*h1{
+/*--------- Texto de la pag de bienvenida ---------*/
+.fondoInicial h1 { 
+    background-color: rgba(5, 46, 81, 0.67);
     color: white;
-}*/
+    margin-top: 230px;
+    margin-right: 120px;
+    height: 440px;
+    font-size: 27.5px;
+    text-align: justify;
+
+}
+
+/*--------- Ancho del texto de la pag de bienvenida ---------*/
 .bienvenida{
-    color: white;
     width: 50%;
-    text-shadow: white;
-    
 }
 
+/*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
 .fondoInicial img{
+    margin-top: 60px;
     width: 50%;
+}
+
+.fondoSecundario img{
+    background-repeat: repeat-x;
 }
