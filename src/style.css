@@ -2,10 +2,8 @@
 body{
     background: #052D51;  
 }
-/*--------- Color del sensor del boton  ---------*/
-.contenedorBoton .botonInicioHP:hover {
-    background: rgb(255, 255, 255);
-}
+
+/*--------- contenedor del boton  ---------*/
 .contenedorBoton{
     background: #052D51; 
     height: 120px;
@@ -15,20 +13,16 @@ body{
     top: 0;
     width: 100%;
     left: 0;
-
-    /* Propiedades responsivas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    /* z-index: 9999;  */
 }
-
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .contenedorBoton {
-        height: 80px;
-    }
-}
+/* .contenedorBoton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Añade un margen de 20 píxeles para separar el contenido del borde de la ventana 
+  } 
+*/
+/*--------- boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP{
     width: 50px;
     height: 50px;
@@ -40,65 +34,28 @@ body{
     padding: 5px;
     border: none;
     cursor: pointer;
-
-    /* Propiedades responsivas */
-    margin-top: 10px;
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .contenedorBoton .botonInicioHP {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 16px;
-    }
-}
-.contenedorBoton .botonInicioHP {
-    /* Estilos base */
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 20px;
-    background-color: #052D51;
-    position: relative;
-    border-radius: 100%;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
+/*--------- Color del sensor del boton  ---------*/
+.contenedorBoton .botonInicioHP:hover {
+    background: rgb(255, 255, 255);
 }
 
-.contenedorBoton .botonInicioHP img {
-    /* Estilos de la imagen */
+/*--------- Imagen del boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP img{
     width: 100%;
-    max-width: 80px;
-    margin-bottom: 10px;
+    max-width: 100px;
+    margin-bottom: 20px;
     position: relative;
     top: 4px;
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .contenedorBoton .botonInicioHP {
-        /* Estilos reducidos */
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 16px;
-    }
-    .contenedorBoton .botonInicioHP img {
-        /* Estilos de imagen reducidos */
-        max-width: 60px;
-        margin-bottom: 5px;
-        top: 2px;
-    }
-}
+/*--------- Botones de cabecera  ---------*/
 .contenedorBoton .botonInicioLibros,
 .contenedorBoton .botonInicioCasas,
 .contenedorBoton .botonInicioPersonajes,
 .contenedorBoton .botonInicioHechizos,
-.contenedorBoton .botonInicioPociones {
-    /* Estilos base */
+.contenedorBoton .botonInicioPociones{
     font-family: 'Harry Potter', sans-serif;
     border: none;
     font-size: 20px;
@@ -115,23 +72,20 @@ body{
     margin: 15px; 
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .contenedorBoton .botonInicioLibros,
-    .contenedorBoton .botonInicioCasas,
-    .contenedorBoton .botonInicioPersonajes,
-    .contenedorBoton .botonInicioHechizos,
-    .contenedorBoton .botonInicioPociones {
-        /* Estilos reducidos */
-        font-size: 16px;
-        height: 40px;
-        width: 80%;
-        border-radius: 10px;
-        top: -10px; 
-        margin: 10px;
-    }
+
+/*--------- fondo de los botones  ---------*/
+.contenedorBoton .botonInicioLibros:hover,
+.contenedorBoton .botonInicioCasas:hover,
+.contenedorBoton .botonInicioPersonajes:hover,
+.contenedorBoton .botonInicioHechizos:hover,
+.contenedorBoton .botonInicioPociones:hover{
+    background: rgb(255, 255, 255);
 }
-.contenedorBoton .flexbox {
+
+
+
+/*--------- flexbox del cotenedor de los botones  ---------*/
+.contenedorBoton .flexbox{
     display: flex;
     justify-content:center;
     /* margin-top: 20px; */
@@ -140,68 +94,35 @@ body{
 /*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial{
     /* margin: 105px; */
-    background-image: url('img/Fondo/FondoCompleto1.png');
+    background-image: url('img/Fondo/FondoPantallaInicio.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .fondoInicial {
-        /* Ajustar tamaño de la imagen de fondo */
-        background-size: contain;
-        background-position: center;
-        /* Ajustar margen */
-        margin: 50px;
-    }
-}
+/*--------- Texto de la pag de bienvenida ---------*/
 .fondoInicial h1 { 
     background-color: rgba(5, 46, 81, 0.67);
     color: white;
-    margin-top: 10%;
-    margin-right: 5%;
-    height: auto;
-    font-size: 22px;
+    margin-top: 230px;
+    margin-right: 120px;
+    height: 440px;
+    font-size: 27.5px;
     text-align: justify;
-    padding: 40px;
+
 }
 
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .fondoInicial h1 {
-        margin-top: 15%;
-        margin-right: 10%;
-        font-size: 18px;
-        padding: 20px;
-    }
-}
+/*--------- Ancho del texto de la pag de bienvenida ---------*/
 .bienvenida{
-    width: 80%;
-    margin: 0 auto; /* centra horizontalmente el elemento */
+    width: 50%;
 }
 
-/* Margen y ancho del logo */
+/*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
 .fondoInicial img{
-    margin-top: 10%;
-    width: 80%;
+    margin-top: 60px;
+    width: 50%;
 }
 
-/* Ancho de la imagen de fondo */
 .fondoSecundario img{
-    width: 100%;
     background-repeat: repeat-x;
-}
-
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .bienvenida {
-        width: 90%;
-    }
-
-    /* Margen y ancho del logo */
-    .fondoInicial img{
-        margin-top: 20%;
-        width: 90%;
-    }
 }
