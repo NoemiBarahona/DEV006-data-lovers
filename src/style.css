@@ -1,6 +1,7 @@
 /*--------- color del fondo  ---------*/
 body{
     background: #052D51;  
+    background-image: url('img/Fondo/Fondo2000x6000.png');
 }
 
 /*--------- contenedor del boton  ---------*/
@@ -94,7 +95,7 @@ body{
 /*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial{
     /* margin: 105px; */
-    background-image: url('img/Fondo/FondoPantallaInicio.png');
+
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -107,7 +108,7 @@ body{
     margin-top: 230px;
     margin-right: 120px;
     height: 440px;
-    font-size: 27.5px;
+    font-size: 2em;
     text-align: justify;
 
 }
