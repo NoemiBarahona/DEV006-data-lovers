@@ -34,7 +34,7 @@ document.getElementById("botonInicioPersonajes").addEventListener('click', funct
   });
 });  
 // Funcionalidad para el boton de hechizos
-document.getElementById("botonInicioHecizos").addEventListener('click', function() {//aqui se llama el id del boton 
+document.getElementById("botonInicioHechizos").addEventListener('click', function() {//aqui se llama el id del boton 
   window.scrollTo({// atributo de mover por la pagina
     top: document.getElementById("PORDEFINIR").offsetTop,
     behavior: "smooth"
