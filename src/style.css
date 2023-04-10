@@ -3,7 +3,7 @@ body {
     background: #052D51;
     background-image: url('img/Fondo/Fondo2000x6000.png');
     background-size: cover;
-    }
+}
 
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
@@ -115,6 +115,7 @@ body {
     text-align: justify;
 
 }
+
 /* --------- Ancho del texto de la pag de bienvenida ---------
 .bienvenida {
     width: 500vw;
@@ -146,7 +147,8 @@ body {
     transition: transform 1s ease-in-out;
   }
   
-  .primerLibroPortada {
+  .primerLibroPortada,
+  .tooltip  {
     background-image: url('img/Libros/piedraFilosofal.jpg');
     background-size: cover;
     transform-origin: center center;
@@ -159,11 +161,21 @@ body {
     transform: rotateY(-180deg);
     backface-visibility: hidden;
   }
-  
+
+  .tooltip {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+  }
   .paginaLibros:hover .primerLibroPortada {
     transform: rotateY(180deg);
   }
   
-  .paginaLibros:hover .primerLibroInformacion {
+  .paginaLibros:hover .tooltip .primerLibroInformacion {
+    display: block;
     transform: rotateY(0deg);
   }
