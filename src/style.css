@@ -15,7 +15,7 @@ body {
     top: 0;
     width: 100vw;
     left: 0;
-    /* z-index: 9999;  */
+    z-index: 10; 
 }
 
 /* .contenedorBoton {
@@ -128,3 +128,85 @@ body {
 /* .fondoSecundario img {
     background-repeat: repeat-x;
 } */
+
+/*--------- Contenedor de los libro ---------*/
+.paginaLibros {
+    width: -30vw;
+    max-width : 10vw;
+    /* padding: 40vw 20vw; */
+    display: flex;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: -50vw 50vw 0vw 0vw;
+    flex-direction: column;
+    /*align es para centar el contenido que trbaja con el flex*/
+    align-items: center;
+}
+
+/*--------- Detalles de los libros ---------*/
+.librosportada {
+    width: 5vw;
+    max-width: 50vw;
+    /*para la animacion quede detras y no quede debajo*/
+    position: relative;
+    color: white;
+    /*Para realizar la transicion imagen a la info*/
+    transition: .3s ease all;
+    /*Para que no se rote la imagen*/
+    transform: rotateY(0deg);
+    /*Para que se vea el reverso de la imagen*/
+    transform-style: preserve-3d;
+    /*Para que la parte de atras este invisible mientras se ve la imagen*/
+    backface-visibility: hidden;
+    cursor: pointer;
+} 
+
+/*--------- Para rotar la tarjeta ---------*/
+.librosportada .active{ 
+    transform: rotateY(180deg); 
+}
+
+/*--------- Detalles del div de libros ---------*/
+.librosportada > div{
+    padding: 30vw;
+    border-radius: 15vw;
+    min-height: -315vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.librosportada .portada {
+    width: 100vw;
+    background: url(/img/Libros/piedraFilosofal.jpg);
+    background-size: cover;
+}
+
+/*--------- Detalles de la portada de los libros ---------*/
+.librosinformacion .portada{
+    width: 100vw;
+}
+
+/*--------- Caja flexbox de las portada ---------*/
+.portada .flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20vw;
+}
+
+/*--------- Detalles de la parte de atras de la información ---------*/
+.librosinformacion {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+
+/* .primerLibro,
+.segundoLibro,
+.tercerLibro,
+.cuartoLibro,
+.quientoLibro, 
+.sectoLibro,
+.septimoLibro { */
