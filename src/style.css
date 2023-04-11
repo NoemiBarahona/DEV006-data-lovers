@@ -126,9 +126,6 @@ body {
     width: 50vw;
 }
 
-/* .fondoSecundario img {
-    background-repeat: repeat-x;
-} */
 
 .libros {
   display: flex;
@@ -140,7 +137,7 @@ body {
 /* Para los libros individuales */
 .libro-portada {
   flex: 1 0 22vw;
-  margin: 1vw;
+  margin: 0vw;
   text-align: center;
 }
 
@@ -149,8 +146,9 @@ body {
 }
 
 #libros img {
-  width: 20vw;
-  height: auto;
+  width: 13vw;
+  height: 20vw;
+  margin: 0 4vw;
 }
 
 #libros div:hover img {
@@ -163,8 +161,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20vw;
-  height: 31.7vw;
+  width: 13vw;
+  height: 20vw;
+  margin: 0 4vw;
   background-color: rgba(5, 46, 81, 0.67);
   /* transform: rotateY(180deg);
   transition: transform 1s ease-in-out; */
