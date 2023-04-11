@@ -171,6 +171,19 @@ body {
     display: none;
     z-index: 6;
   }
+<<<<<<< HEAD
+=======
+
+  .tooltip {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+  }
+>>>>>>> 9f1f4a670e240979684233e14e8cb52be07eea3d
   .paginaLibros:hover .primerLibroPortada {
     transform: rotateY(90deg);
   }
