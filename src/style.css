@@ -3,7 +3,7 @@ body {
     background: #052D51;
     background-image: url('img/Fondo/Fondo2000x6000.png');
     background-size: cover;
-    }
+}
 
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
@@ -115,6 +115,7 @@ body {
     text-align: justify;
 
 }
+
 /* --------- Ancho del texto de la pag de bienvenida ---------
 .bienvenida {
     width: 500vw;
@@ -128,10 +129,12 @@ body {
 /* .fondoSecundario img {
     background-repeat: repeat-x;
 } */
+
+
 .paginaLibros {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 50vw;
+    height: 50vw;
   }
   
   .primerLibroPortada,
@@ -139,29 +142,40 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s ease-in-out;
+    width: 25vw;
+    height: 25vw;
+    transition: transform 3s ease-in-out;
   }
   
-  .primerLibroPortada {
+  .primerLibroPortada,
+  .tooltip  {
     background-image: url('img/Libros/piedraFilosofal.jpg');
     background-size: cover;
     transform-origin: center center;
   }
   
-  .primerLibroInformacion {
+  /* .primerLibroInformacion {
     background-image: url('img/Libros/calizDeFuego.jpg');
     background-size: cover;
     transform-origin: center center;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
+  } */
+
+  .tooltip {
+    background-color: black;
+    color: white;
+    font-size: 6vw;
+    padding: 2vw;
+    border-radius: 2vw;
+    display: none;
+    z-index: 6;
   }
-  
   .paginaLibros:hover .primerLibroPortada {
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
   }
   
-  .paginaLibros:hover .primerLibroInformacion {
+  .paginaLibros:hover .tooltip .primerLibroInformacion {
+    display: block;
     transform: rotateY(0deg);
   }
