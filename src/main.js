@@ -54,7 +54,8 @@ infoLibros.addEventListener('click', function(event){
     const valor = event.target.getAttribute('value');
     const id = event.target.id;
     let titulo = data.books[valor].title;
-    infoLibros.innerText = titulo;
+    let fechaLanzamiento = data.books[valor].releaseDay;
+    infoLibros.innerText = titulo + fechaLanzamiento;
     console.log("Valor: ", valor);
     console.log("ID: ", id);
   }
