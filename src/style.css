@@ -130,65 +130,43 @@ body {
     background-repeat: repeat-x;
 } */
 
+.libros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-.paginaLibros {
-    position: relative;
-    width: 50vw;
-    height: 50vw;
-  }
-  
-  .primerLibroPortada,
-  .primerLibroInformacion {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25vw;
-    height: 25vw;
-    transition: transform 3s ease-in-out;
-  }
-  
-  .primerLibroPortada,
-  .tooltip  {
-    background-image: url('img/Libros/piedraFilosofal.jpg');
-    background-size: cover;
-    transform-origin: center center;
-  }
-  
-  /* .primerLibroInformacion {
-    background-image: url('img/Libros/calizDeFuego.jpg');
-    background-size: cover;
-    transform-origin: center center;
-    transform: rotateY(-180deg);
-    backface-visibility: hidden;
-  } */
+/* Para los libros individuales */
+.libro-portada {
+  flex: 1 0 22vw;
+  margin: 1vw;
+  text-align: center;
+}
 
-  .tooltip {
-    background-color: black;
-    color: white;
-    font-size: 6vw;
-    padding: 2vw;
-    border-radius: 2vw;
-    display: none;
-    z-index: 6;
-  }
-<<<<<<< HEAD
-=======
+#libros div {
+  position: relative;
+}
 
-  .tooltip {
-    background-color: black;
-    color: white;
-    font-size: 12px;
-    padding: 5px;
-    border-radius: 5px;
-    display: none;
-    z-index: 1;
-  }
->>>>>>> 9f1f4a670e240979684233e14e8cb52be07eea3d
-  .paginaLibros:hover .primerLibroPortada {
-    transform: rotateY(90deg);
-  }
-  
-  .paginaLibros:hover .tooltip .primerLibroInformacion {
-    display: block;
-    transform: rotateY(0deg);
-  }
+#libros img {
+  width: 20vw;
+  height: auto;
+}
+
+#libros div:hover img {
+  transform: rotateY(90deg);
+  transition: transform 1s ease-in-out;
+}
+
+#libros div:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 31.7vw;
+  background-color: rgba(5, 46, 81, 0.67);
+  /* transform: rotateY(180deg);
+  transition: transform 1s ease-in-out; */
+}
+
