@@ -49,19 +49,26 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
 });
 
 const infoLibros = document.getElementById("libros");
-infoLibros.addEventListener('click', function(event){
+const infoLibro = document.createElement("p");
+infoLibro.classList.add("info-libro");
+infoLibros.addEventListener('mouseover', function(event){
   if(event.target.classList.contains("LibroPortada")){
     const valor = event.target.getAttribute('value');
     const id = event.target.id;
-    let titulo = data.books[valor].title;
-    let fechaLanzamiento = data.books[valor].releaseDay;
-    infoLibros.innerText = titulo + fechaLanzamiento;
-    console.log("Valor: ", valor);
-    console.log("ID: ", id);
+    const titulo = data.books[valor].title;
+    const fechaLanzamiento = data.books[valor].releaseDay;
+    let libro= document.getElementById(id);
+    infoLibro.innerText = titulo + " " + fechaLanzamiento;
+    libro.appendChild(infoLibro);
   }
-  
-}
-);
+});
+infoLibros.addEventListener('mouseout', function(event){
+  if(event.target.classList.contains("LibroPortada")){
+  const id = event.target.id;
+  let libro= document.getElementById(id);
+  libro.removeChild(infoLibro);
+  }
+});
 // primerLibroTooltip.addEventListener('click', function () {
 //   const A = document.getElementById('primerLibroTooltip');
 //   let i = primerLibroTooltip.getAttribute('value')
