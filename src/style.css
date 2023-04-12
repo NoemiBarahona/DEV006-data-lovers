@@ -125,9 +125,9 @@ body {
     margin-top: 8vw;
     width: 50vw;
 }
-
-
+/*--------- Pagina de los libros ---------*/
 .libros {
+  color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,25 +135,41 @@ body {
 }
 
 /* Para los libros individuales */
-.libro-portada {
-  flex: 1 0 22vw;
+.libroPortada, .librosInfo {
+  flex: -1 0 22vw;
   margin: 0vw;
   text-align: center;
+}
+.info-libro {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-100%);
+  background:  rgba(5, 46, 81, 0.67);
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  z-index: 1;
+  width: 12vw;
+  height: 18vw;
+  margin: 0 4vw;  
+   /* Para asegurarse de que el texto esté por encima de la imagen */
 }
 
 #libros div {
   position: relative;
 }
 
-#libros img {
+#libros img{
   width: 13vw;
   height: 20vw;
-  margin: 0 4vw;
+  margin: 0 4vw;  
 }
 
 #libros div:hover img {
   transform: rotateY(90deg);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 #libros div:hover::before {
@@ -165,7 +181,8 @@ body {
   height: 20vw;
   margin: 0 4vw;
   background-color: rgba(5, 46, 81, 0.67);
+
+  
   /* transform: rotateY(180deg);
   transition: transform 1s ease-in-out; */
 }
-
