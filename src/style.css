@@ -1,173 +1,155 @@
-/*--------- color del fondo  ---------*/
+/* Color del fondo */
 body {
-    background: #052D51;
-    background-image: url('img/Fondo/Fondo2000x6000.png');
-    background-size: cover;
+  background: #052D51;
+  background-image: url('img/Fondo/Fondo2000x6000.png');
+  background-size: cover;
 }
 
-/*--------- contenedor del boton  ---------*/
+/* Contenedor del botón */
 .contenedorBoton {
-    background: #052D51;
-    height: 10vw;
-    text-align: center;
-    border: none;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    left: 0;
-    z-index: 10;
+  background: #052D51;
+  height: 10vw;
+  text-align: center;
+  border: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
 }
 
-/* .contenedorBoton {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 20px; /* Añade un margen de 20 píxeles para separar el contenido del borde de la ventana
-  }
-*/
-/*--------- boton de inicio  ---------*/
+/* Botón de inicio */
 .contenedorBoton .botonInicioHP {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
-    line-height: 2.5vw;
-    background-color: #052D51;
-    position: relative;
-    border-radius: 12.5vw;
-    padding: 0.65vw;
-    border: none;
-    cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  background-color: #052D51;
+  position: relative;
+  border-radius: 12.5vw;
+  padding: 0.65vw;
+  border: none;
+  cursor: pointer;
 }
 
-/*--------- Color del sensor del boton  ---------*/
+/* Color del sensor del botón */
 .contenedorBoton .botonInicioHP:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
-/*--------- Imagen del boton de inicio  ---------*/
+/* Imagen del botón de inicio */
 .contenedorBoton .botonInicioHP img {
-    width: 4vw;
-    max-width: 4vw;
-    margin-bottom: 1.5vw;
-    position: relative;
-    top: 0.3vw;
+  width: 4vw;
+  max-width: 4vw;
+  margin-bottom: 1.5vw;
+  position: relative;
+  top: 0.3vw;
 }
 
-/*--------- Botones de cabecera  ---------*/
+/* Botones de cabecera */
 .contenedorBoton .botonInicioLibros,
 .contenedorBoton .botonInicioCasas,
 .contenedorBoton .botonInicioPersonajes,
 .contenedorBoton .botonInicioHechizos,
 .contenedorBoton .botonInicioPociones {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    /* padding: 0vw; */
-    line-height: 4vw;
-    color: rgb(175, 167, 88);
-    background-color: #052D51;
-    border-radius: 1vw;
-    /* position: relative; */
-    top: -2vw;
-    cursor: pointer;
-    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 13vw;
+  line-height: 4vw;
+  color: rgb(175, 167, 88);
+  background-color: #052D51;
+  border-radius: 1vw;
+  top: -2vw;
+  cursor: pointer;
+  margin: 0vw 6vw 0vw 6vw;
 }
 
-
-/*--------- fondo de los botones  ---------*/
+/* Fondo de los botones */
 .contenedorBoton .botonInicioLibros:hover,
 .contenedorBoton .botonInicioCasas:hover,
 .contenedorBoton .botonInicioPersonajes:hover,
 .contenedorBoton .botonInicioHechizos:hover,
 .contenedorBoton .botonInicioPociones:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
-
-
-/*--------- flexbox del cotenedor de los botones  ---------*/
+/* Flexbox del contenedor de los botones */
 .contenedorBoton .flexbox {
-    display: flex;
-    justify-content: center;
-    /* margin-top: 20px; */
+  display: flex;
+  justify-content: center;
 }
 
-/*--------- Fondo de la pag de bienvenida ---------*/
+/* Fondo de la página de bienvenida */
 .fondoInicial {
-    /* margin: 105px; */
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
 }
 
-/*--------- Texto de la pag de bienvenida ---------*/
+/* Texto de la página de bienvenida */
 .fondoInicial h1 {
-    background-color: rgba(5, 46, 81, 0.67);
-    color: white;
-    margin-top: 15vw;
-    margin-right: 5vw;
-    height: 33vw;
-    font-size: 2vw;
-    text-align: justify;
-
+  background-color: rgba(5, 46, 81, 0.67);
+  color: white;
+  margin-top: 15vw;
+  margin-right: 5vw;
+  height: 33vw;
+  font-size: 2vw;
+  text-align: justify;
 }
 
-/* --------- Ancho del texto de la pag de bienvenida ---------
+/* Ancho del texto de la página de bienvenida */
 .bienvenida {
-    width: 500vw;
-} */
-/*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
-.fondoInicial img {
-    margin-top: 8vw;
-    width: 50vw;
+  width: 500vw;
 }
-/*--------- Pagina de los libros ---------*/
+
+/* Margen y ancho de la página de bienvenida (Logo) */
+.fondoInicial img {
+  margin-top: 8vw;
+  width: 50vw;
+}
+
+/* Página de los libros */
 .libros {
   color: white;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Añadida propiedad flex-wrap: wrap para envolver en varias filas */
   justify-content: center;
   align-items: center;
 }
 
 /* Para los libros individuales */
 .LibroPortada, .librosInfo {
-  flex: -1 0 22vw;
-  margin: 0vw;
+  flex: 0 0 22vw;
+  margin: 0 2vw;
   text-align: center;
-  
 }
+
 .info-libro {
   position: absolute;
   left: 0;
   top: 100%;
   transform: translateY(-100%);
-  /* background:  rgba(5, 46, 81, 0.67); */
-  /* padding: 1vw; */
   font-family: Arial, sans-serif;
   font-size: 0.8vw;
   line-height: 1.2;
   z-index: 1;
   width: 13vw;
   height: 20vw;
-  margin: 0 4vw; 
-   /* Para asegurarse de que el texto esté por encima de la imagen */
+  margin: 0 2vw;
 }
 
 #libros div {
   position: relative;
 }
 
-#libros img{
+#libros img {
   width: 13vw;
   height: 20vw;
-  margin: 0 4vw;  
+  margin: 0 4vw;
+  flex: 0 0 13vw; /* Añadida propiedad flex: 0 0 13vw para ajustar el ancho */
 }
-
 #libros div:hover img {
   transform: rotateY(90deg);
   transition: transform 0s ease-in-out;
@@ -180,11 +162,11 @@ body {
   left: 0;
   width: 13vw;
   height: 20vw;
-  margin: 0 4vw;
+  margin: 0 2vw;
   background-color: rgba(5, 46, 81, 0.67);
 }
 
-/*--------- Pagina de los personajes ---------*/
+/* Página de los personajes */
 .personajes {
   color: white;
   display: flex;
@@ -193,37 +175,36 @@ body {
   align-items: center;
 }
 
-/* Para los libros individuales */
+/* Para los personajes individuales */
 /* .personaje, .librosInfo {
-  flex: -1 0 22vw;
-  margin: 0vw;
+  flex: 0 0 22vw;
+  margin: 0 2vw;
   text-align: center;
-} 
+}
+
 .info-libro {
   position: absolute;
   left: 0;
   top: 100%;
   transform: translateY(-100%);
-  /* background:  rgba(5, 46, 81, 0.67); */
-  /* padding: 1vw; 
   font-family: Arial, sans-serif;
   font-size: 0.8vw;
   line-height: 1.2;
   z-index: 1;
   width: 13vw;
   height: 20vw;
-  margin: 0 4vw; 
-   /* Para asegurarse de que el texto esté por encima de la imagen 
-}
-*/
+  margin: 0 2vw;
+} */
+
 #personajes div {
   position: relative;
 }
 
-#personajes img{
+#personajes img {
   width: 20vw;
-  height: 20vw;
-  margin: 0 2vw;  
+  height: auto;
+  margin: 0 4vw;
+  flex: 0 0 20vw; /* Añadida propiedad flex: 0 0 20vw para ajustar el ancho */
 }
 
 #personajes div:hover img {
