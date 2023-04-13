@@ -139,6 +139,7 @@ body {
   flex: -1 0 22vw;
   margin: 0vw;
   text-align: center;
+  
 }
 .info-libro {
   position: absolute;
@@ -180,5 +181,63 @@ body {
   width: 13vw;
   height: 20vw;
   margin: 0 4vw;
+  background-color: rgba(5, 46, 81, 0.67);
+}
+
+/*--------- Pagina de los personajes ---------*/
+.personajes {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Para los libros individuales */
+/* .personaje, .librosInfo {
+  flex: -1 0 22vw;
+  margin: 0vw;
+  text-align: center;
+} 
+.info-libro {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-100%);
+  /* background:  rgba(5, 46, 81, 0.67); */
+  /* padding: 1vw; 
+  font-family: Arial, sans-serif;
+  font-size: 0.8vw;
+  line-height: 1.2;
+  z-index: 1;
+  width: 13vw;
+  height: 20vw;
+  margin: 0 4vw; 
+   /* Para asegurarse de que el texto esté por encima de la imagen 
+}
+*/
+#personajes div {
+  position: relative;
+}
+
+#personajes img{
+  width: 20vw;
+  height: 20vw;
+  margin: 0 2vw;  
+}
+
+#personajes div:hover img {
+  transform: rotateY(90deg);
+  transition: transform 0s ease-in-out;
+}
+
+#personajes div:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 2vw;
   background-color: rgba(5, 46, 81, 0.67);
 }
