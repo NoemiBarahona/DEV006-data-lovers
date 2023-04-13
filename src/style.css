@@ -128,7 +128,6 @@ body {
 /*--------- Pagina de los libros ---------*/
 .libros {
   color: white;
-  color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -136,7 +135,7 @@ body {
 }
 
 /* Para los libros individuales */
-.libroPortada, .librosInfo {
+.LibroPortada, .librosInfo {
   flex: -1 0 22vw;
   margin: 0vw;
   text-align: center;
@@ -146,31 +145,15 @@ body {
   left: 0;
   top: 100%;
   transform: translateY(-100%);
-  background:  rgba(5, 46, 81, 0.67);
-  padding: 10px;
+  /* background:  rgba(5, 46, 81, 0.67); */
+  /* padding: 1vw; */
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.8vw;
   line-height: 1.2;
   z-index: 1;
-  width: 12vw;
-  height: 18vw;
-  margin: 0 4vw;  
-   /* Para asegurarse de que el texto esté por encima de la imagen */
-}
-.info-libro {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  transform: translateY(-100%);
-  background:  rgba(5, 46, 81, 0.67);
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
-  z-index: 1;
-  width: 12vw;
-  height: 18vw;
-  margin: 0 4vw;  
+  width: 13vw;
+  height: 20vw;
+  margin: 0 4vw; 
    /* Para asegurarse de que el texto esté por encima de la imagen */
 }
 
@@ -182,13 +165,11 @@ body {
   width: 13vw;
   height: 20vw;
   margin: 0 4vw;  
-  margin: 0 4vw;  
 }
 
 #libros div:hover img {
   transform: rotateY(90deg);
-  transition: transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0s ease-in-out;
 }
 
 #libros div:hover::before {
@@ -200,10 +181,4 @@ body {
   height: 20vw;
   margin: 0 4vw;
   background-color: rgba(5, 46, 81, 0.67);
-
-  
-
-  
-  /* transform: rotateY(180deg);
-  transition: transform 1s ease-in-out; */
 }
