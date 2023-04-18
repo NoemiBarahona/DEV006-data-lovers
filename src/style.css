@@ -6,9 +6,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.navbar-close {
+/* .navbar-close {
   display: flex;
-}
+  display: none;
+} */
 
 /* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
@@ -24,7 +25,7 @@ body {
   .contenedorBoton .botonInicioPersonajes,
   .contenedorBoton .botonInicioHechizos,
   .contenedorBoton .botonInicioPociones {
-    display: block;
+    display: none;
     /* Hace que los botones desaparezcan en pantallas pequeñas */
   }
 
@@ -54,13 +55,18 @@ body {
   }
 
 }
+
+.navbar-open {
+  display: flex;
+  flex-direction: column;
+}
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
   height: 10vw;
   text-align: center;
   border: none;
-  position: fixed;
+  /* position: absolute; */
   top: 0;
   width: 100vw;
   left: 0;
@@ -405,7 +411,7 @@ body {
   width: 20vw;
   height: 20vw;
   margin: 0 2vw;
-} */
+} 
 
 /* @media (max-width: 470px) {
   .libros {
@@ -421,9 +427,4 @@ body {
     width: 100%;
     height: 80%;
 
-  }  */
-
-.navbar-open {
-  display: flex;
-  flex-direction: column;
-}
+  } */

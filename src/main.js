@@ -52,7 +52,7 @@ botonHamburguesa.addEventListener("click", () => {
 const infoDataLibro = document.createElement("p");
 infoDataLibro.classList.add("info-libro");
 
-document.querySelectorAll(".libroPortada").forEach(function(libro) {
+document.querySelectorAll(".libroPortada").forEach(function (libro) {
   libro.addEventListener('mouseover', function () {
     const valor = libro.getAttribute('value');
     const titulo = data.books[valor].title;
@@ -72,10 +72,10 @@ document.querySelectorAll(".libroPortada").forEach(function(libro) {
     libro.removeChild(infoDataLibro);
 
     // Esperar a que se complete la transición y luego agregar la clase 'mostrar-info'
-    libro.querySelector('img').addEventListener('transitionend', function() {
+    libro.querySelector('img').addEventListener('transitionend', function () {
       libro.querySelector('img').classList.remove('rotar');
       libro.classList.remove('mostrar-info');
-    }, {once: true});
+    }, { once: true });
 
     // Agregar la clase 'mostrar-info' a la capa contenedora del libro
     libro.classList.add('mostrar-info');
@@ -85,11 +85,11 @@ document.querySelectorAll(".libroPortada").forEach(function(libro) {
 const infoDataPersonaje = document.createElement("p");
 infoDataPersonaje.classList.add("info-personaje");
 
-document.querySelectorAll(".personaje").forEach(function(personaje) {
-  
+document.querySelectorAll(".personaje").forEach(function (personaje) {
+
   personaje.addEventListener('mouseover', function () {
-    
-    const nombreId= personaje.getAttribute('id')
+
+    const nombreId = personaje.getAttribute('id')
     const personajeData = data.characters.find(personaje => personaje.name === nombreId);
     let nombre;
     let fechaNacimiento;
@@ -98,43 +98,36 @@ document.querySelectorAll(".personaje").forEach(function(personaje) {
     let patronusPersonaje;
     let casa;
     let ancestros;
-  
-    if(personajeData){
-      nombre= personajeData.name;
+
+    if (personajeData) {
+      nombre = personajeData.name;
       fechaNacimiento = personajeData.birth;
-      if(fechaNacimiento===null)
-      {
-        fechaNacimiento="Desconocida";
+      if (fechaNacimiento === null) {
+        fechaNacimiento = "Desconocida";
       }
-      
+
       muerte = personajeData.death;
-      if(muerte===null)
-      {
-        muerte="Alive";
+      if (muerte === null) {
+        muerte = "Alive";
       }
-      else
-      {
-        muerte= "Died on "+ personajeData.death;
+      else {
+        muerte = "Died on " + personajeData.death;
       }
       genero = personajeData.gender;
-      if(genero===null)
-      {
-        genero="Desconocido";
+      if (genero === null) {
+        genero = "Desconocido";
       }
       patronusPersonaje = personajeData.patronus;
-      if(patronusPersonaje===null)
-      {
-        patronusPersonaje="Desconocido";
+      if (patronusPersonaje === null) {
+        patronusPersonaje = "Desconocido";
       }
       casa = personajeData.house;
-      if(casa===null)
-      {
-        casa ="Desconocida";
+      if (casa === null) {
+        casa = "Desconocida";
       }
       ancestros = personajeData.ancestry;
-      if( ancestros===null)
-      {
-        ancestros ="Desconocida";
+      if (ancestros === null) {
+        ancestros = "Desconocida";
       }
 
       infoDataPersonaje.innerText = "Name: " + nombre + "\n" + "Birth: " + fechaNacimiento + "\n" + "Status: " + muerte + "\n" + "Gender: " + genero + "\n" + "Patronus: " + patronusPersonaje + "\n" + "House: " + casa + "\n" + "Ancestry: " + ancestros;
@@ -149,10 +142,10 @@ document.querySelectorAll(".personaje").forEach(function(personaje) {
     personaje.removeChild(infoDataPersonaje);
 
     // Esperar a que se complete la transición y luego agregar la clase 'mostrar-info'
-    personaje.querySelector('img').addEventListener('transitionend', function() {
+    personaje.querySelector('img').addEventListener('transitionend', function () {
       personaje.querySelector('img').classList.remove('rotar');
       personaje.classList.remove('mostrar-info');
-    }, {once: true});
+    }, { once: true });
 
     // Agregar la clase 'mostrar-info' a la capa contenedora del libro
     personaje.classList.add('mostrar-info');
