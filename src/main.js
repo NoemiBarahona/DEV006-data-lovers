@@ -1,4 +1,4 @@
-import { example } from './data.js';
+// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -15,13 +15,6 @@ document.getElementById("botonInicioHP").addEventListener('click', function () {
 document.getElementById("botonInicioLibros").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
     top: document.getElementById("libros").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
-    behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
-  });
-});
-// Funcionalidad para el boton de casas
-document.getElementById("botonInicioCasas").addEventListener('click', function () { //aqui se llama el id del boton
-  window.scrollTo({ // atributo de mover por la pagina
-    top: document.getElementById("").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -46,6 +39,14 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
     top: document.getElementById("PORDEFINIR").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
+});
+const botonHamburguesa = document.getElementById("botonHamburguesa");
+const contenedorBoton = document.getElementById("navbar");
+// const flexbox = document.querySelector(".flexbox");
+
+botonHamburguesa.addEventListener("click", () => {
+  contenedorBoton.classList.toggle("navbar-open");
+  // flexbox.classList.toggle("oculto");
 });
 
 const infoDataLibro = document.createElement("p");

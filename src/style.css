@@ -3,8 +3,57 @@ body {
   background: #052D51;
   background-image: url('img/Fondo/Fondo2000x6000.png');
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar-close {
+  display: flex;
 }
 
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+
+  .navbar-close {
+    display: flex;
+    display: none;
+  }
+
+  /* Selector para los botones del otro header dentro del media query */
+  .contenedorBoton .botonInicioLibros,
+  .contenedorBoton .botonInicioCasas,
+  .contenedorBoton .botonInicioPersonajes,
+  .contenedorBoton .botonInicioHechizos,
+  .contenedorBoton .botonInicioPociones {
+    display: block;
+    /* Hace que los botones desaparezcan en pantallas pequeñas */
+  }
+
+  /* Estilos para el menú hamburguesa */
+  .botonHamburguesa {
+    display: block;
+    margin: 0 10px;
+    border: 1px;
+    background-color: #052D51;
+    cursor: pointer;
+  }
+
+  /* Estilos para los tres iconos del menú hamburguesa */
+  .botonHamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 0VW;
+  }
+
+}
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
@@ -18,13 +67,6 @@ body {
   z-index: 10;
 }
 
-/* .contenedorBoton {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 20px; /* Añade un margen de 20 píxeles para separar el contenido del borde de la ventana
-  }
-*/
 /*--------- boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP {
   width: 5vw;
@@ -92,7 +134,7 @@ body {
   max-width: 4vw;
   margin-bottom: 1.5vw;
   position: relative;
-  top: 0.3vw;
+  top: 0.5vw;
 }
 
 /*--------- Botones de cabecera  ---------*/
@@ -107,11 +149,11 @@ body {
   height: 3vw;
   width: 13vw;
   /* padding: 0vw; */
-  line-height: 4vw;
+  line-height: 4vw; /*interlineado*/
   color: rgb(175, 167, 88);
   background-color: #052D51;
   border-radius: 1vw;
-  /* position: relative; */
+  position: relative;
   top: -2vw;
   cursor: pointer;
   /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
@@ -134,7 +176,7 @@ body {
 .contenedorBoton .flexbox {
   display: flex;
   justify-content: center;
-  /* margin-top: 20px; */
+  margin-top: 0vw;
 }
 
 /*--------- Fondo de la pag de bienvenida ---------*/
@@ -155,17 +197,20 @@ body {
   height: 33vw;
   font-size: 2vw;
   text-align: justify;
-
 }
 
-/* --------- Ancho del texto de la pag de bienvenida ---------
+/* --------- Ancho del texto de la pag de bienvenida ---------*/
 .bienvenida {
-    width: 500vw;
-} */
+  width: 500vw;
+  display: flex;
+  flex-wrap: wrap;
+} 
+
 /*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
 .fondoInicial img {
   margin-top: 8vw;
   width: 50vw;
+  flex-wrap: wrap;
 }
 
 .tituloBooks,
@@ -192,32 +237,58 @@ body {
 .libros {
   color: white;
   display: flex;
-  flex-wrap: wrap !important;
+  flex-wrap: wrap;
   /* Añadida propiedad flex-wrap: wrap para envolver en varias filas */
   justify-content: center;
   align-items: center;
 }
 
 /* Para los libros individuales */
-.libroPortada,
-.librosInfo {
-  flex: 0 0 22vw;
-  margin: 0 2vw;
-  text-align: center;
+.libroPortada {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.libroPortada img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.libroPortada.girar img {
+  transform: rotateY(-180deg);
+  transform-origin: left;
 }
 
+.libroPortada:hover img {
+  transform: rotateY(180deg);
+}
 .info-libro {
   position: absolute;
+  top: 0;
   left: 0;
-  top: 100%;
-  transform: translateY(-100%);
-  font-family: Arial, sans-serif;
-  font-size: 0.8vw;
-  line-height: 1.2;
-  z-index: 1;
-  width: 13vw;
-  height: 20vw;
-  margin: 0 2vw;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(5, 46, 81, 0.67);
+  color: #fff;
+  transform: rotateY(180deg);
+  transform-origin: left;
+  transition: transform 1s ease;
+  font-size: 12px;
+}
+.libroPortada:hover .info-libro {
+  transform: rotateY(0deg);
+}
+
+.libroPortada.mostrar-info .info-libro {
+  transform: rotateY(0deg);
+  transform-origin: center;
 }
 
 .info-personaje {
@@ -244,7 +315,7 @@ body {
  }
 
 
-#libros div {
+/* #libros div {
   position: relative;
 }
 
@@ -254,7 +325,7 @@ body {
   margin: 0 2vw;
   flex: 0 0 13vw;
   /* Añadida propiedad flex: 0 0 13vw para ajustar el ancho */
-}
+/* }
 
 #libros div:hover img {
   transform: rotateY(90deg);
@@ -270,7 +341,7 @@ body {
   height: 20vw;
   margin: 0 2vw;
   background-color: rgba(5, 46, 81, 0.67);
-}
+} */
 
 /*--------- Pagina de los personajes ---------*/
 .personajes {
@@ -334,9 +405,9 @@ body {
   width: 20vw;
   height: 20vw;
   margin: 0 2vw;
-}
+} */
 
-@media (max-width: 470px) {
+/* @media (max-width: 470px) {
   .libros {
     display: block;
   }
@@ -350,5 +421,9 @@ body {
     width: 100%;
     height: 80%;
 
-  }
+  }  */
+
+.navbar-open {
+  display: flex;
+  flex-direction: column;
 }
