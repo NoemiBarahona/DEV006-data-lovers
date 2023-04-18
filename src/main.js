@@ -1,4 +1,4 @@
-// import { example } from './data.js';
+import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -7,7 +7,7 @@ import data from './data/harrypotter/data.js';
 // Funcionalidad para el boton de inicio
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
-    top: 0, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
+    top: document.getElementById("botonInicioHP").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
     behavior: "smooth"//forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -21,7 +21,7 @@ document.getElementById("botonInicioLibros").addEventListener('click', function 
 // Funcionalidad para el boton de casas
 document.getElementById("botonInicioCasas").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
-    top: document.getElementById("PORDEFINIR").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
+    top: document.getElementById("").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -29,7 +29,7 @@ document.getElementById("botonInicioCasas").addEventListener('click', function (
 // Funcionalidad para el boton de personajes
 document.getElementById("botonInicioPersonajes").addEventListener('click', function () {//aqui se llama el id del boton
   window.scrollTo({// atributo de mover por la pagina
-    top: document.getElementById("PORDEFINIR").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
+    top: document.getElementById("personajes").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -48,22 +48,112 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
   });
 });
 
-const infoDataLibro = document.createElement("p");// Crear una costante que crea un parrafo para la data libro
-infoDataLibro.classList.add("info-libro");// Para darle una clase de estilo llamada info-libroal parrafo que se esta creando para mostar la data detras de la imagen
+const infoDataLibro = document.createElement("p");
+infoDataLibro.classList.add("info-libro");
 
-document.querySelectorAll(".libroPortada").forEach(function(libro) { //para seleccionar todos los elementos en el documento con la clase "libroPortada" y agregarles dos event listeners.
-  libro.addEventListener('mouseover', function () { //Event listener se dispara cuando el cursor se coloca sobre la imagen del libro y el segundo cuando se mueve el cursor fuera de la imagen.
-    const valor = libro.getAttribute('value'); // Constante para obtener el atributo de value de los libros
-    const titulo = data.books[valor].title;// Constante titulo que llama el value de la data de libro 
-    const fechaLanzamiento = data.books[valor].releaseDay;// Constante fechaLanzamiento que llama el value de la data de libro 
-    const autor = data.books[valor].author; // Constante autor que llama el value de la data de libro 
-    const descripcion = data.books[valor].description;// Constante descripction que llama el value de la data de libro 
+document.querySelectorAll(".libroPortada").forEach(function(libro) {
+  libro.addEventListener('mouseover', function () {
+    const valor = libro.getAttribute('value');
+    const titulo = data.books[valor].title;
+    const fechaLanzamiento = data.books[valor].releaseDay;
+    const autor = data.books[valor].author;
+    const descripcion = data.books[valor].description;
 
-    infoDataLibro.innerText = "Libro: " + titulo + "\n" + "Día de lanzamiento: " + fechaLanzamiento + "\n" + "Autor: " + autor + "\n" + "Descripción: " + descripcion;// Info data libro que muestre el titulo más la fecha en la pag
-    libro.appendChild(infoDataLibro);// Donde esta ubicado el libro se agrege la info de data libro
+    infoDataLibro.innerText = "Book: " + titulo + "\n" + "Release Day: " + fechaLanzamiento + "\n" + "Author: " + autor + "\n" + "Description: " + descripcion;
+    libro.appendChild(infoDataLibro);
+
+    // Agregar la clase 'girar' a la imagen
+    libro.querySelector('img').classList.add('rotar');
   });
 
-  libro.addEventListener('mouseleave', function () { // Esto muestra la información del libro debajo de su imagen.
-    libro.removeChild(infoDataLibro); //para quitar el párrafo que muestra la información del libro de debajo de la imagen.
+  libro.addEventListener('mouseleave', function () {
+    // Eliminar el párrafo de información del libro
+    libro.removeChild(infoDataLibro);
+
+    // Esperar a que se complete la transición y luego agregar la clase 'mostrar-info'
+    libro.querySelector('img').addEventListener('transitionend', function() {
+      libro.querySelector('img').classList.remove('rotar');
+      libro.classList.remove('mostrar-info');
+    }, {once: true});
+
+    // Agregar la clase 'mostrar-info' a la capa contenedora del libro
+    libro.classList.add('mostrar-info');
+  });
+});
+
+const infoDataPersonaje = document.createElement("p");
+infoDataPersonaje.classList.add("info-personaje");
+
+document.querySelectorAll(".personaje").forEach(function(personaje) {
+  
+  personaje.addEventListener('mouseover', function () {
+    
+    const nombreId= personaje.getAttribute('id')
+    const personajeData = data.characters.find(personaje => personaje.name === nombreId);
+    let nombre;
+    let fechaNacimiento;
+    let muerte;
+    let genero;
+    let patronusPersonaje;
+    let casa;
+    let ancestros;
+  
+    if(personajeData){
+      nombre= personajeData.name;
+      fechaNacimiento = personajeData.birth;
+      if(fechaNacimiento===null)
+      {
+        fechaNacimiento="Desconocida";
+      }
+      
+      muerte = personajeData.death;
+      if(muerte===null)
+      {
+        muerte="Alive";
+      }
+      else
+      {
+        muerte= "Died on "+ personajeData.death;
+      }
+      genero = personajeData.gender;
+      if(genero===null)
+      {
+        genero="Desconocido";
+      }
+      patronusPersonaje = personajeData.patronus;
+      if(patronusPersonaje===null)
+      {
+        patronusPersonaje="Desconocido";
+      }
+      casa = personajeData.house;
+      if(casa===null)
+      {
+        casa ="Desconocida";
+      }
+      ancestros = personajeData.ancestry;
+      if( ancestros===null)
+      {
+        ancestros ="Desconocida";
+      }
+
+      infoDataPersonaje.innerText = "Name: " + nombre + "\n" + "Birth: " + fechaNacimiento + "\n" + "Status: " + muerte + "\n" + "Gender: " + genero + "\n" + "Patronus: " + patronusPersonaje + "\n" + "House: " + casa + "\n" + "Ancestry: " + ancestros;
+      personaje.appendChild(infoDataPersonaje);
+    };
+    // Agregar la clase 'girar' a la imagen
+    //personaje.querySelector('img').classList.add('rotar');
+  });
+
+  personaje.addEventListener('mouseleave', function () {
+    // Eliminar el párrafo de información del libro
+    personaje.removeChild(infoDataPersonaje);
+
+    // Esperar a que se complete la transición y luego agregar la clase 'mostrar-info'
+    personaje.querySelector('img').addEventListener('transitionend', function() {
+      personaje.querySelector('img').classList.remove('rotar');
+      personaje.classList.remove('mostrar-info');
+    }, {once: true});
+
+    // Agregar la clase 'mostrar-info' a la capa contenedora del libro
+    personaje.classList.add('mostrar-info');
   });
 });

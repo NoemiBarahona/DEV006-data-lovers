@@ -1,21 +1,21 @@
 /*--------- color del fondo  ---------*/
 body {
-    background: #052D51;
-    background-image: url('img/Fondo/Fondo2000x6000.png');
-    background-size: cover;
+  background: #052D51;
+  background-image: url('img/Fondo/Fondo2000x6000.png');
+  background-size: cover;
 }
 
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
-    background: #052D51;
-    height: 10vw;
-    text-align: center;
-    border: none;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    left: 0;
-    z-index: 10;
+  background: #052D51;
+  height: 10vw;
+  text-align: center;
+  border: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
 }
 
 /* .contenedorBoton {
@@ -27,30 +27,72 @@ body {
 */
 /*--------- boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
-    line-height: 2.5vw;
-    background-color: #052D51;
-    position: relative;
-    border-radius: 12.5vw;
-    padding: 0.65vw;
-    border: none;
-    cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  background-color: #052D51;
+  position: relative;
+  border-radius: 12.5vw;
+  padding: 0.65vw;
+  border: none;
+  cursor: pointer;
+}
+
+.botonMasPersonajes {
+  width: 8vw;
+  height: 8vw;
+  background-color: #052e5169;
+  position: absolute;
+  /* top: 50%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  margin: 5vw 0vw;
+  border-radius: 12.5vw;
+  display: inline-block;
+}
+
+.botonMasPersonajes img {
+  width: 6vw;
+  height: 6vw;
+  justify-content: center;
+}
+
+.etiquetaMensaje {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #052e51ce;
+  color: #ffffff9d;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 1s ease;
+  font-size: 0.8vw;
+  width: 8vw;
+  height: 1vw;
+}
+
+.botonMasPersonajes:hover .etiquetaMensaje {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*--------- Color del sensor del boton  ---------*/
 .contenedorBoton .botonInicioHP:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 /*--------- Imagen del boton de inicio  ---------*/
 .contenedorBoton .botonInicioHP img {
-    width: 4vw;
-    max-width: 4vw;
-    margin-bottom: 1.5vw;
-    position: relative;
-    top: 0.3vw;
+  width: 4vw;
+  max-width: 4vw;
+  margin-bottom: 1.5vw;
+  position: relative;
+  top: 0.3vw;
 }
 
 /*--------- Botones de cabecera  ---------*/
@@ -59,21 +101,21 @@ body {
 .contenedorBoton .botonInicioPersonajes,
 .contenedorBoton .botonInicioHechizos,
 .contenedorBoton .botonInicioPociones {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    /* padding: 0vw; */
-    line-height: 4vw;
-    color: rgb(175, 167, 88);
-    background-color: #052D51;
-    border-radius: 1vw;
-    /* position: relative; */
-    top: -2vw;
-    cursor: pointer;
-    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 13vw;
+  /* padding: 0vw; */
+  line-height: 4vw;
+  color: rgb(175, 167, 88);
+  background-color: #052D51;
+  border-radius: 1vw;
+  /* position: relative; */
+  top: -2vw;
+  cursor: pointer;
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: 0vw 6vw 0vw 6vw;
 }
 
 
@@ -83,36 +125,36 @@ body {
 .contenedorBoton .botonInicioPersonajes:hover,
 .contenedorBoton .botonInicioHechizos:hover,
 .contenedorBoton .botonInicioPociones:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 
 
 /*--------- flexbox del cotenedor de los botones  ---------*/
 .contenedorBoton .flexbox {
-    display: flex;
-    justify-content: center;
-    /* margin-top: 20px; */
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
 }
 
 /*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial {
-    /* margin: 105px; */
+  /* margin: 105px; */
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
 }
 
 /*--------- Texto de la pag de bienvenida ---------*/
 .fondoInicial h1 {
-    background-color: rgba(5, 46, 81, 0.67);
-    color: white;
-    margin-top: 15vw;
-    margin-right: 5vw;
-    height: 33vw;
-    font-size: 2vw;
-    text-align: justify;
+  background-color: rgba(5, 46, 81, 0.67);
+  color: white;
+  margin-top: 15vw;
+  margin-right: 5vw;
+  height: 33vw;
+  font-size: 2vw;
+  text-align: justify;
 
 }
 
@@ -122,20 +164,43 @@ body {
 } */
 /*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
 .fondoInicial img {
-    margin-top: 8vw;
-    width: 50vw;
+  margin-top: 8vw;
+  width: 50vw;
 }
+
+.tituloBooks,
+.tituloCharacters {
+  font-family: 'Harry Potter', sans-serif;
+  color: rgb(175, 167, 88);
+  text-align: center;
+  font-size: 3vw;
+  border: none;
+  margin: 8vw 0vw 2vw 0vw;
+  /* line-height: 4vw; */
+}
+
+.tituloSpells {
+  margin: 12vw 0vw 5vw 0vw;
+  font-family: 'Harry Potter', sans-serif;
+  color: rgb(175, 167, 88);
+  text-align: center;
+  font-size: 3vw;
+  border: none;
+}
+
 /*--------- Pagina de los libros ---------*/
 .libros {
   color: white;
   display: flex;
-  flex-wrap: wrap !important;  /* Añadida propiedad flex-wrap: wrap para envolver en varias filas */
+  flex-wrap: wrap !important;
+  /* Añadida propiedad flex-wrap: wrap para envolver en varias filas */
   justify-content: center;
   align-items: center;
 }
 
 /* Para los libros individuales */
-.libroPortada, .librosInfo {
+.libroPortada,
+.librosInfo {
   flex: 0 0 22vw;
   margin: 0 2vw;
   text-align: center;
@@ -155,6 +220,30 @@ body {
   margin: 0 2vw;
 }
 
+.info-personaje {
+  position: absolute;
+  left: 0vw;
+  top: -0.8vw;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 1vw;
+  line-height: 1.5vw;
+  text-align: center;
+  background-image: url(img/Personajes/TarjetaAtras.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+ .info-personaje p {
+  /* position: absolute; */
+  left: -100vw;
+  top: -100vw;
+  width: -500%;
+  height: -500%;
+ }
+
+
 #libros div {
   position: relative;
 }
@@ -163,8 +252,10 @@ body {
   width: 13vw;
   height: 20vw;
   margin: 0 2vw;
-  flex: 0 0 13vw; /* Añadida propiedad flex: 0 0 13vw para ajustar el ancho */
+  flex: 0 0 13vw;
+  /* Añadida propiedad flex: 0 0 13vw para ajustar el ancho */
 }
+
 #libros div:hover img {
   transform: rotateY(90deg);
   transition: transform 0s ease-in-out;
@@ -179,16 +270,6 @@ body {
   height: 20vw;
   margin: 0 2vw;
   background-color: rgba(5, 46, 81, 0.67);
-}
-
-
-/* Página de los personajes */
-.personajes {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 /*--------- Pagina de los personajes ---------*/
@@ -212,7 +293,7 @@ body {
   top: 100%;
   transform: translateY(-100%);
   /* background:  rgba(5, 46, 81, 0.67); */
-  /* padding: 1vw; 
+/* padding: 1vw; 
   font-family: Arial, sans-serif;
   font-size: 0.8vw;
   line-height: 1.2;
@@ -225,12 +306,19 @@ body {
 */
 #personajes div {
   position: relative;
-}
-
-#personajes img{
   width: 20vw;
   height: 20vw;
   margin: 0 2vw;
+}
+
+#personajes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  /* width: 20vw;
+  height: 20vw;
+  margin: 0 2vw; */
 }
 
 #personajes div:hover img {
@@ -246,20 +334,21 @@ body {
   width: 20vw;
   height: 20vw;
   margin: 0 2vw;
-  background-color: rgba(5, 46, 81, 0.67);
 }
 
 @media (max-width: 470px) {
-  .libros{
+  .libros {
     display: block;
   }
-  .libros div{
+
+  .libros div {
     width: 80%;
     height: 300px;
   }
-  #libros img{
+
+  #libros img {
     width: 100%;
     height: 80%;
-    
+
   }
 }
