@@ -1,4 +1,4 @@
-.contenedor-busqueda {
+/* .contenedor-busqueda {
     display: flex;
     align-items: center;
   }
@@ -25,4 +25,161 @@
     font-size: 20px;
     color: #555;
   }
-  
+   */
+   /*--------- color del fondo  ---------*/
+body {
+  background: #052D51;
+  background-image: url('img/Fondo/Fondo2000x6000.png');
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+
+  .navbar-close {
+    display: flex;
+    display: none;
+  }
+
+  /* Selector para los botones del otro header dentro del media query */
+  .contenedorBoton .botonInicioLibros,
+  .contenedorBoton .botonInicioCasas,
+  .contenedorBoton .botonInicioPersonajes,
+  .contenedorBoton .botonInicioHechizos,
+  .contenedorBoton .botonInicioPociones {
+    display: none;
+    /* Hace que los botones desaparezcan en pantallas pequeñas */
+  }
+
+  /* Estilos para el menú hamburguesa */
+  .botonHamburguesa {
+    display: block;
+    margin: 0 10px;
+    border: 1px;
+    background-color: #052D51;
+    cursor: pointer;
+  }
+
+  /* Estilos para los tres iconos del menú hamburguesa */
+  .botonHamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 0VW;
+  }
+
+}
+
+.navbar-open {
+  display: flex;
+  flex-direction: column;
+}
+/*--------- contenedor del boton  ---------*/
+.contenedorBoton {
+  background: #052D51;
+  height: 10vw;
+  text-align: center;
+  border: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+}
+
+/*--------- boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP {
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  background-color: #052D51;
+  position: relative;
+  border-radius: 12.5vw;
+  padding: 0.65vw;
+  border: none;
+  cursor: pointer;
+}
+/*--------- Color del sensor del boton  ---------*/
+.contenedorBoton .botonInicioHP:hover {
+  background: rgb(255, 255, 255);
+}
+
+/*--------- Imagen del boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP img {
+  width: 4vw;
+  max-width: 4vw;
+  margin-bottom: 1.5vw;
+  position: relative;
+  top: 0.5vw;
+}
+
+/*--------- Botones de cabecera  ---------*/
+.contenedorBoton .botonInicioLibros,
+.contenedorBoton .botonInicioCasas,
+.contenedorBoton .botonInicioPersonajes,
+.contenedorBoton .botonInicioHechizos,
+.contenedorBoton .botonInicioPociones {
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 13vw;
+  /* padding: 0vw; */
+  line-height: 4vw; /*interlineado*/
+  color: rgb(175, 167, 88);
+  background-color: #052D51;
+  border-radius: 1vw;
+  position: relative;
+  top: -2vw;
+  cursor: pointer;
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: 0vw 6vw 0vw 6vw;
+}
+
+
+/*--------- fondo de los botones  ---------*/
+.contenedorBoton .botonInicioLibros:hover,
+.contenedorBoton .botonInicioCasas:hover,
+.contenedorBoton .botonInicioPersonajes:hover,
+.contenedorBoton .botonInicioHechizos:hover,
+.contenedorBoton .botonInicioPociones:hover {
+  background: rgb(255, 255, 255);
+}
+
+
+
+/*--------- flexbox del cotenedor de los botones  ---------*/
+.contenedorBoton .flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 0vw;
+}
+
+.filtros {
+  background-color: rgba(5, 46, 81, 0.67);
+  color: white;
+  /* margin-block-start: 15vw; */
+  margin: 15vw 2vw;
+  height: 33vw;
+  font-size: 2vw;
+  text-align: justify;
+  display: block;
+  font-size: 1.8vw;
+  line-height: 3vw;
+}
+
+em {
+  font-family: 'Harry Potter', sans-serif;
+  font-style: normal;
+  color: rgb(175, 167, 88);
+  font-size: 2vw;
+}

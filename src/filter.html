@@ -3,48 +3,106 @@
 <head>
   <meta charset="utf-8">
   <title>WikiPotter</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="filter.css" />
   <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div id="barraDeBotones" class="contenedorBoton">
-        <a href="index.html">
-          <button class="botonInicioHP" id="botonInicioHP">
-            <img src="img/Boton de inicio/HP snitch.png" alt="">
-          </button>
+  <div id="barraDeBotones" class="contenedorBoton">
+    <a href="index.html">
+      <button class="botonInicioHP" id="botonInicioHP">
+        <img src="img/Boton de inicio/HP snitch.png" alt="">
+      </button>
+    </a>
+    <br>
+    <button class="botonHamburguesa" id="botonHamburguesa">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="navbar" class="navbar-close">
+      <div class="flexbox">
+        <a href="index.html#tituloBooks">
+          <button class="botonInicioLibros" id="botonInicioLibros"> BOOKS </button>
         </a>
-        <br>
-        <button class="botonHamburguesa" id="botonHamburguesa">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div id="navbar" class="navbar-close">
-          <div class="flexbox">
-            <a href="index.html">
-              <button class="botonInicioLibros" id="botonInicioLibros"> BOOKS </button>
-            </a>
-            <a href="index.html">
-              <button class="botonInicioPersonajes" id="botonInicioPersonajes"> CHARACTERS </button>
-            </a>
-            <a href="index.html">
-              <button class="botonInicioHechizos" id="botonInicioHechizos"> SPELLS </button>
-            </a>
-            <a href="index.html">
-              <button class="botonInicioPociones" id="botonInicioPociones"> POTIONS </button>
-            </a>
-          </div>
-        </div>
+        <a href="index.html#tituloCharacters">
+          <button class="botonInicioPersonajes" id="botonInicioPersonajes"> CHARACTERS </button>
+        </a>
+        <a href="index.html">
+          <button class="botonInicioHechizos" id="botonInicioHechizos"> SPELLS </button>
+        </a>
+        <a href="index.html">
+          <button class="botonInicioPociones" id="botonInicioPociones"> POTIONS </button>
+        </a>
       </div>
-      <div class="contenedor-busqueda">
-        <input type="text" id="input-busqueda" placeholder="Buscar...">
-        <button id="btn-busqueda"><i class="fa fa-search"></i></button>
-      </div>
-      
-      
+    </div>
+  </div>
+  <!--<div class="contenedor-busqueda">
+    <input type="text" id="input-busqueda" placeholder="Buscar...">
+    <button id="btn-busqueda"><i class="fa fa-search"></i></button>
+  </div>-->
+  <p class="filtros">
+    <em> Filtro por familia</em>
+    <br>
+    <input type="radio" id="filtroFamiliaPotter" name="filtroFamilia" value="familia" />
+    <label for="familia">Potter</label>
+    <br>
+    <input type="radio" id="filtroFamiliaWeasley" name="filtroFamilia" value="familia" />
+    <label for="familia">Weasley</label>
+    <br>
+    <input type="radio" id="filtroFamiliaMalfoy" name="filtroFamilia" value="familia" />
+    <label for="familia">Malfoy</label>
+    <br>
+    <input type="radio" id="filtroFamiliaBlack" name="filtroFamilia" value="familia" />
+    <label for="familia">Black</label>
+    <br>
+    <input type="radio" id="filtroFamiliaGranger" name="filtroFamilia" value="familia" />
+    <label for="familia">Granger</label>
+    <br>
+    <input type="radio" id="filtroFamiliaDumbledore" name="filtroFamilia" value="familia" />
+    <label for="familia">Dumbledore</label>
+    <br>
+    <input type="radio" id="filtroFamiliaSnape" name="filtroFamilia" value="familia" />
+    <label for="familia">Snape</label>
+    <br>
+    <input type="radio" id="filtroFamiliaLongbotton" name="filtroFamilia" value="familia" />
+    <label for="familia">Longbotton</label>
+    <br>
+    <input type="radio" id="filtroFamiliaLestrange" name="filtroFamilia" value="familia" />
+    <label for="familia">Lestrange</label>
+    <br>
+    <input type="radio" id="filtroFamiliadLovegood" name="filtroFamilia" value="familia" />
+    <label for="familia">Lovegood</label>
+  <br>
+  <br>
+    <em>Filtro por genero</em>  
+    <br>
+    <input type="radio" id="filtroGeneroMale" name="filtroGeneroMale" value="familia" />
+    <label for="genero">Male</label>
+    <br>
+    <input type="radio" id="filtroGeneroFemale" name="filtroGeneroFemale" value="familia" />
+    <label for="genero">Female</label>
+  <br>
+  <br>
+  <em>Filtro tipo de humanos</em>  
+  <br>
+  <input type="radio" id="filtroTipoDeHumanosEspecieshuman" name="filtroTipoDeHumanosEspecies" value="especie" />
+  <label for="especie">Fuman</label>
+  <br>
+  <input type="radio" id="filtroTipoDeHumanosEspeciesformerly" name="filtroTipoDeHumanosEspecies" value="especie" />
+  <label for="especie">Formerly</label>
+  <br>
+  <input type="radio" id="filtroTipoDeHumanosEspeciesSeer" name="filtroTipoDeHumanosEspecies" value="especie" />
+  <label for="especie">Seer</label>
+  <br>
+  <input type="radio" id="filtroTipoDeHumanosEspeciesMetamorphmagus" name="filtroTipoDeHumanosEspecies" value="especie" />
+  <label for="especie">Metamorphmagus</label>
+  <br>
+  <input type="radio" id="filtroTipoDeHumanosEspeciesHalf-human/half-giant" name="filtroTipoDeHumanosEspecies" value="especie" />
+  <label for="especie">Half-human/half-giant</label>
+  </p>
 </body>
 
 </html>

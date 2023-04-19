@@ -14,7 +14,7 @@ document.getElementById("botonInicioHP").addEventListener('click', function () {
 // Funcionalidad para el boton de libros
 document.getElementById("botonInicioLibros").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
-    top: document.getElementById("libros").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
+    top: document.getElementById("tituloBooks").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -22,7 +22,7 @@ document.getElementById("botonInicioLibros").addEventListener('click', function 
 // Funcionalidad para el boton de personajes
 document.getElementById("botonInicioPersonajes").addEventListener('click', function () {//aqui se llama el id del boton
   window.scrollTo({// atributo de mover por la pagina
-    top: document.getElementById("personajes").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
+    top: document.getElementById("tituloCharacters").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
