@@ -66,7 +66,7 @@ body {
   height: 10vw;
   text-align: center;
   border: none;
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   width: 100vw;
   left: 0;
@@ -187,8 +187,8 @@ body {
 
 /*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial {
-  /* margin: 105px; */
-
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: -10vw 2vw -10vw 2vw;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -226,17 +226,18 @@ body {
   text-align: center;
   font-size: 3vw;
   border: none;
-  margin: 8vw 0vw 2vw 0vw;
-  /* line-height: 4vw; */
+  margin: 2vw 0vw 2vw 0vw;
+  font-weight: 200;
 }
 
 .tituloSpells {
-  margin: 12vw 0vw 5vw 0vw;
+  margin: 10vw 0vw 5vw 0vw;
   font-family: 'Harry Potter', sans-serif;
   color: rgb(175, 167, 88);
   text-align: center;
   font-size: 3vw;
   border: none;
+  font-weight: 200;
 }
 
 /*--------- Pagina de los libros ---------*/
@@ -252,17 +253,20 @@ body {
 /* Para los libros individuales */
 .libroPortada {
   position: relative;
-  width: 200px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
   height: 300px;
   margin: 20px;
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
+
 .libroPortada img {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
   backface-visibility: hidden;
 }
 .libroPortada.girar img {
@@ -275,9 +279,9 @@ body {
 }
 .info-libro {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: -1vw;
+  left: 4vw;
+  width: 70%;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -296,59 +300,6 @@ body {
   transform: rotateY(0deg);
   transform-origin: center;
 }
-
-.info-personaje {
-  position: absolute;
-  left: 0vw;
-  top: -0.8vw;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  font-size: 1vw;
-  line-height: 1.5vw;
-  text-align: center;
-  background-image: url(img/Personajes/TarjetaAtras.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
-}
- .info-personaje p {
-  /* position: absolute; */
-  left: -100vw;
-  top: -100vw;
-  width: -500%;
-  height: -500%;
- }
-
-
-/* #libros div {
-  position: relative;
-}
-
-#libros img {
-  width: 13vw;
-  height: 20vw;
-  margin: 0 2vw;
-  flex: 0 0 13vw;
-  /* Añadida propiedad flex: 0 0 13vw para ajustar el ancho */
-/* }
-
-#libros div:hover img {
-  transform: rotateY(90deg);
-  transition: transform 0s ease-in-out;
-}
-
-#libros div:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13vw;
-  height: 20vw;
-  margin: 0 2vw;
-  background-color: rgba(5, 46, 81, 0.67);
-} */
-
 /*--------- Pagina de los personajes ---------*/
 .personajes {
   color: white;
@@ -358,73 +309,62 @@ body {
   align-items: center;
 }
 
-/* Para los libros individuales */
-/* .personaje, .librosInfo {
-  flex: -1 0 22vw;
-  margin: 0vw;
-  text-align: center;
-} 
-.info-libro {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  transform: translateY(-100%);
-  /* background:  rgba(5, 46, 81, 0.67); */
-/* padding: 1vw; 
-  font-family: Arial, sans-serif;
-  font-size: 0.8vw;
-  line-height: 1.2;
-  z-index: 1;
-  width: 13vw;
-  height: 20vw;
-  margin: 0 4vw; 
-   /* Para asegurarse de que el texto esté por encima de la imagen 
-}
-*/
-#personajes div {
+/* Para los personajes individuales */
+.personaje {
   position: relative;
-  width: 20vw;
-  height: 20vw;
-  margin: 0 2vw;
+  /* width: 200px; */
+  /* height: 300px; */
+  margin: 20px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
-#personajes img {
+.personaje img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  /* width: 20vw;
-  height: 20vw;
-  margin: 0 2vw; */
+ /*  position: absolute; */
+  backface-visibility: hidden;
 }
 
-#personajes div:hover img {
-  transform: rotateY(90deg);
-  transition: transform 0s ease-in-out;
+.personaje.girar img {
+  transform: rotateY(-180deg);
+  transform-origin: left;
 }
 
-#personajes div:hover::before {
-  content: "";
+.personaje:hover img {
+  transform: rotateY(180deg);
+}
+
+.info-personaje {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 20vw;
-  height: 20vw;
-  margin: 0 2vw;
+  top: -1vw;
+  left: 0vw;
+  width: 100%;
+  /* height: 100%; */
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url(img/Personajes/TarjetaAtras.png);
+  /* transform: rotateY(180deg); 
+  transform-origin: left; */
+  transition: transform 1s ease;
+  font-size: 12px;
+  height: auto;
+  bottom: 0;
+}
+
+.libroPortada:hover .info-libro {
+  transform: rotateY(0deg);
+}
+
+.libroPortada.mostrar-info .info-libro {
+  transform: rotateY(0deg);
+  transform-origin: center;
+}
+.info-personaje p {
+  font-family: Arial, sans-serif;
+  font-size: 1vw;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
 } 
-
-/* @media (max-width: 470px) {
-  .libros {
-    display: block;
-  }
-
-  .libros div {
-    width: 80%;
-    height: 300px;
-  }
-
-  #libros img {
-    width: 100%;
-    height: 80%;
-
-  } */

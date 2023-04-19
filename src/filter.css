@@ -1,0 +1,28 @@
+.contenedor-busqueda {
+    display: flex;
+    align-items: center;
+  }
+  
+  #input-busqueda {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+  }
+  
+  #btn-busqueda {
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #btn-busqueda i {
+    font-size: 20px;
+    color: #555;
+  }
+  
