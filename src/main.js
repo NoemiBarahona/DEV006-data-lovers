@@ -45,8 +45,15 @@ const contenedorBoton = document.getElementById("navbar");
 // const flexbox = document.querySelector(".flexbox");
 
 botonHamburguesa.addEventListener("click", () => {
-  contenedorBoton.classList.toggle("navbar-open");
+  
   // flexbox.classList.toggle("oculto");
+  if(contenedorBoton.classList.contains("navbar-open")){
+    contenedorBoton.removeAttribute('class', "navbar-open")
+    contenedorBoton.classList.toggle("navbar-close");
+    
+  }else{
+    contenedorBoton.classList.toggle("navbar-open");
+  }
 });
 
 const infoDataLibro = document.createElement("p");
