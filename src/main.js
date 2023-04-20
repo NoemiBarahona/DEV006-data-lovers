@@ -152,6 +152,20 @@ document.querySelectorAll(".personaje").forEach(function (personaje) {
   });
 });
 
+const flechas = document.querySelectorAll('.flecha');
+flechas.forEach(flecha => {
+  flecha.addEventListener('click', () => {
+    // Obtener el contenedor de filtros dentro de la sección
+    const seccion = flecha.parentNode;
+    const filtros = seccion.querySelector('.filtro');
+    
+    // Alternar la clase 'desplegado' para mostrar/ocultar los filtros
+    filtros.classList.toggle('desplegado');
+    
+    // Cambiar el texto de la flecha para indicar el estado de la sección (desplegada o no)
+    flecha.textContent = filtros.classList.contains('desplegado') ? '▼' : '▶️';
+  });
+});
 // const inputBusqueda = document.getElementById('input-busqueda');
 // const btnBusqueda = document.getElementById('btn-busqueda');
 
@@ -160,7 +174,7 @@ document.querySelectorAll(".personaje").forEach(function (personaje) {
 //   // Aquí puedes hacer algo con el valor de búsqueda, como enviarlo a una API o filtrar resultados en una lista
 // });
 
-// En este ejemplo, usamos flexbox para alinear la barra de búsqueda y usamos un input de tipo text para que 
+// En este ejemplo, usamos flexbox para alinear la barra de búsqueda y usamos un input de tipo text para que
 // el usuario pueda escribir su consulta de búsqueda. Luego, creamos un botón con el ícono de búsqueda usando
-//  la biblioteca de iconos Font Awesome. Al hacer clic en el botón, capturamos el valor de búsqueda del input 
+//  la biblioteca de iconos Font Awesome. Al hacer clic en el botón, capturamos el valor de búsqueda del input
 //  usando JavaScript y podemos hacer algo con él, como enviarlo a una API o filtrar resultados en una lista.

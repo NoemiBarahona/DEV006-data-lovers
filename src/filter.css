@@ -31,8 +31,8 @@ body {
   background: #052D51;
   background-image: url('img/Fondo/Fondo2000x6000.png');
   background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;*/
+  flex-wrap: wrap; 
 }
 @media (max-width: 768px) {
 
@@ -164,17 +164,24 @@ body {
   margin-top: 0vw;
 }
 
-.filtros {
-  background-color: rgba(5, 46, 81, 0.67);
+.filtro {
+  /* background-color: rgba(5, 46, 81, 0.67); */
   color: white;
-  /* margin-block-start: 15vw; */
-  margin: 15vw 2vw;
-  height: 33vw;
-  font-size: 2vw;
+  display: none;
   text-align: justify;
-  display: block;
   font-size: 1.8vw;
   line-height: 3vw;
+}
+.desplegado {
+  display: block; /* Mostrar los filtros cuando se despliegan */
+}
+.flecha {
+  display: flex;
+  margin: 0vw 0vw 0vw 0vw;
+  cursor: pointer; /* Cambiar el cursor a una mano para indicar que es clickeable */
+}
+.seccion {
+  margin: 10vw 0vw -8vw 0vw; /* Añadir margen inferior entre secciones */
 }
 
 em {
