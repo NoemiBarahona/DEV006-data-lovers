@@ -1,9 +1,16 @@
-// import { example } from './data.js';
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData } from './data.js';// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(data.books[0]);
 // Funcionalidad para el boton de inicio
+console.log(filterCharacterName(data.characters,'Black'))
+console.log(filterCharacterGender(data.characters,'Female'))
+console.log(filterCharacterGender(data.characters,'Male'))
+const dataOrdenada = sortData(data.characters, "name")
+console.log(filterCharacterGender(dataOrdenada,'Female'))
+console.log(filterCharacterHouse(data.characters, 'Slytherin'))
+
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
     top: document.getElementById("botonInicioHP").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
@@ -148,3 +155,27 @@ flechas.forEach(flecha => {
     flecha.textContent = filtros.classList.contains('desplegado') ? '▼' : ':flecha_hacia_delante:';
   });
 });
+
+// Obtener la lista de letras y agregar un controlador de eventos clic a cada una
+// const letters = document.querySelectorAll('.letter');
+// letters.forEach(letter => {
+//   letter.addEventListener('click', () => {
+//     // Obtener el texto de la letra
+//     const letterText = letter.textContent;
+    
+//     // Obtener la información correspondiente de data.js
+//     const data = getData(letterText);
+    
+//     // Mostrar la información en una alerta
+//     alert(data);
+//   });
+// });
+
+// // Función para obtener la información correspondiente a una letra de data.js
+// function getData(letter) { 
+//   // Buscar la información correspondiente a la letra
+//   const letterData = data[letter];
+  
+//   // Devolver la información como una cadena de texto
+//   return JSON.stringify(letterData);
+// }

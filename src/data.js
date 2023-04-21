@@ -38,8 +38,19 @@ export function sortData(data, sortBy) {
       if (element[sortBy] === nombre) {
         resultadoFinal.push(element);
       }
+
     });
   });
   // console.log(resultadoSort1.sort())
   return resultadoFinal.reverse();
 }
+
+// export function filterpotionsName(letter, nombreAfiltrar) {
+//   const resultadoFiltroNombrePotions = [];
+//   potions.forEach(potions => {
+//     if (potions.name.includes(nombreAfiltrar)) {
+//       resultadoFiltroNombrePotions.push(potions)
+//     }
+//   });
+//   return JSON.stringify(resultadoFiltroNombrePotions);
+// }

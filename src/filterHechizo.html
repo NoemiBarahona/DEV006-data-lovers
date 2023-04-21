@@ -28,10 +28,10 @@
         <a href="index.html#tituloCharacters">
           <button class="botonInicioPersonajes" id="botonInicioPersonajes"> CHARACTERS </button>
         </a>
-        <a href="index.html">
+        <a href="filterHechizo.html">
           <button class="botonInicioHechizos" id="botonInicioHechizos"> SPELLS </button>
         </a>
-        <a href="index.html">
+        <a href="filterPociones.html">
           <button class="botonInicioPociones" id="botonInicioPociones"> POTIONS </button>
         </a>
       </div>
@@ -42,100 +42,31 @@
     <button id="btn-busqueda"><i class="fa fa-search"></i></button>
   </div>-->
   <div class="seccion">
-    <em> Filtro por familia</em><div class="flecha">:flecha_hacia_delante:</div>
+    <em> Filtro por tipo de hechizo</em>
+    <div class="flecha">▶️</div>
     <div class="filtro">
-      <input type="radio" id="filtroFamiliaPotter" name="filtroFamilia" value="familia" />
-      <label for="familia">Potter</label>
-      <br>
-      <input type="radio" id="filtroFamiliaWeasley" name="filtroFamilia" value="familia" />
-      <label for="familia">Weasley</label>
-      <br>
-      <input type="radio" id="filtroFamiliaMalfoy" name="filtroFamilia" value="familia" />
-      <label for="familia">Malfoy</label>
-      <br>
-      <input type="radio" id="filtroFamiliaBlack" name="filtroFamilia" value="familia" />
-      <label for="familia">Black</label>
-      <br>
-      <input type="radio" id="filtroFamiliaGranger" name="filtroFamilia" value="familia" />
-      <label for="familia">Granger</label>
-      <br>
-      <input type="radio" id="filtroFamiliaDumbledore" name="filtroFamilia" value="familia" />
-      <label for="familia">Dumbledore</label>
-      <br>
-      <input type="radio" id="filtroFamiliaSnape" name="filtroFamilia" value="familia" />
-      <label for="familia">Snape</label>
-      <br>
-      <input type="radio" id="filtroFamiliaLongbotton" name="filtroFamilia" value="familia" />
-      <label for="familia">Longbotton</label>
-      <br>
-      <input type="radio" id="filtroFamiliaLestrange" name="filtroFamilia" value="familia" />
-      <label for="familia">Lestrange</label>
-      <br>
-      <input type="radio" id="filtroFamiliadLovegood" name="filtroFamilia" value="familia" />
-      <label for="familia">Lovegood</label>
-      <br>
+        <input type="radio" id="filtroTipoHechizoCharm" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Charm</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoTransfiguration" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Transfiguration</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoHex" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Hex</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoJinx" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Jinx</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoCurse" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Curse</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoConjuration" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Conjuration</label>
+        <br>
+        <input type="radio" id="filtroTipoHechizoHealingSpell" name="filtroTipoHechizo" value="hechizo" />
+        <label for="hechizo">Healing Spell</label>
     </div>
-  </div>
-  <div class="seccion">
-    <em>Filtro por genero</em><div class="flecha">:flecha_hacia_delante:</div>
-    <div class="filtro">
-      <input type="radio" id="filtroGeneroMale" name="filtroGeneroMale" value="familia" />
-      <label for="genero">Male</label>
-      <br>
-      <input type="radio" id="filtroGeneroFemale" name="filtroGeneroFemale" value="familia" />
-      <label for="genero">Female</label>
-    </div>
-  </div>
-  <div class="seccion">
-    <em>Filtro tipo de humanos</em><div class="flecha">:flecha_hacia_delante:</div>
-    <div class="filtro">
-      <input type="radio" id="filtroTipoDeHumanosEspecieshuman" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Fuman</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesformerly" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Formerly</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesSeer" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Seer</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesMetamorphmagus" name="filtroTipoDeHumanosEspecies"
-        value="especie" />
-      <label for="especie">Metamorphmagus</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesHalf-human/half-giant" name="filtroTipoDeHumanosEspecies"
-        value="especie" />
-      <label for="especie">Half-human/half-giant</label>
-      <br>
-    </div>
-  </div>
-  <div class="seccion">
-    <em>Filtro de especies</em><div class="flecha">:flecha_hacia_delante:</div>
-    <div class="filtro">
-      <input type="radio" id="filtroTipoDeotrosHouseElf" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">House elf</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosCentaur" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Centaur</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosGoblin" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Goblin</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosHipogriff" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Hipogriff</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosThreeHeadedDog" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Three headed dog</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosThreeGiant" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Giant</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosWerewolfFormerlyHuman" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Werewolf (formerly human)</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosPoltergeist" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Poltergeist</label>
-    </div>
-  </div>
+</div>
   <script src="main.js" type="module"></script>
 </body>
 </html>

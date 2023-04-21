@@ -225,40 +225,59 @@
     font-size: 2vw;
   }
 
-/* .abecedario {
-  display: flex;
-  flex-direction: column;
-}
-
-.abecedario-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.abecedario-btn {
-  background-color: #ccc;
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.abecedario-potions {
-  display: none;
-  /* estilos para el contenedor de las pociones 
-}
-
-.abecedario-potions.active {
-  display: block;
-  /* estilos para mostrar las pociones 
-}
-
-@media (max-width: 768px) {
-  .abecedario-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
   }
-} */
+  
+  .alphabet ul {
+    list-style: none;
+    margin: 10vw 0vw 0vw 0vw;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alphabet li {
+    margin: 5px;
+    flex-basis: calc((100% / 6) - 10px);
+    max-width: calc((100% / 6) - 10px);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .alphabet li {
+      flex-basis: calc((100% / 3) - 10px);
+      max-width: calc((100% / 3) - 10px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .alphabet li {
+      flex-basis: calc((100% / 2) - 10px);
+      max-width: calc((100% / 2) - 10px);
+    }
+  }
+    
+  .letter {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .letter:hover {
+    background-color: #eee;
+  }
