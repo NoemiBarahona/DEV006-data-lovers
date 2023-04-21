@@ -1,4 +1,4 @@
-import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData } from './data.js';// import { example } from './data.js';
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData} from './data.js';// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';

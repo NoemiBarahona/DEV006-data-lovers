@@ -6,70 +6,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-/* Estilos para el menú desplegable en pantallas pequeñas */
-@media (max-width: 768px) {
-
-  .navbar-close {
-    /* display: flex; */
-    display: none;
-  }
-
-  .navbar-open {
-    display: flex;
-    flex-direction: column;
-  }
-    
-  .contenedorBoton .botonInicioLibros,
-  .contenedorBoton .botonInicioCasas,
-  .contenedorBoton .botonInicioPersonajes,
-  .contenedorBoton .botonInicioHechizos,
-  .contenedorBoton .botonInicioPociones {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    line-height: 4vw;
-    /*interlineado*/
-    color: rgb(175, 167, 88);
-    background-color: #052D51;
-    border-radius: 1vw;
-    position: relative;
-    top: -2vw;
-    cursor: pointer;
-    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
-  }
-
-  /* Estilos para el menú hamburguesa */
-  .botonHamburguesa {
-    display: block;
-    margin: 0 10px;
-    border: 1px;
-    background-color: #052D51;
-    cursor: pointer;
-  }
-
-  /* Estilos para los tres iconos del menú hamburguesa */
-  .botonHamburguesa span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px 0;
-    background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .flexbox {
-    display: flex;
-    justify-content: center;
-    margin-top: 0VW;
-    flex-direction: column;
-  }
-
-}
-
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
@@ -355,4 +291,175 @@ body {
 .libroPortada.mostrar-info .info-libro {
   transform: rotateY(0deg);
   transform-origin: center;
+}
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+
+  .navbar-close {
+    /* display: flex; */
+    display: none;
+  }
+
+  .navbar-open {
+    display: flex;
+    flex-direction: column;
+  }
+    
+  .contenedorBoton .botonInicioLibros,
+  .contenedorBoton .botonInicioCasas,
+  .contenedorBoton .botonInicioPersonajes,
+  .contenedorBoton .botonInicioHechizos,
+  .contenedorBoton .botonInicioPociones {
+    font-family: 'Harry Potter', sans-serif;
+    border: none;
+    font-size: 1.5vw;
+    height: 3vw;
+    width: 13vw;
+    line-height: 4vw;
+    /*interlineado*/
+    color: rgb(175, 167, 88);
+    background-color: #052D51;
+    border-radius: 1vw;
+    position: relative;
+    top: -2vw;
+    cursor: pointer;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 0vw 6vw 0vw 6vw;
+  }
+
+  /* Estilos para el menú hamburguesa */
+  .botonHamburguesa {
+    display: block;
+    margin: 0 10px;
+    border: 1px;
+    background-color: #052D51;
+    cursor: pointer;
+  }
+
+  /* Estilos para los tres iconos del menú hamburguesa */
+  .botonHamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 0VW;
+    flex-direction: column;
+  }
+
+}
+@media (min-width: 1920px){
+  /* Para los libros individuales */
+  .libroPortada {
+    position: relative;
+    width: 100%;
+    max-width: 100px;
+    min-width: 400px;
+    height: 500px;
+    margin: 20px;
+  }
+  
+  .libroPortada img {
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .libroPortada.girar img {
+    transform: rotateY(-180deg);
+    transform-origin: left;
+  }
+  
+  .libroPortada:hover img {
+    transform: rotateY(180deg);
+  }
+  
+  .info-libro {
+    position: absolute;
+    top: -1vw;
+    left: 4vw;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(5, 46, 81, 0.67);
+    color: #fff;
+    transform: rotateY(180deg);
+    transform-origin: left;
+    transition: transform 1s ease;
+    font-size: 20px;
+  }
+  
+  .libroPortada:hover .info-libro {
+    transform: rotateY(0deg);
+  }
+  
+  .libroPortada.mostrar-info .info-libro {
+    transform: rotateY(0deg);
+    transform-origin: center;
+  }
+  
+  /*--------- Pagina de los personajes ---------*/
+  .personajes {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Para los personajes individuales */
+  .personaje {
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    text-align: center;
+  }
+  
+  .personaje img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .personaje.girar img {
+    transform: rotateY(-180deg);
+    transform-origin: left;
+  }
+  
+  .personaje:hover img {
+    transform: rotateY(180deg);
+  }
+  
+  .info-personaje {
+    position: absolute;
+    top: 1vw;
+    left: 0vw;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 35%;
+    box-sizing: border-box;
+    background-image: url(img/Personajes/TarjetaAtras.png);
+    transition: transform 1s ease;
+    font-size: 12px;
+    height: auto;
+    bottom: 0;
+  
+  }
+  
+  .libroPortada:hover .info-libro {
+    transform: rotateY(0deg);
+  }
+  .libroPortada.mostrar-info .info-libro {
+    transform: rotateY(0deg);
+    transform-origin: center;
+  }
+
 }
