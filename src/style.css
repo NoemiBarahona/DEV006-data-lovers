@@ -7,11 +7,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* .navbar-close {
-  display: flex;
-  display: none;
-} */
-
 /* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
 
@@ -24,21 +19,7 @@ body {
     display: flex;
     flex-direction: column;
   }
-
-  /* Selector para los botones del otro header dentro del media query
-  .contenedorBoton .botonInicioLibros,
-  .contenedorBoton .botonInicioCasas,
-  .contenedorBoton .botonInicioPersonajes,
-  .contenedorBoton .botonInicioHechizos,
-  .contenedorBoton .botonInicioPociones {
-    display: none;
-    /* Hace que los botones desaparezcan en pantallas pequeñas  */
-    /* Selector para los botones del otro header dentro del media query */
-    /* .contenedorBoton .flexbox {
-      display: none;
-      /* Hace que los botones desaparezcan en pantallas pequeñas  */
     
-
   .contenedorBoton .botonInicioLibros,
   .contenedorBoton .botonInicioCasas,
   .contenedorBoton .botonInicioPersonajes,
@@ -49,7 +30,6 @@ body {
     font-size: 1.5vw;
     height: 3vw;
     width: 13vw;
-    /* padding: 0vw; */
     line-height: 4vw;
     /*interlineado*/
     color: rgb(175, 167, 88);
@@ -90,7 +70,6 @@ body {
 
 }
 
-
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
@@ -123,7 +102,6 @@ body {
   height: 8vw;
   background-color: #052e5169;
   position: absolute;
-  /* top: 50%;*/
   left: 50%;
   transform: translate(-50%, -50%);
   border: none;
@@ -186,7 +164,6 @@ body {
   font-size: 1.5vw;
   height: 3vw;
   width: 13vw;
-  /* padding: 0vw; */
   line-height: 4vw;
   /*interlineado*/
   color: rgb(175, 167, 88);
@@ -288,9 +265,7 @@ body {
 }
 
 .libroPortada img {
-  /* width: 100%; */
   height: 100%;
-  /* position: absolute; */
   backface-visibility: hidden;
 }
 
@@ -340,8 +315,6 @@ body {
 /* Para los personajes individuales */
 .personaje {
   position: relative;
-  /* width: 200px; */
-  /* height: 300px; */
   margin: 20px;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -352,7 +325,6 @@ body {
 .personaje img {
   width: 100%;
   height: 100%;
-  /*  position: absolute; */
   backface-visibility: hidden;
 }
 
@@ -371,12 +343,9 @@ body {
   left: 0vw;
   width: 100%;
   margin: 0 auto;
-  /* height: 100%; */
   padding-top: 35%;
   box-sizing: border-box;
   background-image: url(img/Personajes/TarjetaAtras.png);
-  /* transform: rotateY(180deg); 
-  transform-origin: left; */
   transition: transform 1s ease;
   font-size: 12px;
   height: auto;
@@ -387,9 +356,7 @@ body {
 .libroPortada:hover .info-libro {
   transform: rotateY(0deg);
 }
-
 .libroPortada.mostrar-info .info-libro {
   transform: rotateY(0deg);
   transform-origin: center;
 }
-

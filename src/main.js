@@ -45,13 +45,12 @@ const contenedorBoton = document.getElementById("navbar");
 // const flexbox = document.querySelector(".flexbox");
 
 botonHamburguesa.addEventListener("click", () => {
-  
   // flexbox.classList.toggle("oculto");
-  if(contenedorBoton.classList.contains("navbar-open")){
+  if (contenedorBoton.classList.contains("navbar-open")) {
     contenedorBoton.removeAttribute('class', "navbar-open")
     contenedorBoton.classList.toggle("navbar-close");
-    
-  }else{
+
+  } else {
     contenedorBoton.classList.toggle("navbar-open");
   }
 });
@@ -165,23 +164,11 @@ flechas.forEach(flecha => {
     // Obtener el contenedor de filtros dentro de la sección
     const seccion = flecha.parentNode;
     const filtros = seccion.querySelector('.filtro');
-    
+
     // Alternar la clase 'desplegado' para mostrar/ocultar los filtros
     filtros.classList.toggle('desplegado');
-    
+
     // Cambiar el texto de la flecha para indicar el estado de la sección (desplegada o no)
     flecha.textContent = filtros.classList.contains('desplegado') ? '▼' : '▶️';
   });
 });
-// const inputBusqueda = document.getElementById('input-busqueda');
-// const btnBusqueda = document.getElementById('btn-busqueda');
-
-// btnBusqueda.addEventListener('click', function() {
-//   const valorBusqueda = inputBusqueda.value;
-//   // Aquí puedes hacer algo con el valor de búsqueda, como enviarlo a una API o filtrar resultados en una lista
-// });
-
-// En este ejemplo, usamos flexbox para alinear la barra de búsqueda y usamos un input de tipo text para que
-// el usuario pueda escribir su consulta de búsqueda. Luego, creamos un botón con el ícono de búsqueda usando
-//  la biblioteca de iconos Font Awesome. Al hacer clic en el botón, capturamos el valor de búsqueda del input
-//  usando JavaScript y podemos hacer algo con él, como enviarlo a una API o filtrar resultados en una lista.
