@@ -26,7 +26,7 @@
     color: #555;
   }
    */
-   --------- color del fondo  ---------
+   /* --------- color del fondo  --------- */
 /* .contenedor-busqueda {
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@
     color: #555;
   }
    */
-   /*--------- color del fondo  ---------*/
+   /* --------- color del fondo  --------- */
    body {
     background: #052D51;
     background-image: url('img/Fondo/Fondo2000x6000.png');
@@ -63,20 +63,41 @@
     /* display: flex;*/
     flex-wrap: wrap;
   }
+  
   @media (max-width: 768px) {
+
     .navbar-close {
-      display: flex;
+      /* display: flex; */
       display: none;
     }
-    /* Selector para los botones del otro header dentro del media query */
+  
+    .navbar-open {
+      display: flex;
+      flex-direction: column;
+    }
+      
     .contenedorBoton .botonInicioLibros,
     .contenedorBoton .botonInicioCasas,
     .contenedorBoton .botonInicioPersonajes,
     .contenedorBoton .botonInicioHechizos,
     .contenedorBoton .botonInicioPociones {
-      display: none;
-      /* Hace que los botones desaparezcan en pantallas pequeñas */
+      font-family: 'Harry Potter', sans-serif;
+      border: none;
+      font-size: 1.5vw;
+      height: 3vw;
+      width: 13vw;
+      line-height: 4vw;
+      /*interlineado*/
+      color: rgb(175, 167, 88);
+      background-color: #052D51;
+      border-radius: 1vw;
+      position: relative;
+      top: -2vw;
+      cursor: pointer;
+      /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+      margin: 0vw 6vw 0vw 6vw;
     }
+  
     /* Estilos para el menú hamburguesa */
     .botonHamburguesa {
       display: block;
@@ -85,25 +106,26 @@
       background-color: #052D51;
       cursor: pointer;
     }
+  
     /* Estilos para los tres iconos del menú hamburguesa */
     .botonHamburguesa span {
       display: block;
       width: 25px;
       height: 2px;
       margin: 5px 0;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       transition: all 0.3s ease-in-out;
     }
+  
     .flexbox {
       display: flex;
       justify-content: center;
       margin-top: 0VW;
+      flex-direction: column;
     }
+  
   }
-  .navbar-open {
-    display: flex;
-    flex-direction: column;
-  }
+
   /*--------- contenedor del boton  ---------*/
   .contenedorBoton {
     background: #052D51;
