@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType } from './data.js';// import { example } from './data.js';
+=======
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData} from './data.js';// import { example } from './data.js';
+>>>>>>> 84a2b9925d3c726e9c5bd1941e5533c17b47f861
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
