@@ -190,3 +190,42 @@ em {
   color: rgb(175, 167, 88);
   font-size: 2vw;
 }
+
+
+/* .abecedario {
+  display: flex;
+  flex-direction: column;
+}
+
+.abecedario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.abecedario-btn {
+  background-color: #ccc;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.abecedario-potions {
+  display: none;
+  /* estilos para el contenedor de las pociones */
+}
+
+.abecedario-potions.active {
+  display: block;
+  /* estilos para mostrar las pociones */
+}
+
+@media (max-width: 768px) {
+  .abecedario-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+} */

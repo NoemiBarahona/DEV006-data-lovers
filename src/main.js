@@ -1,8 +1,13 @@
-// import { example } from './data.js';
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(data.books[0]);
+console.log(filterCharacterName(data.characters,'Black'))
+console.log(filterCharacterGender(data.characters,'Female'))
+const dataOrdenada = sortData(data.characters, "name")
+console.log(filterCharacterGender(dataOrdenada,'Female'))
+console.log(filterCharacterHouse(data.characters, 'Slytherin'))
 
 // Funcionalidad para el boton de inicio
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
@@ -11,6 +16,7 @@ document.getElementById("botonInicioHP").addEventListener('click', function () {
     behavior: "smooth"//forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
+
 // Funcionalidad para el boton de libros
 document.getElementById("botonInicioLibros").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
@@ -40,6 +46,7 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
+
 const botonHamburguesa = document.getElementById("botonHamburguesa");
 const contenedorBoton = document.getElementById("navbar");
 // const flexbox = document.querySelector(".flexbox");
@@ -185,3 +192,42 @@ flechas.forEach(flecha => {
 // el usuario pueda escribir su consulta de búsqueda. Luego, creamos un botón con el ícono de búsqueda usando
 //  la biblioteca de iconos Font Awesome. Al hacer clic en el botón, capturamos el valor de búsqueda del input
 //  usando JavaScript y podemos hacer algo con él, como enviarlo a una API o filtrar resultados en una lista.
+
+
+
+
+
+// Obtenemos el elemento HTML que contiene el abecedario
+// const abecedario = document.querySelector('.abecedario');
+
+// // Recorremos el abecedario letra por letra
+// for (let letter = 'A'; letter <= 'Z'; letter = String.fromCharCode(letter.charCodeAt(0) + 1)) {
+//   // Creamos el botón de la letra correspondiente
+//   const botonletter = document.createElement('button');
+//   botonletter.classList.add('letra');
+//   botonletter.innerText = letter;
+  
+//   // Creamos el contenedor de las pociones correspondientes
+//   const contenedorPotions = document.createElement('div');
+//   contenedorPotions.classList.add('potions');
+  
+//   // Filtramos las pociones que empiezan con la letra correspondiente
+//   const potionsletter = potions.filter(p => p.name.charAt(0) === letter);
+  
+//   // Creamos un elemento HTML para cada poción y lo añadimos al contenedor correspondiente
+//   potionsletter.forEach( potions => {
+//     const elementoPotions = document.createElement('div');
+//     elementoPotions.classList.add(' potions');
+//     elementoPotions.innerText =  potions.name;
+//     contenedorPotions.appendChild(elementoPotions);
+//   });
+  
+//   // Añadimos el botón y el contenedor al abecedario
+//   abecedario.appendChild(botonletter);
+//   abecedario.appendChild(contenedorPotions);
+  
+//   // Añadimos el evento click al botón para mostrar u ocultar las pociones correspondientes
+//   botonletter.addEventListener('click', () => {
+//     contenedorPotions.classList.toggle('visible');
+//   });
+// }
