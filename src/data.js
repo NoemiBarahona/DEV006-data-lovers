@@ -27,22 +27,32 @@ export function filterCharacterHouse(characters, casa) {
   return resultadoCasas;
 }
 
-export function sortData(data, sortBy) {
-  const resultadoSort1 = []
-  const resultadoFinal = []
-  data.forEach(element => {
-    resultadoSort1.push(element[sortBy])
+export function sortData(data, sortBy, sortOrder = 'asc') {
+  const resultadoSort1 = [];
+  const resultadoFinal = [];
+  data.forEach((element) => {
+    resultadoSort1.push(element[sortBy]);
   });
-  resultadoSort1.sort().forEach(nombre => {
-    data.forEach(element => {
-      if (element[sortBy] === nombre) {
-        resultadoFinal.push(element);
-      }
 
+  if (sortOrder === 'desc') {
+    resultadoSort1.sort().reverse().forEach((nombre) => {
+      data.forEach((element) => {
+        if (element[sortBy] === nombre) {
+          resultadoFinal.push(element);
+        }
+      });
     });
-  });
-  // console.log(resultadoSort1.sort())
-  return resultadoFinal.reverse();
+  } else {
+    resultadoSort1.sort().forEach((nombre) => {
+      data.forEach((element) => {
+        if (element[sortBy] === nombre) {
+          resultadoFinal.push(element);
+        }
+      });
+    });
+  }
+  
+  return resultadoFinal;
 }
 
 // export function filterpotionsName(letter, nombreAfiltrar) {

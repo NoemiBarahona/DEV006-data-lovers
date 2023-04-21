@@ -10,6 +10,9 @@ console.log(filterCharacterGender(data.characters,'Male'))
 const dataOrdenada = sortData(data.characters, "name")
 console.log(filterCharacterGender(dataOrdenada,'Female'))
 console.log(filterCharacterHouse(data.characters, 'Slytherin'))
+const dataOrdenadaAZ = sortData(data.characters, 'name', 'desc')
+console.log(filterCharacterGender (dataOrdenadaAZ, 'Female'))
+
 
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
