@@ -26,167 +26,217 @@
     color: #555;
   }
    */
-   /*--------- color del fondo  ---------*/
-body {
-  background: #052D51;
-  background-image: url('img/Fondo/Fondo2000x6000.png');
-  background-size: cover;
-  /* display: flex;*/
-  flex-wrap: wrap; 
-}
-@media (max-width: 768px) {
-
-  .navbar-close {
+   --------- color del fondo  ---------
+/* .contenedor-busqueda {
     display: flex;
-    display: none;
+    align-items: center;
   }
-
-  /* Selector para los botones del otro header dentro del media query */
+ 
+  #input-busqueda {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+  }
+ 
+  #btn-busqueda {
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+ 
+  #btn-busqueda i {
+    font-size: 20px;
+    color: #555;
+  }
+   */
+   /*--------- color del fondo  ---------*/
+   body {
+    background: #052D51;
+    background-image: url('img/Fondo/Fondo2000x6000.png');
+    background-size: cover;
+    /* display: flex;*/
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    .navbar-close {
+      display: flex;
+      display: none;
+    }
+    /* Selector para los botones del otro header dentro del media query */
+    .contenedorBoton .botonInicioLibros,
+    .contenedorBoton .botonInicioCasas,
+    .contenedorBoton .botonInicioPersonajes,
+    .contenedorBoton .botonInicioHechizos,
+    .contenedorBoton .botonInicioPociones {
+      display: none;
+      /* Hace que los botones desaparezcan en pantallas pequeñas */
+    }
+    /* Estilos para el menú hamburguesa */
+    .botonHamburguesa {
+      display: block;
+      margin: 0 10px;
+      border: 1px;
+      background-color: #052D51;
+      cursor: pointer;
+    }
+    /* Estilos para los tres iconos del menú hamburguesa */
+    .botonHamburguesa span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 5px 0;
+      background-color: #FFFFFF;
+      transition: all 0.3s ease-in-out;
+    }
+    .flexbox {
+      display: flex;
+      justify-content: center;
+      margin-top: 0VW;
+    }
+  }
+  .navbar-open {
+    display: flex;
+    flex-direction: column;
+  }
+  /*--------- contenedor del boton  ---------*/
+  .contenedorBoton {
+    background: #052D51;
+    height: 10vw;
+    text-align: center;
+    border: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    left: 0;
+    z-index: 10;
+  }
+  /*--------- boton de inicio  ---------*/
+  .contenedorBoton .botonInicioHP {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    background-color: #052D51;
+    position: relative;
+    border-radius: 12.5vw;
+    padding: 0.65vw;
+    border: none;
+    cursor: pointer;
+  }
+  /*--------- Color del sensor del boton  ---------*/
+  .contenedorBoton .botonInicioHP:hover {
+    background: rgb(255, 255, 255);
+  }
+  /*--------- Imagen del boton de inicio  ---------*/
+  .contenedorBoton .botonInicioHP img {
+    width: 4vw;
+    max-width: 4vw;
+    margin-bottom: 1.5vw;
+    position: relative;
+    top: 0.5vw;
+  }
+  /*--------- Botones de cabecera  ---------*/
   .contenedorBoton .botonInicioLibros,
   .contenedorBoton .botonInicioCasas,
   .contenedorBoton .botonInicioPersonajes,
   .contenedorBoton .botonInicioHechizos,
   .contenedorBoton .botonInicioPociones {
-    display: none;
-    /* Hace que los botones desaparezcan en pantallas pequeñas */
-  }
-
-  /* Estilos para el menú hamburguesa */
-  .botonHamburguesa {
-    display: block;
-    margin: 0 10px;
-    border: 1px;
+    font-family: 'Harry Potter', sans-serif;
+    border: none;
+    font-size: 1.5vw;
+    height: 3vw;
+    width: 13vw;
+    /* padding: 0vw; */
+    line-height: 4vw; /*interlineado*/
+    color: rgb(175, 167, 88);
     background-color: #052D51;
+    border-radius: 1vw;
+    position: relative;
+    top: -2vw;
     cursor: pointer;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 0vw 6vw 0vw 6vw;
   }
-
-  /* Estilos para los tres iconos del menú hamburguesa */
-  .botonHamburguesa span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px 0;
-    background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
+  /*--------- fondo de los botones  ---------*/
+  .contenedorBoton .botonInicioLibros:hover,
+  .contenedorBoton .botonInicioCasas:hover,
+  .contenedorBoton .botonInicioPersonajes:hover,
+  .contenedorBoton .botonInicioHechizos:hover,
+  .contenedorBoton .botonInicioPociones:hover {
+    background: rgb(255, 255, 255);
   }
-
-  .flexbox {
+  /*--------- flexbox del cotenedor de los botones  ---------*/
+  .contenedorBoton .flexbox {
     display: flex;
     justify-content: center;
-    margin-top: 0VW;
+    margin-top: 0vw;
+  }
+  .filtro {
+    /* background-color: rgba(5, 46, 81, 0.67); */
+    color: white;
+    display: none;
+    text-align: justify;
+    font-size: 1.8vw;
+    line-height: 3vw;
+  }
+  .desplegado {
+    display: block; /* Mostrar los filtros cuando se despliegan */
+  }
+  .flecha {
+    display: flex;
+    margin: 0vw 0vw 0vw 0vw;
+    cursor: pointer; /* Cambiar el cursor a una mano para indicar que es clickeable */
+  }
+  .seccion {
+    margin: 10vw 0vw -8vw 0vw; /* Añadir margen inferior entre secciones */
+  }
+  em {
+    font-family: 'Harry Potter', sans-serif;
+    font-style: normal;
+    color: rgb(175, 167, 88);
+    font-size: 2vw;
   }
 
-}
-
-.navbar-open {
+/* .abecedario {
   display: flex;
   flex-direction: column;
 }
-/*--------- contenedor del boton  ---------*/
-.contenedorBoton {
-  background: #052D51;
-  height: 10vw;
-  text-align: center;
-  border: none;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  left: 0;
-  z-index: 10;
+
+.abecedario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
-/*--------- boton de inicio  ---------*/
-.contenedorBoton .botonInicioHP {
-  width: 5vw;
-  height: 5vw;
-  font-size: 2.5vw;
-  line-height: 2.5vw;
-  background-color: #052D51;
-  position: relative;
-  border-radius: 12.5vw;
-  padding: 0.65vw;
+.abecedario-btn {
+  background-color: #ccc;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
 }
-/*--------- Color del sensor del boton  ---------*/
-.contenedorBoton .botonInicioHP:hover {
-  background: rgb(255, 255, 255);
-}
 
-/*--------- Imagen del boton de inicio  ---------*/
-.contenedorBoton .botonInicioHP img {
-  width: 4vw;
-  max-width: 4vw;
-  margin-bottom: 1.5vw;
-  position: relative;
-  top: 0.5vw;
-}
-
-/*--------- Botones de cabecera  ---------*/
-.contenedorBoton .botonInicioLibros,
-.contenedorBoton .botonInicioCasas,
-.contenedorBoton .botonInicioPersonajes,
-.contenedorBoton .botonInicioHechizos,
-.contenedorBoton .botonInicioPociones {
-  font-family: 'Harry Potter', sans-serif;
-  border: none;
-  font-size: 1.5vw;
-  height: 3vw;
-  width: 13vw;
-  /* padding: 0vw; */
-  line-height: 4vw; /*interlineado*/
-  color: rgb(175, 167, 88);
-  background-color: #052D51;
-  border-radius: 1vw;
-  position: relative;
-  top: -2vw;
-  cursor: pointer;
-  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-  margin: 0vw 6vw 0vw 6vw;
-}
-
-
-/*--------- fondo de los botones  ---------*/
-.contenedorBoton .botonInicioLibros:hover,
-.contenedorBoton .botonInicioCasas:hover,
-.contenedorBoton .botonInicioPersonajes:hover,
-.contenedorBoton .botonInicioHechizos:hover,
-.contenedorBoton .botonInicioPociones:hover {
-  background: rgb(255, 255, 255);
-}
-
-
-
-/*--------- flexbox del cotenedor de los botones  ---------*/
-.contenedorBoton .flexbox {
-  display: flex;
-  justify-content: center;
-  margin-top: 0vw;
-}
-
-.filtro {
-  /* background-color: rgba(5, 46, 81, 0.67); */
-  color: white;
+.abecedario-potions {
   display: none;
-  text-align: justify;
-  font-size: 1.8vw;
-  line-height: 3vw;
-}
-.desplegado {
-  display: block; /* Mostrar los filtros cuando se despliegan */
-}
-.flecha {
-  display: flex;
-  margin: 0vw 0vw 0vw 0vw;
-  cursor: pointer; /* Cambiar el cursor a una mano para indicar que es clickeable */
-}
-.seccion {
-  margin: 10vw 0vw -8vw 0vw; /* Añadir margen inferior entre secciones */
+  /* estilos para el contenedor de las pociones 
 }
 
-em {
-  font-family: 'Harry Potter', sans-serif;
-  font-style: normal;
-  color: rgb(175, 167, 88);
-  font-size: 2vw;
+.abecedario-potions.active {
+  display: block;
+  /* estilos para mostrar las pociones 
 }
+
+@media (max-width: 768px) {
+  .abecedario-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+} */
