@@ -128,15 +128,7 @@ body {
   margin-top: 0vw;
 }
 
-.fondoInicial {
-  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-  margin: 0vw 2vw -10vw 2vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-}
-
-/*--------- Texto de la pag de bienvenida ---------*/
+/* --------- Texto de la pag de bienvenida ---------*/
 .fondoInicial h1 {
   background-color: rgba(5, 46, 81, 0.67);
   color: white;
@@ -155,11 +147,20 @@ body {
 }
 
 /*--------- Margen y ancho del la pag bienvenida (Logo) ---------*/
+.fondoInicial {
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: 0vw 2vw -10vw 2vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
 .fondoInicial img {
   margin-top: 8vw;
   width: 50vw;
   flex-wrap: wrap;
 }
+
 
 .tituloBooks,
 .tituloCharacters {
@@ -294,7 +295,25 @@ body {
 }
 /* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
-
+ /* Cambiar el orden de los elementos */
+ .fondoInicial {
+  flex-direction: column;
+  align-items: center;
+}
+.fondoInicial img {
+  order: 1;
+  margin-top: 0;
+  margin-bottom: 8vw;
+  width: 70vw;
+}
+.fondoInicial h1 {
+  order: 2;
+  margin-top: -20vw;
+  margin-right: 0;
+  height: auto;
+  font-size: 4vw;
+  text-align: center;
+}
   .navbar-close {
     /* display: flex; */
     display: none;
