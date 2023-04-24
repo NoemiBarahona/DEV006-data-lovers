@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
@@ -32,10 +33,11 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .botonMasPersonajes {
-  width: 8vw;
-  height: 8vw;
-  background-color: #052e5169;
+  width: 5.8vw;
+  height: 5.8vw;
+  background-color: #ffffff38;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -48,8 +50,8 @@ body {
 }
 
 .botonMasPersonajes img {
-  width: 6vw;
-  height: 6vw;
+  width: 4.5vw;
+  height: 4.5vw;
   justify-content: center;
 }
 
@@ -66,7 +68,8 @@ body {
   transition: opacity 0.3s ease, visibility 1s ease;
   font-size: 0.8vw;
   width: 8vw;
-  height: 1vw;
+  height: 2vw;
+  border-radius: 30%;
 }
 
 .botonMasPersonajes:hover .etiquetaMensaje {
@@ -161,7 +164,6 @@ body {
   flex-wrap: wrap;
 }
 
-
 .tituloBooks,
 .tituloCharacters {
   font-family: 'Harry Potter', sans-serif;
@@ -172,6 +174,8 @@ body {
   /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
   margin: 10vw 0vw 2vw 40vw;
   font-weight: 200;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*--------- Pagina de los libros ---------*/
@@ -289,67 +293,86 @@ body {
 .libroPortada:hover .info-libro {
   transform: rotateY(0deg);
 }
+
 .libroPortada.mostrar-info .info-libro {
   transform: rotateY(0deg);
   transform-origin: center;
 }
+
 /* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
- /* Cambiar el orden de los elementos */
- .fondoInicial {
-  flex-direction: column;
-  align-items: center;
-}
-.fondoInicial img {
-  order: 1;
-  margin-top: 0;
-  margin-bottom: 8vw;
-  width: 70vw;
-}
-.fondoInicial h1 {
-  order: 2;
-  margin-top: -20vw;
-  margin-right: 0;
-  height: auto;
-  font-size: 4vw;
-  text-align: center;
-}
+  /*--------- Imagen del boton de inicio  ---------*/
+  .contenedorBoton .botonInicioHP img {
+    width: 13vw;
+    max-width: 13vw;
+    margin-bottom: 1.5vw;
+    top: 0.8vw;
+  }
+  
+  .contenedorBoton .botonInicioHP {
+    width: 14vw;
+    height: 14vw;
+    top: 5vw;
+  }  
+  /* Cambiar el orden de los elementos */
+  .fondoInicial {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fondoInicial img {
+    order: 1;
+    margin-top: 18vw;
+    margin-bottom: 8vw;
+    width: 70vw;
+  }
+
+  .fondoInicial h1 {
+    order: 2;
+    margin-top: -20vw;
+    margin-right: 0;
+    height: auto;
+    font-size: 4vw;
+    text-align: center;
+  }
+
   .navbar-close {
-    /* display: flex; */
     display: none;
   }
 
   .navbar-open {
     display: flex;
-    flex-direction: column;
   }
-    
+
+  .contenedorBoton {
+    height: 25vw;
+    width: 100%;
+  }
+
   .contenedorBoton .botonInicioLibros,
   .contenedorBoton .botonInicioCasas,
   .contenedorBoton .botonInicioPersonajes,
   .contenedorBoton .botonInicioHechizos,
   .contenedorBoton .botonInicioPociones {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    line-height: 4vw;
-    /*interlineado*/
-    color: rgb(175, 167, 88);
+    font-size: 5vw;
+    height: 12vw;
+    width: 40vw;
     background-color: #052D51;
-    border-radius: 1vw;
-    position: relative;
-    top: -2vw;
-    cursor: pointer;
+    border-radius: 3vw;
     /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
+    margin: 3vw 0vw 0vw 10vw;
+    display: flex;
+    flex-direction: column;
+    /* Establece la dirección del flujo como columna */
+    line-height: 15vw;
+    align-items: center;
+    /* Centra los elementos horizontalmente */
   }
 
   /* Estilos para el menú hamburguesa */
   .botonHamburguesa {
     display: block;
-    margin: 0 10px;
+    margin: 5px 10px;
     border: 1px;
     background-color: #052D51;
     cursor: pointer;
@@ -357,128 +380,127 @@ body {
 
   /* Estilos para los tres iconos del menú hamburguesa */
   .botonHamburguesa span {
-    display: block;
+    display: flex;
     width: 25px;
     height: 2px;
-    margin: 5px 0;
+    margin: 5px;
     background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
   }
 
   .flexbox {
-    display: flex;
+    display: block;
     justify-content: center;
     margin-top: 0VW;
     flex-direction: column;
   }
 
-}
-@media (min-width: 1920px){
+  .tituloBooks,
+  .tituloCharacters {
+    font-size: 8vw;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 20vw 0vw 5vw 33vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   /* Para los libros individuales */
   .libroPortada {
-    position: relative;
-    width: 100%;
-    max-width: 100px;
-    min-width: 400px;
+    min-width: 300px;
+    height: 400px;
+    margin: 4vw 17vw;
+  }
+
+  .info-libro {
+    top: -1vw;
+    left: 0vw;
+    min-width: 254px;
+    height: 390px;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  /* Para los personajes individuales */
+  .personaje {
+    min-width: 180px;
+    height: 320px;
+  }
+
+  .info-personaje {
+    top: 0.5vw;
+    background-image: url(img/Personajes/TarjetaAtras.png);
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .botonMasPersonajes {
+    width: 13vw;
+    height: 13vw;
+    background-color: #ffffff38;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 0vw 0vw;
+  }
+
+  .botonMasPersonajes img {
+    width: 10vw;
+    height: 10vw;
+    margin: -1vw;
+  }
+
+}
+
+@media (min-width: 1920px) {
+
+  /* Para los libros individuales */
+  .libroPortada {
+    min-width: 450px;
     height: 500px;
-    margin: 20px;
   }
-  
-  .libroPortada img {
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .libroPortada.girar img {
-    transform: rotateY(-180deg);
-    transform-origin: left;
-  }
-  
-  .libroPortada:hover img {
-    transform: rotateY(180deg);
-  }
-  
+
   .info-libro {
     position: absolute;
     top: -1vw;
-    left: 4vw;
-    width: 70%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+    left: 0vw;
     background-color: rgba(5, 46, 81, 0.67);
     color: #fff;
-    transform: rotateY(180deg);
-    transform-origin: left;
-    transition: transform 1s ease;
-    font-size: 20px;
-  }
-  
-  .libroPortada:hover .info-libro {
-    transform: rotateY(0deg);
-  }
-  
-  .libroPortada.mostrar-info .info-libro {
-    transform: rotateY(0deg);
-    transform-origin: center;
-  }
-  
-  /*--------- Pagina de los personajes ---------*/
-  .personajes {
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Para los personajes individuales */
-  .personaje {
-    position: relative;
-    margin: 20px;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    text-align: center;
-  }
-  
-  .personaje img {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .personaje.girar img {
-    transform: rotateY(-180deg);
-    transform-origin: left;
-  }
-  
-  .personaje:hover img {
-    transform: rotateY(180deg);
-  }
-  
-  .info-personaje {
-    position: absolute;
-    top: 1vw;
-    left: 0vw;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 35%;
-    box-sizing: border-box;
-    background-image: url(img/Personajes/TarjetaAtras.png);
-    transition: transform 1s ease;
-    font-size: 12px;
-    height: auto;
-    bottom: 0;
-  
-  }
-  
-  .libroPortada:hover .info-libro {
-    transform: rotateY(0deg);
-  }
-  .libroPortada.mostrar-info .info-libro {
-    transform: rotateY(0deg);
-    transform-origin: center;
+    font-size: 20.5px;
   }
 
+  /* Para los personajes individuales */
+  .personaje {
+    min-width: 400px;
+    height: 450px;
+  }
+
+  .info-personaje {
+    top: 0.3vw;
+    background-image: url(img/Personajes/TarjetaAtras.png);
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .botonMasPersonajes {
+    width: 5.8vw;
+    height: 5.8vw;
+    background-color: #ffffff38;
+    left: 50%;
+    border: none;
+    cursor: pointer;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: -4.5vw 0vw;
+  }
+
+  .botonMasPersonajes img {
+    width: 4.5vw;
+    height: 4.5vw;
+    margin: -1vw;
+  }
+
+  .etiquetaMensaje {
+    font-size: 0.8vw;
+    width: 8vw;
+    height: 2vw;
+    border-radius: 50%;
+  }
 }
