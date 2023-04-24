@@ -1,4 +1,4 @@
-import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType } from './data.js';// import { example } from './data.js';
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType, extractApellidos} from './data.js';// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 
@@ -146,55 +146,24 @@ flechas.forEach(flecha => {
   });
 });
 
-const buscaFamiliaBtn = document.getElementById('buscaFamilia');
-const filtroFamiliaRadios = document.getElementsByClassName('filtroFamilia');
+// Obtener referencia al select de la familia
+const selectFamilia = document.getElementById('selectFamilia');
 
-// Agrega un evento click al botón
-buscaFamiliaBtn.addEventListener('click', () => {
-  // Recorre los radio buttons para encontrar el seleccionado
-  let seleccionado = '';
-  for (let i = 0; i < filtroFamiliaRadios.length; i++) {
-    if (filtroFamiliaRadios[i].checked) {
-      seleccionado = filtroFamiliaRadios[i].value;
-      break;
-    }
-  }
+// Obtener apellidos de la data
+const apellidos = extractApellidos(data.characters);
 
-  // Llama a la función filterCharacterName con el valor seleccionado
-  console.log(filterCharacterName(data.characters, seleccionado));
+// Agregar opciones al select con los apellidos
+for (let i = 0; i < apellidos.length; i++) {
+  const opcion = document.createElement('option');
+  opcion.value = apellidos[i]; // Modificado para asignar el valor como el apellido
+  opcion.innerText = apellidos[i];
+  selectFamilia.insertBefore(opcion, selectFamilia.lastChild);
+}
+
+// Agregar evento de cambio al select
+selectFamilia.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  // Utilizar el valor seleccionado en tu aplicación
+  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
+  console.log(filterCharacterName(data.characters, valorSeleccionado))
 });
-
-// Función filterCharacterName
-// const apellidoFamilia = document.getElementById('filtroFamiliaPotter')
-// const buscaFamiliaBoton = document.getElementById("buscaFamilia");
-// buscaFamiliaBoton.addEventListener('click', function() {
-//   const familiaFinal=filterCharacterName(data.characters, apellidoFamilia.value) 
-//   console.log(familiaFinal)
-  
-// });
-
-
-
-// Obtener la lista de letras y agregar un controlador de eventos clic a cada una
-// const letters = document.querySelectorAll('.letter');
-// letters.forEach(letter => {
-//   letter.addEventListener('click', () => {
-//     // Obtener el texto de la letra
-//     const letterText = letter.textContent;
-    
-//     // Obtener la información correspondiente de data.js
-//     const data = getData(letterText);
-    
-//     // Mostrar la información en una alerta
-//     alert(data);
-//   });
-// });
-
-// // Función para obtener la información correspondiente a una letra de data.js
-// function getData(letter) { 
-//   // Buscar la información correspondiente a la letra
-//   const letterData = data[letter];
-  
-//   // Devolver la información como una cadena de texto
-//   return JSON.stringify(letterData);
-// }

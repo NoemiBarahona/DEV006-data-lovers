@@ -39,113 +39,13 @@
       </div>
     </div>
   </div>
-  <button id="buscaFamilia" class=buscaFamilia>Find your Character!</button>
-  <div class="seccion">
-    <em> Filtro por familia</em>
-    <div class="flecha">▶️</div>
-    <div class="filtro">
-      <input type="radio" id="filtroFamiliaPotter" class="filtroFamilia" name="filtroApellidoFamilia" value="Potter" />
-      <label for="familia">Potter</label>
-      <br>
-      <input type="radio" id="filtroFamiliaWeasley" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Weasley" />
-      <label for="familia">Weasley</label>
-      <br>
-      <input type="radio" id="filtroFamiliaMalfoy" class="filtroFamilia" name="filtroApellidoFamilia" value="Malfoy" />
-      <label for="familia">Malfoy</label>
-      <br>
-      <input type="radio" id="filtroFamiliaBlack" class="filtroFamilia" name="filtroApellidoFamilia" value="Black" />
-      <label for="familia">Black</label>
-      <br>
-      <input type="radio" id="filtroFamiliaGranger" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Granger" />
-      <label for="familia">Granger</label>
-      <br>
-      <input type="radio" id="filtroFamiliaDumbledore" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Dumbledore" />
-      <label for="familia">Dumbledore</label>
-      <br>
-      <input type="radio" id="filtroFamiliaSnape" class="filtroFamilia" name="filtroApellidoFamilia" value="Snape" />
-      <label for="familia">Snape</label>
-      <br>
-      <input type="radio" id="filtroFamiliaLongbotton" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Longbotton" />
-      <label for="familia">Longbotton</label>
-      <br>
-      <input type="radio" id="filtroFamiliaLestrange" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Lestrange" />
-      <label for="familia">Lestrange</label>
-      <br>
-      <input type="radio" id="filtroFamiliadLovegood" class="filtroFamilia" name="filtroApellidoFamilia"
-        value="Lovegood" />
-      <label for="familia">Lovegood</label>
-      <br>
+  <div id="contenedorDesplegables" class="contenedorDesplegables">
+    <div class="eligeFamilia">
+      <select name="familia" id="selectFamilia"> 
+        <option disabled selected>Family Filter</option>
+      </select>
     </div>
   </div>
-  <div class="seccion">
-    <em>Filtro por genero</em>
-    <div class="flecha">▶️</div>
-    <div class="filtro">
-      <input type="radio" id="filtroGeneroMale" name="filtroGeneroMale" value="familia" />
-      <label for="genero">Male</label>
-      <br>
-      <input type="radio" id="filtroGeneroFemale" name="filtroGeneroFemale" value="familia" />
-      <label for="genero">Female</label>
-    </div>
-  </div>
-  <div class="seccion">
-    <em>Filtro tipo de humanos</em>
-    <div class="flecha">▶️</div>
-    <div class="filtro">
-      <input type="radio" id="filtroTipoDeHumanosEspecieshuman" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Fuman</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesformerly" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Formerly</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesSeer" name="filtroTipoDeHumanosEspecies" value="especie" />
-      <label for="especie">Seer</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesMetamorphmagus" name="filtroTipoDeHumanosEspecies"
-        value="especie" />
-      <label for="especie">Metamorphmagus</label>
-      <br>
-      <input type="radio" id="filtroTipoDeHumanosEspeciesHalf-human/half-giant" name="filtroTipoDeHumanosEspecies"
-        value="especie" />
-      <label for="especie">Half-human/half-giant</label>
-      <br>
-    </div>
-  </div>
-  <div class="seccion">
-    <em>Filtro de especies</em>
-    <div class="flecha">▶️</div>
-    <div class="filtro">
-      <input type="radio" id="filtroTipoDeotrosHouseElf" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">House elf</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosCentaur" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Centaur</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosGoblin" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Goblin</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosHipogriff" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Hipogriff</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosThreeHeadedDog" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Three headed dog</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosThreeGiant" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Giant</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosWerewolfFormerlyHuman" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Werewolf (formerly human)</label>
-      <br>
-      <input type="radio" id="filtroTipoDeotrosPoltergeist" name="filtroTipoDeotros" value="especie" />
-      <label for="especie">Poltergeist</label>
-    </div>
-  </div>
-
   <script src="main.js" type="module"></script>
 </body>
 

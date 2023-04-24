@@ -185,6 +185,22 @@ em {
   background-color: #eee;
 }
 
+
+.eligeFamilia {
+  margin: 12vw 0vw 0vw 1vw;
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3.5vw;
+  width: 15vw;
+  line-height: 4vw;
+  color: rgb(175, 167, 88);
+  border-radius: 1vw;
+  position: relative;
+  top: -1vw;
+  cursor: pointer;
+  background-color: #ffffff41;
+}
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
   .alphabet li {
