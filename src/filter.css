@@ -3,73 +3,10 @@ body {
   background: #052D51;
   background-image: url('img/Fondo/Fondo2000x6000.png');
   background-size: cover;
-  /* display: flex;*/
+  display: flex;
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .navbar-close {
-    display: none;
-  }
-
-  .navbar-open {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contenedorBoton .botonInicioLibros,
-  .contenedorBoton .botonInicioCasas,
-  .contenedorBoton .botonInicioPersonajes,
-  .contenedorBoton .botonInicioHechizos,
-  .contenedorBoton .botonInicioPociones {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    line-height: 4vw;
-    /*interlineado*/
-    color: rgb(175, 167, 88);
-    background-color: #052D51;
-    border-radius: 1vw;
-    position: relative;
-    top: -2vw;
-    cursor: pointer;
-    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
-  }
-
-  /* Estilos para el menú hamburguesa */
-  .botonHamburguesa {
-    display: block;
-    margin: 0 10px;
-    border: 1px;
-    background-color: #052D51;
-    cursor: pointer;
-  }
-
-  /* Estilos para los tres iconos del menú hamburguesa */
-  .botonHamburguesa span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px 0;
-    background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .flexbox {
-    display: flex;
-    justify-content: center;
-    margin-top: 0VW;
-    flex-direction: column;
-  }
-
-}
-
-@media (max-width: 1920px) {
-
-}
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
   background: #052D51;
@@ -122,7 +59,7 @@ body {
   font-size: 1.5vw;
   height: 3vw;
   width: 13vw;
-  /* padding: 0vw; */
+  /* padding: 0vw;*/
   line-height: 4vw;
   /*interlineado*/
   color: rgb(175, 167, 88);
@@ -180,7 +117,6 @@ body {
   background: rgb(255, 255, 255);
 }
 
-
 .desplegado {
   display: block;
   /* Mostrar los filtros cuando se despliegan */
@@ -194,13 +130,8 @@ body {
 }
 
 .seccion {
-  margin: 1vw 0vw 1vw 1vw;
+  margin: 15vw 0vw 1vw 1vw;
   /* Añadir margen inferior entre secciones */
-}
-
-input[name="filtroFamilia"] {
-  width: 20px; /* Cambiar ancho a 20px */
-  height: 20px; /* Cambiar altura a 20px */
 }
 
 em {
@@ -234,20 +165,6 @@ em {
   max-width: calc((100% / 6) - 10px);
 }
 
-@media screen and (max-width: 768px) {
-  .alphabet li {
-    flex-basis: calc((100% / 3) - 10px);
-    max-width: calc((100% / 3) - 10px);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .alphabet li {
-    flex-basis: calc((100% / 2) - 10px);
-    max-width: calc((100% / 2) - 10px);
-  }
-}
-
 .letter {
   display: block;
   width: 30px;
@@ -267,60 +184,88 @@ em {
   background-color: #eee;
 }
 
-/* .contenedor-busqueda {
+@media (max-width: 768px) {
+  .alphabet li {
+    flex-basis: calc((100% / 2) - 10px);
+    max-width: calc((100% / 2) - 10px);
+  }
+
+  /*--------- Imagen del boton de inicio  ---------*/
+  .contenedorBoton .botonInicioHP img {
+    width: 13vw;
+    max-width: 13vw;
+    margin-bottom: 1.5vw;
+    top: 0.8vw;
+  }
+
+  .contenedorBoton .botonInicioHP {
+    width: 14vw;
+    height: 14vw;
+    top: 5vw;
+  }
+
+  .navbar-close {
+    display: none;
+  }
+
+  .navbar-open {
     display: flex;
+  }
+
+  .contenedorBoton {
+    height: 25vw;
+    width: 100%;
+  }
+
+  .contenedorBoton .botonInicioLibros,
+  .contenedorBoton .botonInicioCasas,
+  .contenedorBoton .botonInicioPersonajes,
+  .contenedorBoton .botonInicioHechizos,
+  .contenedorBoton .botonInicioPociones {
+    font-size: 5vw;
+    height: 12vw;
+    width: 40vw;
+    background-color: #052D51;
+    border-radius: 3vw;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 3vw 0vw 0vw 10vw;
+    display: flex;
+    flex-direction: column;
+    /* Establece la dirección del flujo como columna */
+    line-height: 15vw;
     align-items: center;
+    /* Centra los elementos horizontalmente */
   }
-  
-  #input-busqueda {
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-size: 16px;
-  }
-  
-  #btn-busqueda {
-    width: 40px;
-    height: 40px;
-    margin-left: -40px;
-    background-color: transparent;
-    border: none;
+
+  /* Estilos para el menú hamburguesa */
+  .botonHamburguesa {
+    display: block;
+    margin: 5px 10px;
+    border: 1px;
+    background-color: #052D51;
     cursor: pointer;
   }
-  
-  #btn-busqueda i {
-    font-size: 20px;
-    color: #555;
-  }
-   */
-/* --------- color del fondo  --------- */
-/* .contenedor-busqueda {
+
+  /* Estilos para los tres iconos del menú hamburguesa */
+  .botonHamburguesa span {
     display: flex;
-    align-items: center;
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: #ffffff;
   }
- 
-  #input-busqueda {
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-size: 16px;
+
+  .flexbox {
+    display: block;
+    justify-content: center;
+    margin-top: 0VW;
+    flex-direction: column;
   }
- 
-  #btn-busqueda {
-    width: 40px;
-    height: 40px;
-    margin-left: -40px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
- 
-  #btn-busqueda i {
-    font-size: 20px;
-    color: #555;
-  }
-   */
+}
+
+@media (max-width: 1920px) {
+    .alphabet li {
+      flex-basis: calc((100% / 3) - 10px);
+      max-width: calc((100% / 3) - 10px);
+    }
+}

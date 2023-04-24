@@ -186,6 +186,7 @@ body {
   /* Añadida propiedad flex-wrap: wrap para envolver en varias filas */
   justify-content: center;
   align-items: center;
+  margin: 0vw 0vw 0vw 10vw
 }
 
 /* Para los libros individuales */
@@ -195,7 +196,7 @@ body {
   max-width: 300px;
   min-width: 200px;
   height: 300px;
-  margin: 20px;
+  margin: 5vw 0vw 0vw 0vw;
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -218,7 +219,7 @@ body {
 .info-libro {
   position: absolute;
   top: -1vw;
-  left: 4vw;
+  left: 0vw;
   width: 70%;
   height: 100%;
   padding: 10px;
