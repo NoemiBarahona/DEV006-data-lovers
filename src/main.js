@@ -1,4 +1,4 @@
-import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType, extractApellidos} from './data.js';// import { example } from './data.js';
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType, extractApellidos, extractSpecies } from './data.js';// import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 
@@ -148,10 +148,8 @@ flechas.forEach(flecha => {
 
 // Obtener referencia al select de la familia
 const selectFamilia = document.getElementById('selectFamilia');
-
 // Obtener apellidos de la data
 const apellidos = extractApellidos(data.characters);
-
 // Agregar opciones al select con los apellidos
 for (let i = 0; i < apellidos.length; i++) {
   const opcion = document.createElement('option');
@@ -167,3 +165,33 @@ selectFamilia.addEventListener('change', function(e) {
   // Puedes realizar acciones con la variable "valorSeleccionado" aquí
   console.log(filterCharacterName(data.characters, valorSeleccionado))
 });
+
+const selectGender = document.getElementById('selectGender');
+// Agregar evento de cambio al select
+selectGender.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  // Utilizar el valor seleccionado en tu aplicación
+  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
+  console.log(filterCharacterGender(data.characters, valorSeleccionado))
+});
+
+const selectSpecies = document.getElementById('selectSpecies');
+
+const especie = extractSpecies(data.characters);
+
+console.log(especie)
+for (let i = 0; i < especie.length; i++) {
+  const opcion = document.createElement('option');
+  opcion.value = especie[i]; // Modificado para asignar el valor como el apellido
+  opcion.innerText = especie[i];
+  selectSpecies.insertBefore(opcion, selectSpecies.lastChild);
+}
+// Agregar evento de cambio al select
+selectSpecies.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  // Utilizar el valor seleccionado en tu aplicación
+  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
+  console.log(filterCharacterSpecies(data.characters, valorSeleccionado))
+});
+
+

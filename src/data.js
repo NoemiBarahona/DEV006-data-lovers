@@ -36,6 +36,18 @@ export function filterCharacterGender(characters, genero) {
   return resultadoFiltroGender;
 }
 
+export function extractSpecies(characters) {
+  const resultadoFiltro = [];
+  const especiesRegistradas = [];
+  characters.forEach(personaje => {
+    const especie = personaje.species;
+    if (especie && typeof especie === 'string' && !especiesRegistradas.includes(especie)) {
+      resultadoFiltro.push(especie);
+      especiesRegistradas.push(especie);
+    }
+  });
+  return resultadoFiltro.sort();
+}
 export function filterCharacterSpecies(characters, tipoEspecie) { // En  el dom hay qu escribir Human(ALGO)
   const filterCharacterSpecies = [];
   characters.forEach(especie => {
@@ -90,7 +102,7 @@ export function sortData(data, sortBy, sortOrder = 'asc') {
       });
     });
   }
-  
+
   return resultadoFinal;
 }
 
