@@ -59,7 +59,6 @@ body {
   font-size: 1.5vw;
   height: 3vw;
   width: 13vw;
-  /* padding: 0vw;*/
   line-height: 4vw;
   /*interlineado*/
   color: rgb(175, 167, 88);
@@ -72,7 +71,7 @@ body {
   margin: 0vw 6vw 0vw 6vw;
 }
 
-/*--------- fondo de los botones  ---------*/
+/*--------- Fondo de los botones  ---------*/
 .contenedorBoton .botonInicioLibros:hover,
 .contenedorBoton .botonInicioCasas:hover,
 .contenedorBoton .botonInicioPersonajes:hover,
@@ -81,13 +80,14 @@ body {
   background: rgb(255, 255, 255);
 }
 
-/*--------- flexbox del cotenedor de los botones  ---------*/
+/*--------- Flexbox del cotenedor de los botones  ---------*/
 .contenedorBoton .flexbox {
   display: flex;
   justify-content: center;
   margin-top: 0vw;
 }
 
+/*--------- Filtro de familias ---------*/
 .filtro {
   /* background-color: rgba(5, 46, 81, 0.67); */
   color: white;
@@ -122,6 +122,7 @@ body {
   /* Mostrar los filtros cuando se despliegan */
 }
 
+/*--------- Flecha de los filtros ---------*/
 .flecha {
   display: flex;
   margin: 0vw 0vw 0vw 0vw;
@@ -141,6 +142,7 @@ em {
   font-size: 1.3vw;
 }
 
+/*--------- Abecedario de los filtros ---------*/
 .alphabet {
   display: flex;
   flex-wrap: wrap;
@@ -151,11 +153,10 @@ em {
 
 .alphabet ul {
   list-style: none;
-  margin: 10vw 0vw 0vw 0vw;
+  margin: 0vw 0vw 0vw 15vw;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 }
 
@@ -184,6 +185,7 @@ em {
   background-color: #eee;
 }
 
+/*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
   .alphabet li {
     flex-basis: calc((100% / 2) - 10px);
@@ -263,6 +265,7 @@ em {
   }
 }
 
+/*--------- Media para pantallas grandes ---------*/
 @media (max-width: 1920px) {
     .alphabet li {
       flex-basis: calc((100% / 3) - 10px);

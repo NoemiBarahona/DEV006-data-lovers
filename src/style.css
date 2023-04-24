@@ -34,49 +34,6 @@ body {
   cursor: pointer;
 }
 
-.botonMasPersonajes {
-  width: 5.8vw;
-  height: 5.8vw;
-  background-color: #ffffff38;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  cursor: pointer;
-  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-  margin: -5.5vw 0vw;
-  border-radius: 12.5vw;
-  display: inline-block;
-}
-
-.botonMasPersonajes img {
-  width: 4.5vw;
-  height: 4.5vw;
-  justify-content: center;
-}
-
-.etiquetaMensaje {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #052e51ce;
-  color: #ffffff9d;
-  padding: 0.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 1s ease;
-  font-size: 0.8vw;
-  width: 8vw;
-  height: 2vw;
-  border-radius: 30%;
-}
-
-.botonMasPersonajes:hover .etiquetaMensaje {
-  opacity: 1;
-  visibility: visible;
-}
-
 /*--------- Color del sensor del boton  ---------*/
 .contenedorBoton .botonInicioHP:hover {
   background: rgb(255, 255, 255);
@@ -114,7 +71,6 @@ body {
   margin: 0vw 6vw 0vw 6vw;
 }
 
-
 /*--------- fondo de los botones  ---------*/
 .contenedorBoton .botonInicioLibros:hover,
 .contenedorBoton .botonInicioCasas:hover,
@@ -124,11 +80,58 @@ body {
   background: rgb(255, 255, 255);
 }
 
-/*--------- flexbox del cotenedor de los botones  ---------*/
+/*--------- Flexbox del cotenedor de los botones  ---------*/
 .contenedorBoton .flexbox {
   display: flex;
   justify-content: center;
   margin-top: 0vw;
+}
+
+/*--------- Boton para ver mas personajes ---------*/
+.botonMasPersonajes {
+  width: 5.8vw;
+  height: 5.8vw;
+  background-color: #ffffff38;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: -5.5vw 0vw;
+  border-radius: 12.5vw;
+  display: inline-block;
+}
+
+/*--------- Imagen de boton para ver mas personajes ---------*/
+.botonMasPersonajes img {
+  width: 4.5vw;
+  height: 4.5vw;
+  justify-content: center;
+}
+
+/*--------- Etiqueta del boton mas personajes ---------*/
+.etiquetaMensaje {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #052e51ce;
+  color: #ffffff9d;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 1s ease;
+  font-size: 0.8vw;
+  width: 8vw;
+  height: 2vw;
+  border-radius: 30%;
+}
+
+/*--------- ? ---------*/
+.botonMasPersonajes:hover .etiquetaMensaje {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* --------- Texto de la pag de bienvenida ---------*/
@@ -158,12 +161,14 @@ body {
   display: flex;
 }
 
+/*--------- Margen y ancho de la imagen de la bienevenida ---------*/
 .fondoInicial img {
   margin-top: 8vw;
   width: 50vw;
   flex-wrap: wrap;
 }
 
+/*--------- Es el estilo de los titulos  ---------*/
 .tituloBooks,
 .tituloCharacters {
   font-family: 'Harry Potter', sans-serif;
@@ -189,7 +194,7 @@ body {
   margin: 0vw 0vw 0vw 10vw
 }
 
-/* Para los libros individuales */
+/*--------- Para los libros individuales ---------*/
 .libroPortada {
   position: relative;
   width: 100%;
@@ -202,20 +207,24 @@ body {
   transition: transform 1s;
 }
 
+/*--------- Para las imagenes de los libros ---------*/
 .libroPortada img {
   height: 100%;
   backface-visibility: hidden;
 }
 
+/*--------- Para el efecto de girar la img de libro ---------*/
 .libroPortada.girar img {
   transform: rotateY(-180deg);
   transform-origin: left;
 }
 
+/*--------- Para la rotacion de la img ---------*/
 .libroPortada:hover img {
   transform: rotateY(180deg);
 }
 
+/*--------- Para info de los libros individuales ---------*/
 .info-libro {
   position: absolute;
   top: -1vw;
@@ -232,10 +241,12 @@ body {
   font-size: 12px;
 }
 
+/*--------- Para la rotacion de la info ---------*/
 .libroPortada:hover .info-libro {
   transform: rotateY(0deg);
 }
 
+/*--------- Para que se muestre la info ---------*/
 .libroPortada.mostrar-info .info-libro {
   transform: rotateY(0deg);
   transform-origin: center;
@@ -250,7 +261,7 @@ body {
   align-items: center;
 }
 
-/* Para los personajes individuales */
+/*--------- Para los personajes individuales ---------*/
 .personaje {
   position: relative;
   margin: 20px;
@@ -260,21 +271,25 @@ body {
   text-align: center;
 }
 
+/*--------- Para la imegen de los personajes ---------*/
 .personaje img {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
+/*--------- Para girar la imgen de personaje ---------*/
 .personaje.girar img {
   transform: rotateY(-180deg);
   transform-origin: left;
 }
 
+/*--------- Para rotar la imgen ---------*/
 .personaje:hover img {
   transform: rotateY(180deg);
 }
 
+/*--------- Para info de los libros individuales ---------*/
 .info-personaje {
   position: absolute;
   top: 1vw;
@@ -291,16 +306,18 @@ body {
 
 }
 
+/*--------- Para rotar info de los libros individuales ---------*/
 .libroPortada:hover .info-libro {
   transform: rotateY(0deg);
 }
 
+/*--------- Para girar de los libros individuales ---------*/
 .libroPortada.mostrar-info .info-libro {
   transform: rotateY(0deg);
   transform-origin: center;
 }
 
-/* Estilos para el menú desplegable en pantallas pequeñas */
+/*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
   /*--------- Imagen del boton de inicio  ---------*/
   .contenedorBoton .botonInicioHP img {
@@ -450,6 +467,7 @@ body {
 
 }
 
+/*--------- Media para pantallas grandes ---------*/
 @media (min-width: 1920px) {
 
   /* Para los libros individuales */
