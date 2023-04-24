@@ -17,6 +17,26 @@ export function filterCharacterGender(characters, genero) {
   return resultadoFiltroGender;
 }
 
+export function filterCharacterSpecies(characters, tipoEspecie) { // En  el dom hay qu escribir Human(ALGO)
+  const filterCharacterSpecies = [];
+  characters.forEach(especie => {
+    if (especie.species === tipoEspecie) {
+      filterCharacterSpecies.push(especie)
+    }
+  });
+  return filterCharacterSpecies;
+}
+
+export function filterspellType(spells, tipoHechizo) {
+  const filterspellType = [];
+  spells.forEach(hechizo => {
+    if (hechizo.spell_type === tipoHechizo) {
+      filterspellType.push(hechizo)
+    }
+  });
+  return filterspellType;
+}
+
 export function filterCharacterHouse(characters, casa) {
   const resultadoCasas = [];
   characters.forEach(element => {

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType } from './data.js';// import { example } from './data.js';
+=======
 import { filterCharacterGender,filterCharacterName, filterCharacterHouse, sortData} from './data.js';// import { example } from './data.js';
+>>>>>>> 84a2b9925d3c726e9c5bd1941e5533c17b47f861
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -12,6 +16,8 @@ console.log(filterCharacterGender(dataOrdenada,'Female'))
 console.log(filterCharacterHouse(data.characters, 'Slytherin'))
 const dataOrdenadaAZ = sortData(data.characters, 'name', 'desc')
 console.log(filterCharacterGender (dataOrdenadaAZ, 'Female'))
+console.log(filterCharacterSpecies(data.characters, 'Human (Seer)'))
+console.log(filterspellType(data.spells, 'Charm'))
 
 
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
