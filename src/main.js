@@ -1,21 +1,18 @@
 import { filterCharacterGender,filterCharacterName, filterCharacterHouse, filterspellType, filterCharacterSpecies, sortData} from './data.js';// import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-// console.log(data.books[0]);
+
+// console.log(filterCharacterName(data.characters,'Black'))
+// console.log(filterCharacterGender(data.characters,'Female'))
+// console.log(filterCharacterGender(data.characters,'Male'))
+// const dataOrdenada = sortData(data.characters, "name")
+// console.log(filterCharacterGender(dataOrdenada,'Female'))
+// console.log(filterCharacterHouse(data.characters, 'Slytherin'))
+// const dataOrdenadaAZ = sortData(data.characters, 'name', 'desc')
+// console.log(filterCharacterGender (dataOrdenadaAZ, 'Female'))
+// console.log(filterCharacterSpecies(data.characters, 'Human (Seer)'))
+// console.log(filterspellType(data.spells, 'Charm'))
+
 // Funcionalidad para el boton de inicio
-console.log(filterCharacterName(data.characters,'Black'))
-console.log(filterCharacterGender(data.characters,'Female'))
-console.log(filterCharacterGender(data.characters,'Male'))
-const dataOrdenada = sortData(data.characters, "name")
-console.log(filterCharacterGender(dataOrdenada,'Female'))
-console.log(filterCharacterHouse(data.characters, 'Slytherin'))
-const dataOrdenadaAZ = sortData(data.characters, 'name', 'desc')
-console.log(filterCharacterGender (dataOrdenadaAZ, 'Female'))
-console.log(filterCharacterSpecies(data.characters, 'Human (Seer)'))
-console.log(filterspellType(data.spells, 'Charm'))
-
-
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
     top: document.getElementById("botonInicioHP").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
@@ -36,20 +33,7 @@ document.getElementById("botonInicioPersonajes").addEventListener('click', funct
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
-// Funcionalidad para el boton de hechizos
-document.getElementById("botonInicioHechizos").addEventListener('click', function () {//aqui se llama el id del boton
-  window.scrollTo({// atributo de mover por la pagina
-    top: document.getElementById("PORDEFINIR").offsetTop,
-    behavior: "smooth"
-  });
-});
-// Funcionalidad para el boton de pociones
-document.getElementById("botonInicioPociones").addEventListener('click', function () {//aqui se llama el id del boton
-  window.scrollTo({// atributo de mover por la pagina
-    top: document.getElementById("PORDEFINIR").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
-    behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
-  });
-});
+
 const botonHamburguesa = document.getElementById("botonHamburguesa");
 const contenedorBoton = document.getElementById("navbar");
 // const flexbox = document.querySelector(".flexbox");
@@ -160,6 +144,35 @@ flechas.forEach(flecha => {
     flecha.textContent = filtros.classList.contains('desplegado') ? '▼' : ':flecha_hacia_delante:';
   });
 });
+
+const buscaFamiliaBtn = document.getElementById('buscaFamilia');
+const filtroFamiliaRadios = document.getElementsByClassName('filtroFamilia');
+
+// Agrega un evento click al botón
+buscaFamiliaBtn.addEventListener('click', () => {
+  // Recorre los radio buttons para encontrar el seleccionado
+  let seleccionado = '';
+  for (let i = 0; i < filtroFamiliaRadios.length; i++) {
+    if (filtroFamiliaRadios[i].checked) {
+      seleccionado = filtroFamiliaRadios[i].value;
+      break;
+    }
+  }
+
+  // Llama a la función filterCharacterName con el valor seleccionado
+  console.log(filterCharacterName(data.characters, seleccionado));
+});
+
+// Función filterCharacterName
+// const apellidoFamilia = document.getElementById('filtroFamiliaPotter')
+// const buscaFamiliaBoton = document.getElementById("buscaFamilia");
+// buscaFamiliaBoton.addEventListener('click', function() {
+//   const familiaFinal=filterCharacterName(data.characters, apellidoFamilia.value) 
+//   console.log(familiaFinal)
+  
+// });
+
+
 
 // Obtener la lista de letras y agregar un controlador de eventos clic a cada una
 // const letters = document.querySelectorAll('.letter');

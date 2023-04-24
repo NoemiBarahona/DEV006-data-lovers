@@ -160,6 +160,27 @@ body {
   line-height: 3vw;
 }
 
+.buscaFamilia {
+  margin: 12vw 0vw 0vw 1vw;
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3.5vw;
+  width: 15vw;
+  line-height: 4vw;
+  color: rgb(175, 167, 88);
+  border-radius: 1vw;
+  position: relative;
+  top: -1vw;
+  cursor: pointer;
+  background-color: #ffffff41;
+}
+
+.buscaFamilia:hover {
+  background: rgb(255, 255, 255);
+}
+
+
 .desplegado {
   display: block;
   /* Mostrar los filtros cuando se despliegan */
@@ -173,15 +194,20 @@ body {
 }
 
 .seccion {
-  margin: 10vw 0vw -8vw 0vw;
+  margin: 1vw 0vw 1vw 1vw;
   /* Añadir margen inferior entre secciones */
+}
+
+input[name="filtroFamilia"] {
+  width: 20px; /* Cambiar ancho a 20px */
+  height: 20px; /* Cambiar altura a 20px */
 }
 
 em {
   font-family: 'Harry Potter', sans-serif;
   font-style: normal;
   color: rgb(175, 167, 88);
-  font-size: 2vw;
+  font-size: 1.3vw;
 }
 
 .alphabet {
