@@ -88,39 +88,67 @@ body {
 }
 
 /*--------- Filtro de familias ---------*/
-.filtro {
-  /* background-color: rgba(5, 46, 81, 0.67); */
-  color: white;
-  display: none;
-  text-align: justify;
-  font-size: 1.8vw;
-  line-height: 3vw;
+
+.contenedorDesplegables {
+  display: flex;
+  margin: 10vw 0vw 0vw 20vw;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.buscaFamilia {
-  margin: 12vw 0vw 0vw 1vw;
+#filtro {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
   font-family: 'Harry Potter', sans-serif;
-  border: none;
-  font-size: 1.5vw;
-  height: 3.5vw;
-  width: 15vw;
-  line-height: 4vw;
   color: rgb(175, 167, 88);
-  border-radius: 1vw;
-  position: relative;
-  top: -1vw;
-  cursor: pointer;
+
+}
+
+select {
+  font-family: 'Harry Potter', sans-serif;
+  color: rgb(175, 167, 88);
   background-color: #ffffff41;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  font-size: 2vw; 
+   cursor: pointer;
 }
 
-.buscaFamilia:hover {
-  background: rgb(255, 255, 255);
+select.filtro {
+  color: #fff;
+  background-color: #333;
+  border-radius: 0;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
-.desplegado {
-  display: block;
-  /* Mostrar los filtros cuando se despliegan */
+
+
+
+
+  /* display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: #ffffff41;
+  cursor: pointer;
+  border-radius: 1vw;
+  margin: 12vw 0vw 0vw 1vw;
+  width: 15vw; 
 }
+*/
+/* .eligeFamilia{
+  font-family: 'Harry Potter', sans-serif;
+  font-size: 1.5vw;
+  color: rgb(175, 167, 88);
+  border: none;
+  position: relative;
+  height: 3.5vw; 
+  line-height: 4vw;
+  top: -1vw;
+} */
 
 /*--------- Flecha de los filtros ---------*/
 .flecha {
@@ -186,21 +214,7 @@ em {
 }
 
 
-.eligeFamilia {
-  margin: 12vw 0vw 0vw 1vw;
-  font-family: 'Harry Potter', sans-serif;
-  border: none;
-  font-size: 1.5vw;
-  height: 3.5vw;
-  width: 15vw;
-  line-height: 4vw;
-  color: rgb(175, 167, 88);
-  border-radius: 1vw;
-  position: relative;
-  top: -1vw;
-  cursor: pointer;
-  background-color: #ffffff41;
-}
+
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
   .alphabet li {
