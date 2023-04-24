@@ -1,245 +1,247 @@
- /* --------- color del fondo  --------- */
- body {
-   background: #052D51;
-   background-image: url('img/Fondo/Fondo2000x6000.png');
-   background-size: cover;
-   /* display: flex;*/
-   flex-wrap: wrap;
- }
+/* --------- color del fondo  --------- */
+body {
+  background: #052D51;
+  background-image: url('img/Fondo/Fondo2000x6000.png');
+  background-size: cover;
+  /* display: flex;*/
+  flex-wrap: wrap;
+}
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .navbar-close {
+    display: none;
+  }
 
-   .navbar-close {
-     /* display: flex; */
-     display: none;
-   }
+  .navbar-open {
+    display: flex;
+    flex-direction: column;
+  }
 
-   .navbar-open {
-     display: flex;
-     flex-direction: column;
-   }
+  .contenedorBoton .botonInicioLibros,
+  .contenedorBoton .botonInicioCasas,
+  .contenedorBoton .botonInicioPersonajes,
+  .contenedorBoton .botonInicioHechizos,
+  .contenedorBoton .botonInicioPociones {
+    font-family: 'Harry Potter', sans-serif;
+    border: none;
+    font-size: 1.5vw;
+    height: 3vw;
+    width: 13vw;
+    line-height: 4vw;
+    /*interlineado*/
+    color: rgb(175, 167, 88);
+    background-color: #052D51;
+    border-radius: 1vw;
+    position: relative;
+    top: -2vw;
+    cursor: pointer;
+    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+    margin: 0vw 6vw 0vw 6vw;
+  }
 
-   .contenedorBoton .botonInicioLibros,
-   .contenedorBoton .botonInicioCasas,
-   .contenedorBoton .botonInicioPersonajes,
-   .contenedorBoton .botonInicioHechizos,
-   .contenedorBoton .botonInicioPociones {
-     font-family: 'Harry Potter', sans-serif;
-     border: none;
-     font-size: 1.5vw;
-     height: 3vw;
-     width: 13vw;
-     line-height: 4vw;
-     /*interlineado*/
-     color: rgb(175, 167, 88);
-     background-color: #052D51;
-     border-radius: 1vw;
-     position: relative;
-     top: -2vw;
-     cursor: pointer;
-     /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-     margin: 0vw 6vw 0vw 6vw;
-   }
+  /* Estilos para el menú hamburguesa */
+  .botonHamburguesa {
+    display: block;
+    margin: 0 10px;
+    border: 1px;
+    background-color: #052D51;
+    cursor: pointer;
+  }
 
-   /* Estilos para el menú hamburguesa */
-   .botonHamburguesa {
-     display: block;
-     margin: 0 10px;
-     border: 1px;
-     background-color: #052D51;
-     cursor: pointer;
-   }
+  /* Estilos para los tres iconos del menú hamburguesa */
+  .botonHamburguesa span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
 
-   /* Estilos para los tres iconos del menú hamburguesa */
-   .botonHamburguesa span {
-     display: block;
-     width: 25px;
-     height: 2px;
-     margin: 5px 0;
-     background-color: #ffffff;
-     transition: all 0.3s ease-in-out;
-   }
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 0VW;
+    flex-direction: column;
+  }
 
-   .flexbox {
-     display: flex;
-     justify-content: center;
-     margin-top: 0VW;
-     flex-direction: column;
-   }
+}
 
- }
+@media (max-width: 1920px) {
 
- /*--------- contenedor del boton  ---------*/
- .contenedorBoton {
-   background: #052D51;
-   height: 10vw;
-   text-align: center;
-   border: none;
-   position: fixed;
-   top: 0;
-   width: 100vw;
-   left: 0;
-   z-index: 10;
- }
+}
+/*--------- contenedor del boton  ---------*/
+.contenedorBoton {
+  background: #052D51;
+  height: 10vw;
+  text-align: center;
+  border: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+}
 
- /*--------- boton de inicio  ---------*/
- .contenedorBoton .botonInicioHP {
-   width: 5vw;
-   height: 5vw;
-   font-size: 2.5vw;
-   line-height: 2.5vw;
-   background-color: #052D51;
-   position: relative;
-   border-radius: 12.5vw;
-   padding: 0.65vw;
-   border: none;
-   cursor: pointer;
- }
+/*--------- boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP {
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  background-color: #052D51;
+  position: relative;
+  border-radius: 12.5vw;
+  padding: 0.65vw;
+  border: none;
+  cursor: pointer;
+}
 
- /*--------- Color del sensor del boton  ---------*/
- .contenedorBoton .botonInicioHP:hover {
-   background: rgb(255, 255, 255);
- }
+/*--------- Color del sensor del boton  ---------*/
+.contenedorBoton .botonInicioHP:hover {
+  background: rgb(255, 255, 255);
+}
 
- /*--------- Imagen del boton de inicio  ---------*/
- .contenedorBoton .botonInicioHP img {
-   width: 4vw;
-   max-width: 4vw;
-   margin-bottom: 1.5vw;
-   position: relative;
-   top: 0.5vw;
- }
+/*--------- Imagen del boton de inicio  ---------*/
+.contenedorBoton .botonInicioHP img {
+  width: 4vw;
+  max-width: 4vw;
+  margin-bottom: 1.5vw;
+  position: relative;
+  top: 0.5vw;
+}
 
- /*--------- Botones de cabecera  ---------*/
- .contenedorBoton .botonInicioLibros,
- .contenedorBoton .botonInicioCasas,
- .contenedorBoton .botonInicioPersonajes,
- .contenedorBoton .botonInicioHechizos,
- .contenedorBoton .botonInicioPociones {
-   font-family: 'Harry Potter', sans-serif;
-   border: none;
-   font-size: 1.5vw;
-   height: 3vw;
-   width: 13vw;
-   /* padding: 0vw; */
-   line-height: 4vw;
-   /*interlineado*/
-   color: rgb(175, 167, 88);
-   background-color: #052D51;
-   border-radius: 1vw;
-   position: relative;
-   top: -2vw;
-   cursor: pointer;
-   /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-   margin: 0vw 6vw 0vw 6vw;
- }
+/*--------- Botones de cabecera  ---------*/
+.contenedorBoton .botonInicioLibros,
+.contenedorBoton .botonInicioCasas,
+.contenedorBoton .botonInicioPersonajes,
+.contenedorBoton .botonInicioHechizos,
+.contenedorBoton .botonInicioPociones {
+  font-family: 'Harry Potter', sans-serif;
+  border: none;
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 13vw;
+  /* padding: 0vw; */
+  line-height: 4vw;
+  /*interlineado*/
+  color: rgb(175, 167, 88);
+  background-color: #052D51;
+  border-radius: 1vw;
+  position: relative;
+  top: -2vw;
+  cursor: pointer;
+  /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
+  margin: 0vw 6vw 0vw 6vw;
+}
 
- /*--------- fondo de los botones  ---------*/
- .contenedorBoton .botonInicioLibros:hover,
- .contenedorBoton .botonInicioCasas:hover,
- .contenedorBoton .botonInicioPersonajes:hover,
- .contenedorBoton .botonInicioHechizos:hover,
- .contenedorBoton .botonInicioPociones:hover {
-   background: rgb(255, 255, 255);
- }
+/*--------- fondo de los botones  ---------*/
+.contenedorBoton .botonInicioLibros:hover,
+.contenedorBoton .botonInicioCasas:hover,
+.contenedorBoton .botonInicioPersonajes:hover,
+.contenedorBoton .botonInicioHechizos:hover,
+.contenedorBoton .botonInicioPociones:hover {
+  background: rgb(255, 255, 255);
+}
 
- /*--------- flexbox del cotenedor de los botones  ---------*/
- .contenedorBoton .flexbox {
-   display: flex;
-   justify-content: center;
-   margin-top: 0vw;
- }
+/*--------- flexbox del cotenedor de los botones  ---------*/
+.contenedorBoton .flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 0vw;
+}
 
- .filtro {
-   /* background-color: rgba(5, 46, 81, 0.67); */
-   color: white;
-   display: none;
-   text-align: justify;
-   font-size: 1.8vw;
-   line-height: 3vw;
- }
+.filtro {
+  /* background-color: rgba(5, 46, 81, 0.67); */
+  color: white;
+  display: none;
+  text-align: justify;
+  font-size: 1.8vw;
+  line-height: 3vw;
+}
 
- .desplegado {
-   display: block;
-   /* Mostrar los filtros cuando se despliegan */
- }
+.desplegado {
+  display: block;
+  /* Mostrar los filtros cuando se despliegan */
+}
 
- .flecha {
-   display: flex;
-   margin: 0vw 0vw 0vw 0vw;
-   cursor: pointer;
-   /* Cambiar el cursor a una mano para indicar que es clickeable */
- }
+.flecha {
+  display: flex;
+  margin: 0vw 0vw 0vw 0vw;
+  cursor: pointer;
+  /* Cambiar el cursor a una mano para indicar que es clickeable */
+}
 
- .seccion {
-   margin: 10vw 0vw -8vw 0vw;
-   /* Añadir margen inferior entre secciones */
- }
+.seccion {
+  margin: 10vw 0vw -8vw 0vw;
+  /* Añadir margen inferior entre secciones */
+}
 
- em {
-   font-family: 'Harry Potter', sans-serif;
-   font-style: normal;
-   color: rgb(175, 167, 88);
-   font-size: 2vw;
- }
+em {
+  font-family: 'Harry Potter', sans-serif;
+  font-style: normal;
+  color: rgb(175, 167, 88);
+  font-size: 2vw;
+}
 
- .alphabet {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   margin: 20px;
- }
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
 
- .alphabet ul {
-   list-style: none;
-   margin: 10vw 0vw 0vw 0vw;
-   padding: 0;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
- }
+.alphabet ul {
+  list-style: none;
+  margin: 10vw 0vw 0vw 0vw;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
- .alphabet li {
-   margin: 5px;
-   flex-basis: calc((100% / 6) - 10px);
-   max-width: calc((100% / 6) - 10px);
- }
+.alphabet li {
+  margin: 5px;
+  flex-basis: calc((100% / 6) - 10px);
+  max-width: calc((100% / 6) - 10px);
+}
 
- @media screen and (max-width: 768px) {
-   .alphabet li {
-     flex-basis: calc((100% / 3) - 10px);
-     max-width: calc((100% / 3) - 10px);
-   }
- }
+@media screen and (max-width: 768px) {
+  .alphabet li {
+    flex-basis: calc((100% / 3) - 10px);
+    max-width: calc((100% / 3) - 10px);
+  }
+}
 
- @media screen and (max-width: 480px) {
-   .alphabet li {
-     flex-basis: calc((100% / 2) - 10px);
-     max-width: calc((100% / 2) - 10px);
-   }
- }
+@media screen and (max-width: 480px) {
+  .alphabet li {
+    flex-basis: calc((100% / 2) - 10px);
+    max-width: calc((100% / 2) - 10px);
+  }
+}
 
- .letter {
-   display: block;
-   width: 30px;
-   height: 30px;
-   line-height: 30px;
-   text-align: center;
-   font-size: 16px;
-   color: #333;
-   background-color: #fff;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   text-decoration: none;
-   transition: all 0.3s ease;
- }
+.letter {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
- .letter:hover {
-   background-color: #eee;
- }
-  /* .contenedor-busqueda {
+.letter:hover {
+  background-color: #eee;
+}
+
+/* .contenedor-busqueda {
     display: flex;
     align-items: center;
   }
@@ -267,7 +269,7 @@
     color: #555;
   }
    */
-   /* --------- color del fondo  --------- */
+/* --------- color del fondo  --------- */
 /* .contenedor-busqueda {
     display: flex;
     align-items: center;
