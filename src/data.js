@@ -33,7 +33,7 @@ export function filterCharacterGender(characters, genero) {
       resultadoFiltroGender.push(element)
     }
   });
-  return resultadoFiltroGender;
+  return resultadoFiltroGender.sort();
 }
 
 export function extractSpecies(characters) {
@@ -55,7 +55,7 @@ export function filterCharacterSpecies(characters, tipoEspecie) { // En  el dom 
       filterCharacterSpecies.push(especie)
     }
   });
-  return filterCharacterSpecies;
+  return filterCharacterSpecies.sort();
 }
 
 export function filterspellType(spells, tipoHechizo) {
@@ -75,7 +75,7 @@ export function filterCharacterHouse(characters, casa) {
       resultadoCasas.push(element)
     }
   });
-  return resultadoCasas;
+  return resultadoCasas.sort();
 }
 
 export function sortData(data, sortBy, sortOrder = 'asc') {

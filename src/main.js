@@ -175,6 +175,15 @@ selectGender.addEventListener('change', function(e) {
   console.log(filterCharacterGender(data.characters, valorSeleccionado))
 });
 
+const selectHouses = document.getElementById('selectHouses');
+// Agregar evento de cambio al select
+selectHouses.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  // Utilizar el valor seleccionado en tu aplicación
+  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
+  console.log(filterCharacterHouse(data.characters, valorSeleccionado))
+});
+
 const selectSpecies = document.getElementById('selectSpecies');
 
 const especie = extractSpecies(data.characters);
