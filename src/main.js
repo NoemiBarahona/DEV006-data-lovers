@@ -35,6 +35,7 @@ document.getElementById("botonInicioPersonajes").addEventListener('click', funct
   });
 });
 
+//funcionalidad boton hamburguesa
 const botonHamburguesa = document.getElementById("botonHamburguesa");
 const contenedorBoton = document.getElementById("navbar");
 // const flexbox = document.querySelector(".flexbox");
@@ -47,6 +48,8 @@ botonHamburguesa.addEventListener("click", () => {
     contenedorBoton.classList.toggle("navbar-open");
   }
 });
+
+//funcionalidad fotos giratorias libros
 const infoDataLibro = document.createElement("p");
 infoDataLibro.classList.add("info-libro");
 document.querySelectorAll(".libroPortada").forEach(function (libro) {
@@ -73,6 +76,7 @@ document.querySelectorAll(".libroPortada").forEach(function (libro) {
     libro.classList.add('mostrar-info');
   });
 });
+//funcionalidad fotos giratorias personajes
 const infoDataPersonaje = document.createElement("p");
 infoDataPersonaje.classList.add("info-personaje");
 document.querySelectorAll(".personaje").forEach(function (personaje) {
@@ -101,11 +105,11 @@ document.querySelectorAll(".personaje").forEach(function (personaje) {
       }
       genero = personajeData.gender;
       if (genero === null) {
-        genero = "Desconocido";
+        genero = "Unknown";
       }
       patronusPersonaje = personajeData.patronus;
       if (patronusPersonaje === null) {
-        patronusPersonaje = "Desconocido";
+        patronusPersonaje = "Unknown";
       }
       casa = personajeData.house;
       if (casa === null) {
@@ -133,74 +137,64 @@ document.querySelectorAll(".personaje").forEach(function (personaje) {
     personaje.classList.add('mostrar-info');
   });
 });
-const flechas = document.querySelectorAll('.flecha');
-flechas.forEach(flecha => {
-  flecha.addEventListener('click', () => {
-    // Obtener el contenedor de filtros dentro de la sección
-    const seccion = flecha.parentNode;
-    const filtros = seccion.querySelector('.filtro');
-    // Alternar la clase 'desplegado' para mostrar/ocultar los filtros
-    filtros.classList.toggle('desplegado');
-    // Cambiar el texto de la flecha para indicar el estado de la sección (desplegada o no)
-    flecha.textContent = filtros.classList.contains('desplegado') ? '▼' : ':flecha_hacia_delante:';
-  });
-});
 
+//SELECCION DE APELLIDOS PARA VISUALIZAR DESPLEGABLE
 // Obtener referencia al select de la familia
 const selectFamilia = document.getElementById('selectFamilia');
 // Obtener apellidos de la data
 const apellidos = extractApellidos(data.characters);
-// Agregar opciones al select con los apellidos
 for (let i = 0; i < apellidos.length; i++) {
   const opcion = document.createElement('option');
-  opcion.value = apellidos[i]; // Modificado para asignar el valor como el apellido
+  opcion.value = apellidos[i]; //para asignar el valor como el apellido
   opcion.innerText = apellidos[i];
   selectFamilia.insertBefore(opcion, selectFamilia.lastChild);
 }
-
-// Agregar evento de cambio al select
+//FILTRO POR APELLIDO LINKEADO CON SELECCION APELLIDOS
 selectFamilia.addEventListener('change', function(e) {
   const valorSeleccionado = e.target.value; // Obtener el contenido del value
-  // Utilizar el valor seleccionado en tu aplicación
-  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
-  console.log(filterCharacterName(data.characters, valorSeleccionado))
+  const resultado = filterCharacterName(data.characters, valorSeleccionado); // Obtener el resultado del filtro
+  console.log(resultado); // Mostrar el resultado en la consola
+
+  // Construir la representación en cadena de texto personalizada del objeto
+  let textoResultado = '';
+  for (let i = 0; i < resultado.length; i++) {
+    const personaje = resultado[i];
+    textoResultado += `Name: ${personaje.name ?? 'Unknown'}, Birth: ${personaje.birth ?? 'Unknown'}, Status: ${personaje.death ? 'Died on ' + personaje.death : 'Alive'}, Gender: ${personaje.gender ?? 'Unknown'}<br>`; // Utilizar operador ?? para mostrar 'Unknown' en lugar de null
+  }
+
+  document.getElementById('resultado').innerHTML = textoResultado; // Mostrar el resultado en el elemento <p> del HTML como HTML
 });
 
-const selectGender = document.getElementById('selectGender');
-// Agregar evento de cambio al select
-selectGender.addEventListener('change', function(e) {
-  const valorSeleccionado = e.target.value; // Obtener el contenido del value
-  // Utilizar el valor seleccionado en tu aplicación
-  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
-  console.log(filterCharacterGender(data.characters, valorSeleccionado))
-});
-
-const selectHouses = document.getElementById('selectHouses');
-// Agregar evento de cambio al select
-selectHouses.addEventListener('change', function(e) {
-  const valorSeleccionado = e.target.value; // Obtener el contenido del value
-  // Utilizar el valor seleccionado en tu aplicación
-  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
-  console.log(filterCharacterHouse(data.characters, valorSeleccionado))
-});
-
+//SELECCION DE ESPECIES PARA VISUALIZAR DESPLEGABLE
 const selectSpecies = document.getElementById('selectSpecies');
-
 const especie = extractSpecies(data.characters);
-
-console.log(especie)
 for (let i = 0; i < especie.length; i++) {
   const opcion = document.createElement('option');
   opcion.value = especie[i]; // Modificado para asignar el valor como el apellido
   opcion.innerText = especie[i];
   selectSpecies.insertBefore(opcion, selectSpecies.lastChild);
 }
-// Agregar evento de cambio al select
+//FILTRO POR ESPECIE LINKEADO CON SELECCION DE ESPECIES
 selectSpecies.addEventListener('change', function(e) {
   const valorSeleccionado = e.target.value; // Obtener el contenido del value
-  // Utilizar el valor seleccionado en tu aplicación
-  // Puedes realizar acciones con la variable "valorSeleccionado" aquí
   console.log(filterCharacterSpecies(data.characters, valorSeleccionado))
 });
+
+//FILTRO POR GENERO
+const selectGender = document.getElementById('selectGender');
+// Agregar evento de cambio al select
+selectGender.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  console.log(filterCharacterGender(data.characters, valorSeleccionado))
+});
+
+//FILTRO POR CASA
+const selectHouses = document.getElementById('selectHouses');
+// Agregar evento de cambio al select
+selectHouses.addEventListener('change', function(e) {
+  const valorSeleccionado = e.target.value; // Obtener el contenido del value
+  console.log(filterCharacterHouse(data.characters, valorSeleccionado))
+});
+
 
 
