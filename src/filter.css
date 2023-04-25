@@ -126,27 +126,6 @@ select option {
   padding: 10px;
 }
 
-
-/*--------- Flecha de los filtros ---------*/
-/* .flecha {
-  display: flex;
-  margin: 0vw 0vw 0vw 0vw;
-  cursor: pointer;
-  /* Cambiar el cursor a una mano para indicar que es clickeable 
-} */
-
- /*.seccion {
-  margin: 15vw 0vw 1vw 1vw;
-  Añadir margen inferior entre secciones 
-}
-
-em {
-  font-family: 'Harry Potter', sans-serif;
-  font-style: normal;
-  color: rgb(175, 167, 88);
-  font-size: 1.3vw;
-}
-
 /*--------- Abecedario de los filtros ---------*/
 .alphabet {
   display: flex;
@@ -194,6 +173,16 @@ em {
 
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
+  select {
+    font-size: 3.5vw;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .contenedorDesplegables {
+    flex-direction: column;
+    margin: -30vw 0vw 0vw 15vw;
+  }
+
   .alphabet li {
     flex-basis: calc((100% / 2) - 10px);
     max-width: calc((100% / 2) - 10px);
