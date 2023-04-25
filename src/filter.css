@@ -169,7 +169,10 @@ select option {
   background-color: #eee;
 }
 
+.resultados{
+  color: #eee;
 
+}
 
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
