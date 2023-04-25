@@ -87,24 +87,8 @@ body {
   margin-top: 0vw;
 }
 
-/*--------- Filtro de familias ---------*/
-
-.contenedorDesplegables {
-  display: flex;
-  margin: 10vw 0vw 0vw 20vw;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-#filtro {
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  font-family: 'Harry Potter', sans-serif;
-  color: rgb(175, 167, 88);
-
-}
-
+/*--------- Contenedor de filtros ---------*/
+/* Estilos para los select */
 select {
   font-family: 'Harry Potter', sans-serif;
   color: rgb(175, 167, 88);
@@ -113,54 +97,47 @@ select {
   outline: none;
   border-radius: 1vw;
   font-size: 2vw; 
-   cursor: pointer;
-}
-
-select.filtro {
-  color: #fff;
-  background-color: #333;
-  border-radius: 0;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-}
-
-
-
-
-
-  /* display: inline-block;
-  border-radius: 10px;
-  padding: 5px;
-  margin-right: 10px;
-  background-color: #ffffff41;
   cursor: pointer;
-  border-radius: 1vw;
-  margin: 12vw 0vw 0vw 1vw;
-  width: 15vw; 
+  width: 200px; /* Tamaño fijo para los select */
+  padding: 10px; /* Añadimos un poco de padding para que los textos no queden pegados a los bordes */
+  margin: 0 10px; /* Separación entre los select */
+  text-align: center; /* Centramos el texto horizontalmente */
+  transition: background-color 0.3s ease-in-out; /* Efecto de transición al pasar el cursor */
 }
-*/
-/* .eligeFamilia{
-  font-family: 'Harry Potter', sans-serif;
-  font-size: 1.5vw;
-  color: rgb(175, 167, 88);
-  border: none;
-  position: relative;
-  height: 3.5vw; 
-  line-height: 4vw;
-  top: -1vw;
-} */
+
+/* Estilos para cuando se pasa el cursor */
+select:hover {
+  background-color: #fff; /* Cambio de color de fondo */
+  color: #333; /* Cambio de color de texto */
+}
+
+/* Estilos para los options */
+select option {
+  font-family: 'Georgia', serif; /* Tipo de letra con detalles */
+  font-size: 1.2rem; /* Tamaño de letra */
+}
+
+/* Contenedor principal */
+.contenedorDesplegables {
+  display: flex;
+  justify-content: center; /* Centramos horizontalmente los elementos */
+  margin: 10vw 10vw 0vw 15vw;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 
 /*--------- Flecha de los filtros ---------*/
-.flecha {
+/* .flecha {
   display: flex;
   margin: 0vw 0vw 0vw 0vw;
   cursor: pointer;
-  /* Cambiar el cursor a una mano para indicar que es clickeable */
-}
+  /* Cambiar el cursor a una mano para indicar que es clickeable 
+} */
 
-.seccion {
+ /*.seccion {
   margin: 15vw 0vw 1vw 1vw;
-  /* Añadir margen inferior entre secciones */
+  Añadir margen inferior entre secciones 
 }
 
 em {
