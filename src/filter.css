@@ -103,27 +103,31 @@ select {
   margin: 0 10px; /* Separación entre los select */
   text-align: center; /* Centramos el texto horizontalmente */
   transition: background-color 0.3s ease-in-out; /* Efecto de transición al pasar el cursor */
+  position: relative; /* Agregamos posición relativa */
+  /*z-index: 11;  Agregamos z-index para que los botones no se superpongan */
 }
 
-/* Estilos para cuando se pasa el cursor */
+/*--------- Estilos para cuando se pasa el cursor ---------*/
 select:hover {
   background-color: #fff; /* Cambio de color de fondo */
   color: #333; /* Cambio de color de texto */
 }
 
-/* Estilos para los options */
+/*--------- Estilos para los options ---------*/
 select option {
   font-family: 'Georgia', serif; /* Tipo de letra con detalles */
-  font-size: 1.2rem; /* Tamaño de letra */
+  font-size: 4vw; /* Tamaño de letra */
 }
 
-/* Contenedor principal */
+/*--------- Contenedor principal ---------*/
 .contenedorDesplegables {
   display: flex;
+  flex-wrap: wrap; /* Agregamos flex-wrap para que los botones se muestren uno debajo del otro */
   justify-content: center; /* Centramos horizontalmente los elementos */
   margin: 10vw 10vw 0vw 15vw;
   border-radius: 10px;
   padding: 10px;
+  min-height: 150px; /* Agregamos min-height para evitar superposición */
 }
 
 /*--------- Abecedario de los filtros ---------*/
@@ -150,7 +154,7 @@ select option {
   max-width: calc((100% / 6) - 10px);
 }
 
-.letter {
+/* .letter {
   display: block;
   width: 30px;
   height: 30px;
@@ -167,24 +171,42 @@ select option {
 
 .letter:hover {
   background-color: #eee;
+} */
+
+/*--------- Resultado de los filtros ---------*/
+#resultados {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/*--------- terjeta de los resultado de los filtros ---------*/
 .tarjetas {
-  background-color: lightgray;
+  display: flex;
+  background-color: rgba(5, 46, 81, 0.838);
+  color: #fff;
   padding: 10px;
   margin-bottom: 10px;
+  flex-direction: column;
+  border: 0.3vw solid rgb(175, 167, 88);
+  box-sizing: border-box;
+  border-radius: 2vw;
+  flex-basis: 40%;
+  flex-shrink: 1;
+  margin: 1.6vw;
 }
 
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
-  select {
-    font-size: 3.5vw;
-    width: 100%;
-    margin: 10px 0;
+  .tarjetas {
+    flex-basis: 100%;
   }
   .contenedorDesplegables {
-    flex-direction: column;
-    margin: -30vw 0vw 0vw 15vw;
+    /* flex-direction: column; */
+    margin: 10vw 0;
+  }
+  select {
+    width: 100%; /* Los selectores ocupan todo el ancho disponible */
+    margin: 10px 0; /* Separación entre los selectores */
   }
 
   .alphabet li {
