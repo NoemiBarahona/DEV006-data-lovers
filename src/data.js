@@ -26,16 +26,6 @@ export function extractApellidos(characters) {
   return resultadoFiltro.sort();
 }
 
-export function filterCharacterGender(characters, genero) {
-  const resultadoFiltroGender = [];
-  characters.forEach(element => {
-    if (element.gender === genero) {
-      resultadoFiltroGender.push(element)
-    }
-  });
-  return resultadoFiltroGender.sort();
-}
-
 export function extractSpecies(characters) {
   const resultadoFiltro = [];
   const especiesRegistradas = [];
@@ -58,14 +48,14 @@ export function filterCharacterSpecies(characters, tipoEspecie) { // En  el dom 
   return filterCharacterSpecies.sort();
 }
 
-export function filterspellType(spells, tipoHechizo) {
-  const filterspellType = [];
+export function filterSpellType(spells, tipoHechizo) {
+  const resultadofilterSpellType = [];
   spells.forEach(hechizo => {
     if (hechizo.spell_type === tipoHechizo) {
-      filterspellType.push(hechizo)
+      resultadofilterSpellType.push(hechizo)
     }
   });
-  return filterspellType;
+  return resultadofilterSpellType;
 }
 
 export function filterCharacterHouse(characters, casa) {
@@ -76,6 +66,16 @@ export function filterCharacterHouse(characters, casa) {
     }
   });
   return resultadoCasas.sort();
+}
+
+export function filterCharacterGender(characters, genero) {
+  const resultadoFiltroGender = [];
+  characters.forEach(element => {
+    if (element.gender === genero) {
+      resultadoFiltroGender.push(element)
+    }
+  });
+  return resultadoFiltroGender.sort();
 }
 
 export function sortData(data, sortBy, sortOrder = 'asc') {

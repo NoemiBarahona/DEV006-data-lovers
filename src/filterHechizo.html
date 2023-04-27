@@ -39,32 +39,23 @@
       </div>
     </div>
   </div>
-  <div class="seccion">
-    <em> Filtro por tipo de hechizo</em>
-    <div class="flecha">▶️</div>
-    <div class="filtro">
-      <input type="radio" id="filtroTipoHechizoCharm" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Charm</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoTransfiguration" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Transfiguration</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoHex" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Hex</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoJinx" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Jinx</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoCurse" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Curse</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoConjuration" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Conjuration</label>
-      <br>
-      <input type="radio" id="filtroTipoHechizoHealingSpell" name="filtroTipoHechizo" value="hechizo" />
-      <label for="hechizo">Healing Spell</label>
+  <div id="contenedorDesplegablesHechizos" class="contenedorDesplegablesHechizos">
+    <div id="filtroHechizos" class="eligeSpell">
+      <select name="Spell" id="selectSpell"> 
+        <option disabled selected>Spell Filter</option>
+        <option>Transfiguration</option>
+        <option>Hex</option>
+        <option>Jinx</option>
+        <option>Curse</option>
+        <option>Conjuration</option>
+        <option>Healing Spell</option>
+      </select>
     </div>
   </div>
+  <div id = "resultadosHechizos">
+    <div id="resultadoHechizo"></div>
+  </div>
+  
   <script src="main.js" type="module"></script>
 </body>
 

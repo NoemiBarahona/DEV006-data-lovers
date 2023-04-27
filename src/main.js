@@ -1,18 +1,6 @@
-import { filterCharacterGender, filterCharacterName, filterCharacterHouse, sortData, filterCharacterSpecies, filterspellType, extractApellidos, extractSpecies } from './data.js';// import { example } from './data.js';
-// import data from './data/lol/lol.js';
+import { filterCharacterGender, filterCharacterName, filterCharacterHouse, filterCharacterSpecies, filterSpellType, extractApellidos, extractSpecies } from './data.js';// import { example } from './data.js';
+
 import data from './data/harrypotter/data.js';
-
-// console.log(filterCharacterName(data.characters,'Black'))
-// console.log(filterCharacterGender(data.characters,'Female'))
-// console.log(filterCharacterGender(data.characters,'Male'))
-// const dataOrdenada = sortData(data.characters, "name")
-// console.log(filterCharacterGender(dataOrdenada,'Female'))
-// console.log(filterCharacterHouse(data.characters, 'Slytherin'))
-// const dataOrdenadaAZ = sortData(data.characters, 'name', 'desc')
-// console.log(filterCharacterGender (dataOrdenadaAZ, 'Female'))
-// console.log(filterCharacterSpecies(data.characters, 'Human (Seer)'))
-// console.log(filterspellType(data.spells, 'Charm'))
-
 // Funcionalidad para el boton de inicio
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
@@ -143,7 +131,7 @@ for (let i = 0; i < apellidos.length; i++) {
   const opcion = document.createElement('option');
   opcion.value = apellidos[i]; //para asignar el valor como el apellido
   opcion.innerText = apellidos[i];
-  selectFamilia.insertBefore(opcion, selectFamilia.lastChild);
+  selectFamilia?.insertBefore(opcion, selectFamilia.lastChild);
 }
 
 const selectSpecies = document.getElementById('selectSpecies');// Obtener referencia al select de la familia
@@ -152,15 +140,14 @@ for (let i = 0; i < especie.length; i++) {
   const opcion = document.createElement('option');
   opcion.value = especie[i]; //para asignar el valor como el apellido
   opcion.innerText = especie[i];
-  selectSpecies.insertBefore(opcion, selectSpecies.lastChild);
+  selectSpecies?.insertBefore(opcion, selectSpecies.lastChild);
 }
+
 //FILTRO POR APELLIDO LINKEADO CON SELECCION APELLIDOS
-selectFamilia.addEventListener('change', function (e) { // Agrega un evento 'change' al elemento select con el ID 'selectFamilia' que se dispara cuando se cambia su valor
+selectFamilia?.addEventListener('change', function (e) { // Agrega un evento 'change' al elemento select con el ID 'selectFamilia' que se dispara cuando se cambia su valor
   const valorSeleccionado = e.target.value;  // Obtén el valor seleccionado del elemento select que disparó el evento y guárdalo en la variable 'valorSeleccionado'
   const resultado = filterCharacterName(data.characters, valorSeleccionado);  // Llama a la función 'filterCharacterName' pasándole como argumentos el arreglo de personajes 'data.characters' y el valor seleccionado del elemento select, y guarda el resultado filtrado en la variable 'resultado'
   console.log(resultado); // Mostrar el resultado en la consola
-
-  let textoResultado = ""; // Inicializa una cadena de texto vacía en la variable 'textoResultado' para construir la representación personalizada del objeto
   for (let i = 0; i < resultado.length; i++) {// Itera a través del arreglo 'resultado' que contiene los personajes filtrados y guarda cada personaje en la variable 'personaje' en cada iteración del bucle
     const personaje = resultado[i];
     const tarjeta = document.createElement('div'); // Crea un nuevo elemento <div> para cada personaje
@@ -169,6 +156,7 @@ selectFamilia.addEventListener('change', function (e) { // Agrega un evento 'cha
     document.getElementById('resultados').appendChild(tarjeta); // Agrega el nuevo
   }
 });
+
 function construirTarjetas(personajes) {
   const resultadosDiv = document.getElementById('resultados'); // Obtener referencia al elemento div con el ID 'resultados'
   resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
@@ -195,7 +183,7 @@ function construirTarjetas(personajes) {
 }
 
 // Evento de cambio en el select de apellidos
-selectFamilia.addEventListener('change', function (e) {
+selectFamilia?.addEventListener('change', function (e) {
   const valorSeleccionado = e.target.value;
   const resultado = filterCharacterName(data.characters, valorSeleccionado);
   console.log(resultado);
@@ -205,7 +193,7 @@ selectFamilia.addEventListener('change', function (e) {
 });
 
 // Evento de cambio en el select de especies
-selectSpecies.addEventListener('change', function (e) {
+selectSpecies?.addEventListener('change', function (e) {
   const valorSeleccionado = e.target.value;
   const resultado = filterCharacterSpecies(data.characters, valorSeleccionado);
   console.log(resultado);
@@ -216,7 +204,7 @@ selectSpecies.addEventListener('change', function (e) {
 
 const selectGender = document.getElementById('selectGender')
 
-selectGender.addEventListener('change', function (e) {
+selectGender?.addEventListener('change', function (e) {
   const valorSeleccionado = e.target.value;
   const resultado = filterCharacterGender(data.characters, valorSeleccionado);
   console.log(resultado);
@@ -227,7 +215,7 @@ selectGender.addEventListener('change', function (e) {
 
 const selectHouse = document.getElementById('selectHouses')
 // Evento de cambio en el select de casas
-selectHouse.addEventListener('change', function (e) {
+selectHouse?.addEventListener('change', function (e) {
   const valorSeleccionado = e.target.value;
   const resultado = filterCharacterHouse(data.characters, valorSeleccionado);
   console.log(resultado);
@@ -235,3 +223,43 @@ selectHouse.addEventListener('change', function (e) {
   // Construir las tarjetas de resultado con los personajes filtrados
   construirTarjetas(resultado);
 });
+const selectSpell = document.getElementById('selectSpell')
+// Evento de cambio en el select de casas
+selectSpell?.addEventListener('change', function (h) {
+  const valorSeleccionado = h.target.value;
+  console.log(valorSeleccionado);
+  const resultado = filterSpellType(data.spells, valorSeleccionado);
+  console.log(resultado);
+
+  // Construir las tarjetas de resultado con los personajes filtrados
+  construirTarjetasHechizo(resultado);
+});
+
+function construirTarjetasHechizo(hechizo) {
+  const resultadosDiv = document.getElementById('resultadosHechizos'); // Obtener referencia al elemento div con el ID 'resultados'
+  resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
+
+  // Iterar a través del arreglo de personajes y construir una tarjeta para cada uno
+  for (let i = 0; i < hechizo.length; i++) {
+    const spells = hechizo[i];
+
+    // Crear un nuevo elemento div para representar la tarjeta del personaje
+    const tarjetaDiv = document.createElement('div');
+    tarjetaDiv.classList.add('tarjetas'); // Agregar la clase 'tarjetas' al div
+
+    // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
+    tarjetaDiv.innerHTML = `
+          <p>Name: ${spells.name ?? 'Unknown'}</p>
+          <p>Other Name: ${spells.other_name ?? 'None'}</p>
+          <p>Pronunciation: ${spells.pronunciation ?? 'Unknown'}</p>
+          <p>Spell Type: ${spells.spell_type ?? 'Unknown'}</p>
+          <p>Description: ${spells.description ?? 'None'}</p>
+          <p>Etymology: ${spells.etymology ?? 'Unknown'}</p>
+        `;
+
+    // Agregar la tarjeta al elemento div con el ID 'resultados'
+    resultadosDiv.appendChild(tarjetaDiv);
+  }
+}
+
+

@@ -126,6 +126,13 @@ select option {
   padding: 10px;
 }
 
+.contenedorDesplegablesHechizos {
+  display: flex;
+  justify-content: center; /* Centramos horizontalmente los elementos */
+  margin: 10vw 10vw 0vw 15vw;
+  border-radius: 10px;
+  padding: 10px;
+}
 /*--------- Abecedario de los filtros ---------*/
 .alphabet {
   display: flex;
