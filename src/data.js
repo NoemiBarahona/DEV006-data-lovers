@@ -18,8 +18,8 @@ export function extractApellidos(characters) {
     if (nombreSeparado.length > 1 && nombreSeparado[1].length > 2 && /^[A-Z]/.test(nombreSeparado[1])) {
       const apellido = nombreSeparado[1];
       if (!apellidosRegistrados.includes(apellido)) { // verificar si el apellido ya está registrado
-        resultadoFiltro.push(apellido);
         apellidosRegistrados.push(apellido); // agregar el apellido a los apellidos registrados
+        resultadoFiltro.push(apellido);
       }
     }
   });
@@ -32,8 +32,8 @@ export function extractSpecies(characters) {
   characters.forEach(personaje => {
     const especie = personaje.species;
     if (especie && typeof especie === 'string' && !especiesRegistradas.includes(especie)) {
-      resultadoFiltro.push(especie);
       especiesRegistradas.push(especie);
+      resultadoFiltro.push(especie);
     }
   });
   return resultadoFiltro.sort();

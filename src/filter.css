@@ -159,81 +159,15 @@ select option {
   width: 100%;
 }
 
-<<<<<<< HEAD
-.contenedorDesplegablesHechizos {
-  display: flex;
-  margin: 10vw 14vw 5vw 10vw;
-  border-radius: 10px;
-  padding: 10px;
-  min-height: max-content;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.contenedorDesplegablesPociones {
-  display: flex;
-  margin: 10vw 14vw 5vw 10vw;
-  border-radius: 10px;
-  padding: 10px;
-  min-height: max-content;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-=======
->>>>>>> 7338b48b212dc66c8e58dddf49d06f09217d103a
-/*--------- Abecedario de los filtros ---------*/
-.alphabet {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-.alphabet ul {
-  list-style: none;
-  margin: 0vw 0vw 0vw 15vw;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.alphabet li {
-  margin: 5px;
-  flex-basis: calc((100% / 6) - 10px);
-  max-width: calc((100% / 6) - 10px);
-}
-
-/* .letter {
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 16px;
-  color: #333;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.letter:hover {
-  background-color: #eee;
-} */
-
-
-
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
   .tarjetas {
     flex-basis: 100%;
   }
-  .contenedorDesplegables {
+  .contenedorDesplegables, 
+  .contenedorDesplegablesHechizos,
+  .contenedorDesplegablesPociones,
+  .resultadoPocion  {
     margin: 20vw 0vw 0vw 0vw;
     display: initial;
   }
@@ -241,11 +175,6 @@ select option {
     width: 100%; /* Los selectores ocupan todo el ancho disponible */
     margin: 10px 0; /* Separación entre los selectores */
     font-size: 5vw;
-  }
-
-  .alphabet li {
-    flex-basis: calc((100% / 2) - 10px);
-    max-width: calc((100% / 2) - 10px);
   }
 
   /*--------- Imagen del boton de inicio  ---------*/
@@ -323,8 +252,5 @@ select option {
 
 /*--------- Media para pantallas grandes ---------*/
 @media (max-width: 1920px) {
-    .alphabet li {
-      flex-basis: calc((100% / 3) - 10px);
-      max-width: calc((100% / 3) - 10px);
-    }
+
 }
