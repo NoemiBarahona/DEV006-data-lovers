@@ -88,6 +88,12 @@ body {
 }
 
 /*--------- Contenedor de filtros ---------*/
+/* #filtro{
+  padding: inherit;
+  margin-top: auto;
+  margin-bottom: 0;
+} */
+
 /* Estilos para los select */
 select {
   font-family: 'Harry Potter', sans-serif;
@@ -116,13 +122,24 @@ select:hover {
 /*--------- Estilos para los options ---------*/
 select option {
   font-family: 'Georgia', serif; /* Tipo de letra con detalles */
-  font-size: 4vw; /* Tamaño de letra */
+  font-size: 2vw; /* Tamaño de letra */
 }
 
 /*--------- Contenedor principal ---------*/
 .contenedorDesplegables {
   display: flex;
-  flex-wrap: wrap; /* Agregamos flex-wrap para que los botones se muestren uno debajo del otro */
+  margin: 10vw 14vw 5vw 10vw;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: max-content;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contenedorDesplegablesHechizos {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center; /* Centramos horizontalmente los elementos */
   margin: 10vw 10vw 0vw 15vw;
   border-radius: 10px;
@@ -216,12 +233,13 @@ select option {
     flex-basis: 100%;
   }
   .contenedorDesplegables {
-    /* flex-direction: column; */
-    margin: 10vw 0;
+    margin: 20vw 0vw 0vw 0vw;
+    display: initial;
   }
   select {
     width: 100%; /* Los selectores ocupan todo el ancho disponible */
     margin: 10px 0; /* Separación entre los selectores */
+    font-size: 5vw;
   }
 
   .alphabet li {
