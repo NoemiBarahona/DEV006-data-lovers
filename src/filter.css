@@ -88,11 +88,29 @@ body {
 }
 
 /*--------- Contenedor de filtros ---------*/
-/* #filtro{
-  padding: inherit;
-  margin-top: auto;
-  margin-bottom: 0;
-} */
+
+/*--------- Resultado de los filtros ---------*/
+#resultados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*--------- terjeta de los resultado de los filtros ---------*/
+.tarjetas {
+  display: flex;
+  background-color: rgba(5, 46, 81, 0.838);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border: 0.3vw solid rgb(175, 167, 88);
+  box-sizing: border-box;
+  border-radius: 2vw;
+  flex: 0 0 calc(25vw - 1.6vw);
+  margin: 1.6vw;
+
+}
 
 /* Estilos para los select */
 select {
@@ -126,17 +144,22 @@ select option {
 }
 
 /*--------- Contenedor principal ---------*/
-.contenedorDesplegables {
+.contenedorDesplegables,
+.contenedorDesplegablesHechizos,
+.contenedorDesplegablesPociones,
+.resultadoPocion  {
   display: flex;
-  margin: 10vw 14vw 5vw 10vw;
+  margin: 10vw auto 5vw;
   border-radius: 10px;
   padding: 10px;
   min-height: max-content;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
+<<<<<<< HEAD
 .contenedorDesplegablesHechizos {
   display: flex;
   margin: 10vw 14vw 5vw 10vw;
@@ -158,6 +181,8 @@ select option {
   flex-direction: row;
   justify-content: center;
 }
+=======
+>>>>>>> 7338b48b212dc66c8e58dddf49d06f09217d103a
 /*--------- Abecedario de los filtros ---------*/
 .alphabet {
   display: flex;
@@ -201,27 +226,7 @@ select option {
   background-color: #eee;
 } */
 
-/*--------- Resultado de los filtros ---------*/
-#resultados {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-/*--------- terjeta de los resultado de los filtros ---------*/
-.tarjetas {
-  display: flex;
-  background-color: rgba(5, 46, 81, 0.838);
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  flex-direction: column;
-  border: 0.3vw solid rgb(175, 167, 88);
-  box-sizing: border-box;
-  border-radius: 2vw;
-  flex-basis: 40%;
-  flex-shrink: 1;
-  margin: 1.6vw;
-}
 
 /*--------- Media para moviles ---------*/
 @media (max-width: 768px) {
