@@ -78,16 +78,16 @@ export function filterCharacterGender(characters, genero) {
   return resultadoFiltroGender.sort();
 }
 
-export function sortData(data, sortBy, sortOrder = 'asc') {
+export function sortDataPotions (potions, sortBy, sortOrder = 'asc') {
   const resultadoSort1 = [];
   const resultadoFinal = [];
-  data.forEach((element) => {
+  potions.forEach((element) => {
     resultadoSort1.push(element[sortBy]);
   });
 
   if (sortOrder === 'desc') {
     resultadoSort1.sort().reverse().forEach((nombre) => {
-      data.forEach((element) => {
+      potions.forEach((element) => {
         if (element[sortBy] === nombre) {
           resultadoFinal.push(element);
         }
@@ -95,7 +95,7 @@ export function sortData(data, sortBy, sortOrder = 'asc') {
     });
   } else {
     resultadoSort1.sort().forEach((nombre) => {
-      data.forEach((element) => {
+      potions.forEach((element) => {
         if (element[sortBy] === nombre) {
           resultadoFinal.push(element);
         }

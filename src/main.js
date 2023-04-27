@@ -1,4 +1,4 @@
-import { filterCharacterGender, filterCharacterName, filterCharacterHouse, filterCharacterSpecies, filterSpellType, extractApellidos, extractSpecies } from './data.js';// import { example } from './data.js';
+import { filterCharacterGender, filterCharacterName, filterCharacterHouse, filterCharacterSpecies, filterSpellType, extractApellidos, extractSpecies, sortDataPotions } from './data.js';// import { example } from './data.js';
 
 import data from './data/harrypotter/data.js';
 // Funcionalidad para el boton de inicio
@@ -219,7 +219,6 @@ selectHouse?.addEventListener('change', function (e) {
   const valorSeleccionado = e.target.value;
   const resultado = filterCharacterHouse(data.characters, valorSeleccionado);
   console.log(resultado);
-
   // Construir las tarjetas de resultado con los personajes filtrados
   construirTarjetas(resultado);
 });
@@ -230,7 +229,6 @@ selectSpell?.addEventListener('change', function (h) {
   console.log(valorSeleccionado);
   const resultado = filterSpellType(data.spells, valorSeleccionado);
   console.log(resultado);
-
   // Construir las tarjetas de resultado con los personajes filtrados
   construirTarjetasHechizo(resultado);
 });
@@ -238,15 +236,12 @@ selectSpell?.addEventListener('change', function (h) {
 function construirTarjetasHechizo(hechizo) {
   const resultadosDiv = document.getElementById('resultadosHechizos'); // Obtener referencia al elemento div con el ID 'resultados'
   resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
-
   // Iterar a través del arreglo de personajes y construir una tarjeta para cada uno
   for (let i = 0; i < hechizo.length; i++) {
     const spells = hechizo[i];
-
     // Crear un nuevo elemento div para representar la tarjeta del personaje
     const tarjetaDiv = document.createElement('div');
     tarjetaDiv.classList.add('tarjetas'); // Agregar la clase 'tarjetas' al div
-
     // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
     tarjetaDiv.innerHTML = `
           <p>Name: ${spells.name ?? 'Unknown'}</p>
@@ -256,10 +251,47 @@ function construirTarjetasHechizo(hechizo) {
           <p>Description: ${spells.description ?? 'None'}</p>
           <p>Etymology: ${spells.etymology ?? 'Unknown'}</p>
         `;
-
     // Agregar la tarjeta al elemento div con el ID 'resultados'
     resultadosDiv.appendChild(tarjetaDiv);
   }
 }
 
+const selectPotions = document.getElementById('selectPotions')
+// Evento de cambio en el select de casas
+selectPotions?.addEventListener('change', function (h) {
+  const valorSeleccionado = h.target.value;
+  let orden;
+  if(valorSeleccionado==='A-Z')
+  {
+    orden="asc";
+  }
+  else
+  {
+    orden="desc";
+  }
+  const resultado = sortDataPotions(data.potions,"name" ,orden);
+  console.log(resultado);
+
+  // Construir las tarjetas de resultado con los personajes filtrados
+  construirTarjetasPotions(resultado);
+});
+
+function construirTarjetasPotions(pociones) {
+  const resultadosDiv = document.getElementById('resultadosPociones'); // Obtener referencia al elemento div con el ID 'resultados'
+  resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
+  // Iterar a través del arreglo de personajes y construir una tarjeta para cada uno
+  for (let i = 0; i < pociones.length; i++) {
+    const potion = pociones[i];
+    // Crear un nuevo elemento div para representar la tarjeta del personaje
+    const tarjetaDiv = document.createElement('div');
+    tarjetaDiv.classList.add('tarjetas'); // Agregar la clase 'tarjetas' al div
+    // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
+    tarjetaDiv.innerHTML = `
+          <p>Name: ${potion.name ?? 'Unknown'}</p>
+          <p>Description: ${potion.description ?? 'None'}</p>
+        `;
+    // Agregar la tarjeta al elemento div con el ID 'resultados'
+    resultadosDiv.appendChild(tarjetaDiv);
+  }
+}
 
