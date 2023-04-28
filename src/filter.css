@@ -91,11 +91,13 @@ body {
 /*--------- Contenedor de filtros ---------*/
 
 /*--------- Resultado de los filtros ---------*/
-#resultados {
+#resultados,
+#resultadosPociones,
+#resultadosHechizos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} 
 
 /*--------- terjeta de los resultado de los filtros ---------*/
 .tarjetas {
@@ -129,26 +131,24 @@ select {
   text-align: center; /* Centramos el texto horizontalmente */
   transition: background-color 0.3s ease-in-out; /* Efecto de transición al pasar el cursor */
   position: relative; /* Agregamos posición relativa */
-  /*z-index: 11;  Agregamos z-index para que los botones no se superpongan */
 }
 
 /*--------- Estilos para cuando se pasa el cursor ---------*/
 select:hover {
-  background-color: #fff; /* Cambio de color de fondo */
-  color: #333; /* Cambio de color de texto */
+  background-color: #fff; 
+  color: #333; 
 }
 
 /*--------- Estilos para los options ---------*/
 select option {
-  font-family: 'Georgia', serif; /* Tipo de letra con detalles */
-  font-size: 2vw; /* Tamaño de letra */
+  font-family: 'Georgia', serif; 
+  font-size: 2vw; 
 }
 
 /*--------- Contenedor principal ---------*/
 .contenedorDesplegables,
 .contenedorDesplegablesHechizos,
-.contenedorDesplegablesPociones,
-.resultadoPocion  {
+.contenedorDesplegablesPociones{
   display: flex;
   margin: 10vw auto 5vw;
   border-radius: 10px;

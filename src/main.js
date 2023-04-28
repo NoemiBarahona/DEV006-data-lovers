@@ -233,6 +233,8 @@ selectSpell?.addEventListener('change', function (h) {
   construirTarjetasHechizo(resultado);
 });
 
+  // construirTarjetasHechizo(filterSpellType(data.spells, 'Transfiguration'));
+
 function construirTarjetasHechizo(hechizo) {
   const resultadosDiv = document.getElementById('resultadosHechizos'); // Obtener referencia al elemento div con el ID 'resultados'
   resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
