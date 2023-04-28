@@ -127,35 +127,38 @@ document.querySelectorAll(".personaje").forEach(function (personaje) {
 //SELECCION DE APELLIDOS PARA VISUALIZAR DESPLEGABLE
 const selectFamilia = document.getElementById('selectFamilia');// Obtener referencia al select de la familia
 const apellidos = extractApellidos(data.characters);// Obtener apellidos de la data
-for (let i = 0; i < apellidos.length; i++) {
-  const opcion = document.createElement('option');
-  opcion.value = apellidos[i]; //para asignar el valor como el apellido
-  opcion.innerText = apellidos[i];
-  selectFamilia?.insertBefore(opcion, selectFamilia.lastChild);
+if (selectFamilia) {
+  for (let i = 0; i < apellidos.length; i++) {
+    const opcion = document.createElement('option');
+    opcion.value = apellidos[i]; //para asignar el valor como el apellido
+    opcion.innerText = apellidos[i];
+    selectFamilia.insertBefore(opcion, selectFamilia.lastChild);
+  }
 }
-
 const selectSpecies = document.getElementById('selectSpecies');// Obtener referencia al select de la familia
 const especie = extractSpecies(data.characters);// Obtener apellidos de la data
-for (let i = 0; i < especie.length; i++) {
-  const opcion = document.createElement('option');
-  opcion.value = especie[i]; //para asignar el valor como el apellido
-  opcion.innerText = especie[i];
-  selectSpecies?.insertBefore(opcion, selectSpecies.lastChild);
-}
-
-//FILTRO POR APELLIDO LINKEADO CON SELECCION APELLIDOS
-selectFamilia?.addEventListener('change', function (e) { // Agrega un evento 'change' al elemento select con el ID 'selectFamilia' que se dispara cuando se cambia su valor
-  const valorSeleccionado = e.target.value;  // Obtén el valor seleccionado del elemento select que disparó el evento y guárdalo en la variable 'valorSeleccionado'
-  const resultado = filterCharacterName(data.characters, valorSeleccionado);  // Llama a la función 'filterCharacterName' pasándole como argumentos el arreglo de personajes 'data.characters' y el valor seleccionado del elemento select, y guarda el resultado filtrado en la variable 'resultado'
-  console.log(resultado); // Mostrar el resultado en la consola
-  for (let i = 0; i < resultado.length; i++) {// Itera a través del arreglo 'resultado' que contiene los personajes filtrados y guarda cada personaje en la variable 'personaje' en cada iteración del bucle
-    const personaje = resultado[i];
-    const tarjeta = document.createElement('div'); // Crea un nuevo elemento <div> para cada personaje
-    tarjeta.className = 'tarjetas'; // Asigna la clase 'tarjetas' al nuevo elemento <div>
-    tarjeta.innerHTML = `Name: ${personaje.name || 'Unknown'}<br>Birth: ${personaje.birth || 'Unknown'}<br>Status: ${personaje.death ? 'Died on ' + personaje.death : 'Alive'}<br>Gender: ${personaje.gender ?? 'Unknown'}`; // Construye la representación personalizada del objeto 'personaje' utilizando plantillas de cadena de texto (template literals) con interpolación de variables, y agrega cada propiedad del personaje (name, birth, death y gender) junto con su valor correspondiente. Utiliza el operador de fusión nula (??) para mostrar 'Unknown' en lugar de null en las propiedades que no tienen valor. También utiliza un operador ternario para mostrar 'Died on [fecha]' si la propiedad 'death' tiene un valor, o 'Alive' si no lo tiene. Al final, agrega una etiqueta <br> para hacer un salto de línea en el resultado.
-    document.getElementById('resultados').appendChild(tarjeta); // Agrega el nuevo
+if (selectSpecies) {
+  for (let i = 0; i < especie.length; i++) {
+    const opcion = document.createElement('option');
+    opcion.value = especie[i]; //para asignar el valor como el apellido
+    opcion.innerText = especie[i];
+    selectSpecies.insertBefore(opcion, selectSpecies.lastChild);
   }
-});
+}
+//FILTRO POR APELLIDO LINKEADO CON SELECCION APELLIDOS
+if (selectFamilia) {
+  selectFamilia.addEventListener('change', function (e) { // Agrega un evento 'change' al elemento select con el ID 'selectFamilia' que se dispara cuando se cambia su valor
+    const valorSeleccionado = e.target.value;  // Obtén el valor seleccionado del elemento select que disparó el evento y guárdalo en la variable 'valorSeleccionado'
+    const resultado = filterCharacterName(data.characters, valorSeleccionado);  // Llama a la función 'filterCharacterName' pasándole como argumentos el arreglo de personajes 'data.characters' y el valor seleccionado del elemento select, y guarda el resultado filtrado en la variable 'resultado'
+    for (let i = 0; i < resultado.length; i++) {// Itera a través del arreglo 'resultado' que contiene los personajes filtrados y guarda cada personaje en la variable 'personaje' en cada iteración del bucle
+      const personaje = resultado[i];
+      const tarjeta = document.createElement('div'); // Crea un nuevo elemento <div> para cada personaje
+      tarjeta.className = 'tarjetas'; // Asigna la clase 'tarjetas' al nuevo elemento <div>
+      tarjeta.innerHTML = `Name: ${personaje.name || 'Unknown'}<br>Birth: ${personaje.birth || 'Unknown'}<br>Status: ${personaje.death ? 'Died on ' + personaje.death : 'Alive'}<br>Gender: ${personaje.gender || 'Unknown'}`; // Construye la representación personalizada del objeto 'personaje' utilizando plantillas de cadena de texto (template literals) con interpolación de variables, y agrega cada propiedad del personaje (name, birth, death y gender) junto con su valor correspondiente. Utiliza el operador de fusión nula (||) para mostrar 'Unknown' en lugar de null en las propiedades que no tienen valor. También utiliza un operador ternario para mostrar 'Died on [fecha]' si la propiedad 'death' tiene un valor, o 'Alive' si no lo tiene. Al final, agrega una etiqueta <br> para hacer un salto de línea en el resultado.
+      document.getElementById('resultados').appendChild(tarjeta); // Agrega el nuevo
+    }
+  });
+}
 
 function construirTarjetas(personajes) {
   const resultadosDiv = document.getElementById('resultados'); // Obtener referencia al elemento div con el ID 'resultados'
@@ -171,68 +174,64 @@ function construirTarjetas(personajes) {
 
     // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
     tarjetaDiv.innerHTML = `
-          <p>Name: ${personaje.name ?? 'Unknown'}</p>
-          <p>Birth: ${personaje.birth ?? 'Unknown'}</p>
+          <p>Name: ${personaje.name || 'Unknown'}</p>
+          <p>Birth: ${personaje.birth || 'Unknown'}</p>
           <p>Status: ${personaje.death ? 'Died on ' + personaje.death : 'Alive'}</p>
-          <p>Gender: ${personaje.gender ?? 'Unknown'}</p>
+          <p>Gender: ${personaje.gender || 'Unknown'}</p>
+          <p>Species: ${personaje.species || 'Unknown'}</p>
         `;
-
     // Agregar la tarjeta al elemento div con el ID 'resultados'
     resultadosDiv.appendChild(tarjetaDiv);
   }
 }
 
 // Evento de cambio en el select de apellidos
-selectFamilia?.addEventListener('change', function (e) {
-  const valorSeleccionado = e.target.value;
-  const resultado = filterCharacterName(data.characters, valorSeleccionado);
-  console.log(resultado);
-
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetas(resultado);
-});
-
+if (selectFamilia) {
+  selectFamilia.addEventListener('change', function (e) {
+    const valorSeleccionado = e.target.value;
+    const resultado = filterCharacterName(data.characters, valorSeleccionado);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetas(resultado);
+  });
+}
 // Evento de cambio en el select de especies
-selectSpecies?.addEventListener('change', function (e) {
-  const valorSeleccionado = e.target.value;
-  const resultado = filterCharacterSpecies(data.characters, valorSeleccionado);
-  console.log(resultado);
-
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetas(resultado);
-});
-
+if (selectSpecies) {
+  selectSpecies.addEventListener('change', function (e) {
+    const valorSeleccionado = e.target.value;
+    const resultado = filterCharacterSpecies(data.characters, valorSeleccionado);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetas(resultado);
+  });
+}
 const selectGender = document.getElementById('selectGender')
-
-selectGender?.addEventListener('change', function (e) {
-  const valorSeleccionado = e.target.value;
-  const resultado = filterCharacterGender(data.characters, valorSeleccionado);
-  console.log(resultado);
-
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetas(resultado);
-});
-
+if (selectGender) {
+  selectGender.addEventListener('change', function (e) {
+    const valorSeleccionado = e.target.value;
+    const resultado = filterCharacterGender(data.characters, valorSeleccionado);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetas(resultado);
+  });
+}
 const selectHouse = document.getElementById('selectHouses')
 // Evento de cambio en el select de casas
-selectHouse?.addEventListener('change', function (e) {
-  const valorSeleccionado = e.target.value;
-  const resultado = filterCharacterHouse(data.characters, valorSeleccionado);
-  console.log(resultado);
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetas(resultado);
-});
+if (selectHouse) {
+  selectHouse.addEventListener('change', function (e) {
+    const valorSeleccionado = e.target.value;
+    const resultado = filterCharacterHouse(data.characters, valorSeleccionado);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetas(resultado);
+  });
+}
 const selectSpell = document.getElementById('selectSpell')
 // Evento de cambio en el select de casas
-selectSpell?.addEventListener('change', function (h) {
-  const valorSeleccionado = h.target.value;
-  console.log(valorSeleccionado);
-  const resultado = filterSpellType(data.spells, valorSeleccionado);
-  console.log(resultado);
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetasHechizo(resultado);
-});
-
+if (selectSpell) {
+  selectSpell.addEventListener('change', function (h) {
+    const valorSeleccionado = h.target.value;
+    const resultado = filterSpellType(data.spells, valorSeleccionado);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetasHechizo(resultado);
+  });
+}
 function construirTarjetasHechizo(hechizo) {
   const resultadosDiv = document.getElementById('resultadosHechizos'); // Obtener referencia al elemento div con el ID 'resultados'
   resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
@@ -244,12 +243,12 @@ function construirTarjetasHechizo(hechizo) {
     tarjetaDiv.classList.add('tarjetas'); // Agregar la clase 'tarjetas' al div
     // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
     tarjetaDiv.innerHTML = `
-          <p>Name: ${spells.name ?? 'Unknown'}</p>
-          <p>Other Name: ${spells.other_name ?? 'None'}</p>
-          <p>Pronunciation: ${spells.pronunciation ?? 'Unknown'}</p>
-          <p>Spell Type: ${spells.spell_type ?? 'Unknown'}</p>
-          <p>Description: ${spells.description ?? 'None'}</p>
-          <p>Etymology: ${spells.etymology ?? 'Unknown'}</p>
+          <p>Name: ${spells.name || 'Unknown'}</p>
+          <p>Other Name: ${spells.other_name || 'None'}</p>
+          <p>Pronunciation: ${spells.pronunciation || 'Unknown'}</p>
+          <p>Spell Type: ${spells.spell_type || 'Unknown'}</p>
+          <p>Description: ${spells.description || 'None'}</p>
+          <p>Etymology: ${spells.etymology || 'Unknown'}</p>
         `;
     // Agregar la tarjeta al elemento div con el ID 'resultados'
     resultadosDiv.appendChild(tarjetaDiv);
@@ -258,24 +257,21 @@ function construirTarjetasHechizo(hechizo) {
 
 const selectPotions = document.getElementById('selectPotions')
 // Evento de cambio en el select de casas
-selectPotions?.addEventListener('change', function (h) {
-  const valorSeleccionado = h.target.value;
-  let orden;
-  if(valorSeleccionado==='A-Z')
-  {
-    orden="asc";
-  }
-  else
-  {
-    orden="desc";
-  }
-  const resultado = sortDataPotions(data.potions,"name" ,orden);
-  console.log(resultado);
-
-  // Construir las tarjetas de resultado con los personajes filtrados
-  construirTarjetasPotions(resultado);
-});
-
+if (selectPotions) {
+  selectPotions.addEventListener('change', function (h) {
+    const valorSeleccionado = h.target.value;
+    let orden;
+    if (valorSeleccionado === 'A-Z') {
+      orden = "asc";
+    }
+    else {
+      orden = "desc";
+    }
+    const resultado = sortDataPotions(data.potions, "name", orden);
+    // Construir las tarjetas de resultado con los personajes filtrados
+    construirTarjetasPotions(resultado);
+  });
+}
 function construirTarjetasPotions(pociones) {
   const resultadosDiv = document.getElementById('resultadosPociones'); // Obtener referencia al elemento div con el ID 'resultados'
   resultadosDiv.innerHTML = ""; // Limpiar el contenido del div antes de construir las tarjetas
@@ -287,8 +283,8 @@ function construirTarjetasPotions(pociones) {
     tarjetaDiv.classList.add('tarjetas'); // Agregar la clase 'tarjetas' al div
     // Construir el contenido HTML de la tarjeta utilizando plantillas de cadena de texto (template literals) con interpolación de variables
     tarjetaDiv.innerHTML = `
-          <p>Name: ${potion.name ?? 'Unknown'}</p>
-          <p>Description: ${potion.description ?? 'None'}</p>
+          <p>Name: ${potion.name || 'Unknown'}</p>
+          <p>Description: ${potion.description || 'None'}</p>
         `;
     // Agregar la tarjeta al elemento div con el ID 'resultados'
     resultadosDiv.appendChild(tarjetaDiv);
