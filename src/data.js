@@ -105,13 +105,3 @@ export function sortDataPotions (potions, sortBy, sortOrder = 'asc') {
 
   return resultadoFinal;
 }
-
-// export function filterpotionsName(letter, nombreAfiltrar) {
-//   const resultadoFiltroNombrePotions = [];
-//   potions.forEach(potions => {
-//     if (potions.name.includes(nombreAfiltrar)) {
-//       resultadoFiltroNombrePotions.push(potions)
-//     }
-//   });
-//   return JSON.stringify(resultadoFiltroNombrePotions);
-// }
