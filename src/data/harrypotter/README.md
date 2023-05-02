@@ -1,74 +1,42 @@
-# Harry Potter
+## Diseño centrado en el usuario:
 
-Harry Potter es una serie de novelas fantásticas escrita por la autora
-británica J. K. Rowling, en la que se describen las aventuras del joven
-aprendiz de magia y hechicería Harry Potter y sus amigos durante los años
-que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se
-centra en la lucha entre Harry Potter y el malvado mago lord Voldemort,
-quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.
+- Se utilizó un proceso de diseño centrado en el usuario.
+- Se tuvo en cuenta a los usuarios y sus necesidades durante todo el proceso de diseño.
+- Se realizaron investigaciones sobre los usuarios y sus necesidades, se crearon prototipos y se realizaron pruebas de usabilidad para garantizar que la página web fuera fácil de usar y que cumpliera con las necesidades de los usuarios.
 
-El éxito de las novelas ha hecho de la marca una de las más exitosas del mundo.
-En 1999, la productora de cine Warner Bros. Adquirió los derechos para
-adaptar los siete libros a una serie de películas. La última de ellas,
-Harry Potter y las reliquias de la Muerte: parte 2, se estrenó el 15 de julio
-de 2011 y con ocho películas realizadas la serie se convirtió en una de las
-franquicias más exitosas del cine en concepto de recaudaciones en taquilla.​
+## Diseño de la página web:
 
-## Hallazgos
+- La página web tiene un diseño intuitivo y responsivo que permite a los usuarios navegar fácilmente y encontrar la información que están buscando en cualquier dispositivo.
+- El menú en la parte superior de la página es fijo, lo que significa que los usuarios pueden acceder a los distintos botones en cualquier momento sin tener que desplazarse hacia arriba o hacia abajo en la página.
 
-Haciendo una investigación sobre la información que podrían necesitar
-nuestras usuarias encontramos que los datos de mayor interés son:
+## Bienvenida:
 
-- Información sobre los personajes como nombre, especie, género, fecha de
-  nacimiento, saber si es _muggle_ o conocer su casa de estudio.
-- El colegio Hogwarts de Magia y Hechicería utiliza el sistema de Casas.
-  El cuerpo estudiantil de Hogwarts se divide en cuatro Casas ( Gryffindor,
-  Hufflepuff, Ravenclaw y Slytherin;). A nuestras usarías les interesa saber
-  cuantos estudiantes hay por cada casa.
-- Dentro del mundo mágico hay muchos hechizos que se pueden invocar, para
-  nuestras usuarias es importante conocerlos y saber lo que hacen
-  para estar preparadas.
-- Toda esta información se basa la saga de novelas de la autora J. K. Rowling,
-  para nuestras usuarias es relevante conocer cuantos libros han sido publicados
-  y les gustaría poder visualizar que personajes aparecen en cada libro.
-- Las pociones son una herramienta crucial en el mundo de Harry Potter,
-  tener un diccionario para poder consultarlas es una petición de las usuarias.
+En la página de inicio, los usuarios son recibidos con una bienvenida que los invita a explorar la página y encontrar todo lo que necesitan saber sobre el mundo de Harry Potter.
 
-## Detalles de la data
+## Libros:
 
-### Personajes
+- Los libros son los primeros elementos que se visualizan al scrolear en la página.
+- Al pasar el mouse por encima de cada uno, se muestra información detallada como el nombre, la fecha de estreno, el autor y una pequeña descripción.
 
-En la lista personajes puedes todos los que aparecen en la saga.
-Puedes encontrar información básica como nombre, especie, género,
-fecha de nacimiento, casa de estudio, saber si es un ser mágico o muggle,
-grupos a los que pertenece, libros en los que aparece entre otras cosas.
+## Personajes:
 
-### Hechizos
+- Wikipottter proporciona información detallada sobre los personajes principales de la saga.
+Incluye información como su nombre, fecha de cumpleaños, estado vital (vivo o muerto), género, patronus, casa y ancestro.
+- Los usuarios pueden filtrar los personajes por apellido, género, especie y casa.
 
-En esta lista podrás encontrar el nombre y la descripción de los hechizos
- que pueden invocar los personajes, también el lugar del libro donde se
-menciona este hechizo y su pronunciación .
+## Hechizos:
 
-### Libros
+En el menú superior se encuentra el botón para acceder a Spells (Hechizos).
+Los usuarios pueden ver y filtrar información sobre los diferentes tipos de hechizos.
 
-La lista de libros describe el título, fecha de lanzamiento y la descripción
-de cada libro dentro de la saga .
+## Pociones:
 
-### Datos curiosos
+- En el menú superior se encuentra el botón para acceder a Potions (Pociones).
+- Los usuarios pueden ver y filtrar información sobre los diferentes tipos de pociones.
+- También se puede ordenar las pociones en orden alfabético.
 
-Lista de algunos datos curiosos sobre la saga, contiene tipo y contenido.
+## Resumen:
 
-### Pociones
-
-En esta lista puedes encontrar nombres de las pociones que se mencionan en el
-libro así como una pequeña descripción de la misma.
-
----
-
-#### Disclaimer
-
-De acuerdo a los principios de convivencia armónica y diversidad como valor
-intrínseco que orientan nuestra política de diversidad e inclusión,
-Laboratoria no condona ni avala los comentarios de la autora de la data
-utilizada en este dataset del proyecto, Joanne Rowling, respecto a la
-identidad de género y personas neurodivergentes.
+- Wikipottter es la guía del mundo mágico de Harry Potter.
+- Proporciona a los usuarios información detallada y fácil de usar sobre los personajes, hechizos, pociones y mucho más.
+- Con un diseño centrado en el usuario y un menú fijo en la parte superior de la página, Wikipottter hace que sea fácil para los usuarios encontrar la información que necesitan y sumergirse en el mundo mágico de Harry Potter.
