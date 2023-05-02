@@ -40,3 +40,5 @@ Los usuarios pueden ver y filtrar información sobre los diferentes tipos de hec
 - Wikipottter es la guía del mundo mágico de Harry Potter.
 - Proporciona a los usuarios información detallada y fácil de usar sobre los personajes, hechizos, pociones y mucho más.
 - Con un diseño centrado en el usuario y un menú fijo en la parte superior de la página, Wikipottter hace que sea fácil para los usuarios encontrar la información que necesitan y sumergirse en el mundo mágico de Harry Potter.
+
+Creadoras Noemi Barahona y Mikaella Munoz
