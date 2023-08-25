@@ -41,4 +41,10 @@ Los usuarios pueden ver y filtrar información sobre los diferentes tipos de hec
 - Proporciona a los usuarios información detallada y fácil de usar sobre los personajes, hechizos, pociones y mucho más.
 - Con un diseño centrado en el usuario y un menú fijo en la parte superior de la página, Wikipottter hace que sea fácil para los usuarios encontrar la información que necesitan y sumergirse en el mundo mágico de Harry Potter.
 
+## Prototipos
+A continuación, se muestran los enlaces a los prototipos creados en Figma:
+- Prototipo de Tarjeta de Crédito Alta:  https://www.figma.com/file/4Jk169XCG8RyWXoBmox3AG/Data-lovers-baj?type=design&node-id=0-1&mode=design&t=KDcQvVSWHuAe8rf7-0
+
+- Prototipo de Tarjeta de Crédito Alta:  https://www.figma.com/file/kl5SCPp0g9pGUe9INvDryS/Prototipo-de-alta?type=design&mode=design&t=KDcQvVSWHuAe8rf7-0
+
 Creadoras Noemi Barahona y Mikaella Munoz
