@@ -43,8 +43,8 @@ Los usuarios pueden ver y filtrar información sobre los diferentes tipos de hec
 
 ## Prototipos
 A continuación, se muestran los enlaces a los prototipos creados en Figma:
-- Prototipo de Tarjeta de Crédito Alta:  https://www.figma.com/file/4Jk169XCG8RyWXoBmox3AG/Data-lovers-baj?type=design&node-id=0-1&mode=design&t=KDcQvVSWHuAe8rf7-0
+- Prototipo de WikiPotter Alta:  https://www.figma.com/file/4Jk169XCG8RyWXoBmox3AG/Data-lovers-baj?type=design&node-id=0-1&mode=design&t=KDcQvVSWHuAe8rf7-0
 
-- Prototipo de Tarjeta de Crédito Alta:  https://www.figma.com/file/kl5SCPp0g9pGUe9INvDryS/Prototipo-de-alta?type=design&mode=design&t=KDcQvVSWHuAe8rf7-0
+- Prototipo de WikiPotter Alta:  https://www.figma.com/file/kl5SCPp0g9pGUe9INvDryS/Prototipo-de-alta?type=design&mode=design&t=KDcQvVSWHuAe8rf7-0
 
 Creadoras Noemi Barahona y Mikaella Munoz
